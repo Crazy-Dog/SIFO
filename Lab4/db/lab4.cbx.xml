@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab4">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|CommandRetrieval:inst|counter:inst7|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_bli.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|decoder_dca:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_u7f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|R-M_exec:inst10|constant00000:inst9|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_nf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|Memory:inst1|LPM_RAM_IO:inst1|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_af91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|Memory:inst1|LPM_ROM:inst|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_0tv.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|OperandRetrieval:inst2|M-R_Operation:inst9|constant10:inst1|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_8h6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|OperandRetrieval:inst2|R-M_Operation:inst1|constant6:inst17|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|counter_dca:inst3|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_d4i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|R-M_exec:inst10|constant6:inst17|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|constant00000:inst7|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_nf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|constant5:inst2|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_sf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|counter4:inst18|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_9vj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|sub:inst12|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_7fh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|CommandRetrieval:inst|constant0:inst|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_of6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|OperandRetrieval:inst2|M-R_Operation:inst9|constant00:inst7|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_5e6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|OperandRetrieval:inst2|R-M_Operation:inst1|constant00:inst7|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_5e6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|OperandRetrieval:inst2|R-M_Operation:inst1|constant10:inst6|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_8h6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|R-M_exec:inst10|constant9:inst15|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_0g6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|decoder4:inst|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_0sf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|Registers:inst2|decoder_rg:inst8|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_8bf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|OperandRetrieval:inst2|decoder4:inst6|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_0sf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab4|ControlUnit:inst|execution:inst5|decoder5:inst23|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_p7f.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
