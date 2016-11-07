@@ -19,7 +19,5 @@ FUNCTION decoder_en
 )
 
 RETURNS (
-	eq0,
-	eq1,
 	eq2
 );
