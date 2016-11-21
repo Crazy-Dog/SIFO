@@ -2,6 +2,7 @@
 set1 <= find_greatest:inst114.out1
 miss <= inst151.DB_MAX_OUTPUT_PORT_TYPE
 hit1 <= teg_comparator:inst23.aeb
+address[0] => addr_bustri:inst2.data[0]
 address[0] => data_mux:inst43.sel[0]
 address[0] => data_mux:inst51.sel[0]
 address[0] => data_mux:inst60.sel[0]
@@ -10,6 +11,7 @@ address[0] => data_mux:inst78.sel[0]
 address[0] => data_mux:inst87.sel[0]
 address[0] => data_mux:inst96.sel[0]
 address[0] => data_mux:inst105.sel[0]
+address[1] => addr_bustri:inst2.data[1]
 address[1] => data_mux:inst43.sel[1]
 address[1] => data_mux:inst51.sel[1]
 address[1] => data_mux:inst60.sel[1]
@@ -57,6 +59,8 @@ clk => data_dff:inst97.clock
 clk => data_dff:inst99.clock
 clk => data_dff:inst101.clock
 clk => data_dff:inst103.clock
+read => addr_bustri:inst2.enabledt
+read => inst4.IN0
 addr1[0] <= wait_counter:inst126.q[0]
 addr1[1] <= wait_counter:inst126.q[1]
 hit3 <= teg_comparator:inst25.aeb
@@ -2301,6 +2305,46 @@ eq[0] <= w_anode1w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[1] <= w_anode15w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[2] <= w_anode24w[2].DB_MAX_OUTPUT_PORT_TYPE
 eq[3] <= w_anode33w[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cache|addr_bustri:inst2
+data[0] => lpm_bustri:lpm_bustri_component.data[0]
+data[1] => lpm_bustri:lpm_bustri_component.data[1]
+enabledt => lpm_bustri:lpm_bustri_component.enabledt
+tridata[0] <> lpm_bustri:lpm_bustri_component.tridata[0]
+tridata[1] <> lpm_bustri:lpm_bustri_component.tridata[1]
+
+
+|Cache|addr_bustri:inst2|lpm_bustri:lpm_bustri_component
+tridata[0] <> dout[0]
+tridata[1] <> dout[1]
+data[0] => dout[0].DATAIN
+data[1] => dout[1].DATAIN
+enabletr => ~NO_FANOUT~
+enabledt => dout[1].OE
+enabledt => dout[0].OE
+result[0] <= result[0]~1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cache|addr_bustri:inst3
+data[0] => lpm_bustri:lpm_bustri_component.data[0]
+data[1] => lpm_bustri:lpm_bustri_component.data[1]
+enabledt => lpm_bustri:lpm_bustri_component.enabledt
+tridata[0] <> lpm_bustri:lpm_bustri_component.tridata[0]
+tridata[1] <> lpm_bustri:lpm_bustri_component.tridata[1]
+
+
+|Cache|addr_bustri:inst3|lpm_bustri:lpm_bustri_component
+tridata[0] <> dout[0]
+tridata[1] <> dout[1]
+data[0] => dout[0].DATAIN
+data[1] => dout[1].DATAIN
+enabletr => ~NO_FANOUT~
+enabledt => dout[1].OE
+enabledt => dout[0].OE
+result[0] <= result[0]~1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1]~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Cache|wait_counter:inst126

@@ -1,5 +1,5 @@
 Simulator report for Cache
-Fri Nov 11 23:54:13 2016
+Mon Nov 21 22:44:38 2016
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 2129 nodes   ;
-; Simulation Coverage         ;      24.61 % ;
-; Total Number of Transitions ; 6999         ;
+; Simulation Netlist Size     ; 2136 nodes   ;
+; Simulation Coverage         ;      24.80 % ;
+; Total Number of Transitions ; 7027         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Stratix II   ;
 +-----------------------------+--------------+
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      24.61 % ;
-; Total nodes checked                                 ; 2129         ;
-; Total output ports checked                          ; 2170         ;
-; Total output ports with complete 1/0-value coverage ; 534          ;
+; Total coverage as a percentage                      ;      24.80 % ;
+; Total nodes checked                                 ; 2136         ;
+; Total output ports checked                          ; 2177         ;
+; Total output ports with complete 1/0-value coverage ; 540          ;
 ; Total output ports with no 1/0-value coverage       ; 1402         ;
-; Total output ports with no 1-value coverage         ; 1522         ;
-; Total output ports with no 0-value coverage         ; 1516         ;
+; Total output ports with no 1-value coverage         ; 1520         ;
+; Total output ports with no 0-value coverage         ; 1519         ;
 +-----------------------------------------------------+--------------+
 
 
@@ -124,6 +124,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Cache|address[0]                                                                                                           ; |Cache|address[0]                                                                                                           ; out              ;
 ; |Cache|clk                                                                                                                  ; |Cache|clk                                                                                                                  ; out              ;
 ; |Cache|inst41                                                                                                               ; |Cache|inst41                                                                                                               ; out0             ;
+; |Cache|addrIn[1]                                                                                                            ; |Cache|addrIn[1]                                                                                                            ; out0             ;
+; |Cache|addrIn[0]                                                                                                            ; |Cache|addrIn[0]                                                                                                            ; out0             ;
 ; |Cache|addr1[1]                                                                                                             ; |Cache|addr1[1]                                                                                                             ; pin_out          ;
 ; |Cache|addr1[0]                                                                                                             ; |Cache|addr1[0]                                                                                                             ; pin_out          ;
 ; |Cache|inst59                                                                                                               ; |Cache|inst59                                                                                                               ; out0             ;
@@ -149,11 +151,13 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Cache|OTB~5                                                                                                                ; |Cache|OTB~5                                                                                                                ; out0             ;
 ; |Cache|output_data[10]                                                                                                      ; |Cache|output_data[10]                                                                                                      ; pin_out          ;
 ; |Cache|output_data[4]                                                                                                       ; |Cache|output_data[4]                                                                                                       ; pin_out          ;
+; |Cache|output_data[3]                                                                                                       ; |Cache|output_data[3]                                                                                                       ; pin_out          ;
 ; |Cache|output_data[2]                                                                                                       ; |Cache|output_data[2]                                                                                                       ; pin_out          ;
 ; |Cache|output_data[1]                                                                                                       ; |Cache|output_data[1]                                                                                                       ; pin_out          ;
 ; |Cache|output_data[0]                                                                                                       ; |Cache|output_data[0]                                                                                                       ; pin_out          ;
 ; |Cache|output_data~1                                                                                                        ; |Cache|output_data~1                                                                                                        ; out0             ;
 ; |Cache|output_data~7                                                                                                        ; |Cache|output_data~7                                                                                                        ; out0             ;
+; |Cache|output_data~8                                                                                                        ; |Cache|output_data~8                                                                                                        ; out0             ;
 ; |Cache|output_data~9                                                                                                        ; |Cache|output_data~9                                                                                                        ; out0             ;
 ; |Cache|output_data~10                                                                                                       ; |Cache|output_data~10                                                                                                       ; out0             ;
 ; |Cache|output_data~11                                                                                                       ; |Cache|output_data~11                                                                                                       ; out0             ;
@@ -179,12 +183,13 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w2_n1_mux_dataout~0                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w2_n1_mux_dataout~0                              ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w3_n0_mux_dataout~0                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w3_n0_mux_dataout~0                              ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w3_n1_mux_dataout~0                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w3_n1_mux_dataout~0                              ; out0             ;
+; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout~0                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout~0                              ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w1_n0_mux_dataout~0                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w1_n0_mux_dataout~0                              ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w1_n0_mux_dataout                                ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w1_n0_mux_dataout                                ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~0                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~0                              ; out0             ;
-; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~1                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~1                              ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout                                ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout                                ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~0                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~0                              ; out0             ;
+; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~0                              ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~0                              ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w0_n0_mux_dataout~1                              ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w0_n0_mux_dataout~1                              ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w0_n0_mux_dataout                                ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w0_n0_mux_dataout                                ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w0_n1_mux_dataout~1                              ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w0_n1_mux_dataout~1                              ; out0             ;
@@ -212,7 +217,6 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~1                              ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~1                              ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout                                ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout                                ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~0                              ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~0                              ; out0             ;
-; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~1                              ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~1                              ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout                                ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout                                ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~0                              ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~0                              ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~1                              ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~1                              ; out0             ;
@@ -252,9 +256,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Cache|data_mux:inst43|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout                                ; |Cache|data_mux:inst43|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout                                ; out0             ;
 ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[10]                                                         ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[10]                                                         ; out              ;
 ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[4]                                                          ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[4]                                                          ; out              ;
+; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[3]                                                          ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[3]                                                          ; out              ;
 ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[2]                                                          ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[2]                                                          ; out              ;
-; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[1]                                                          ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[1]                                                          ; out              ;
-; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[0]                                                          ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[0]                                                          ; out              ;
 ; |Cache|set_counter:inst22|lpm_counter:lpm_counter_component|cntr_g4i:auto_generated|counter_comb_bita0                      ; |Cache|set_counter:inst22|lpm_counter:lpm_counter_component|cntr_g4i:auto_generated|counter_comb_bita0                      ; sumout           ;
 ; |Cache|set_counter:inst22|lpm_counter:lpm_counter_component|cntr_g4i:auto_generated|counter_comb_bita0                      ; |Cache|set_counter:inst22|lpm_counter:lpm_counter_component|cntr_g4i:auto_generated|counter_comb_bita0~COUT                 ; cout             ;
 ; |Cache|set_counter:inst22|lpm_counter:lpm_counter_component|cntr_g4i:auto_generated|counter_comb_bita1                      ; |Cache|set_counter:inst22|lpm_counter:lpm_counter_component|cntr_g4i:auto_generated|counter_comb_bita1                      ; sumout           ;
@@ -448,6 +451,9 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Cache|wait_counter:inst126|lpm_counter:lpm_counter_component|cntr_voi:auto_generated|counter_comb_bita1                    ; |Cache|wait_counter:inst126|lpm_counter:lpm_counter_component|cntr_voi:auto_generated|counter_comb_bita1                    ; sumout           ;
 ; |Cache|wait_counter:inst126|lpm_counter:lpm_counter_component|cntr_voi:auto_generated|counter_reg_bit1a[1]                  ; |Cache|wait_counter:inst126|lpm_counter:lpm_counter_component|cntr_voi:auto_generated|safe_q[1]                             ; regout           ;
 ; |Cache|wait_counter:inst126|lpm_counter:lpm_counter_component|cntr_voi:auto_generated|counter_reg_bit1a[0]                  ; |Cache|wait_counter:inst126|lpm_counter:lpm_counter_component|cntr_voi:auto_generated|safe_q[0]                             ; regout           ;
+; |Cache|addr_bustri:inst3|lpm_bustri:lpm_bustri_component|dout[1]                                                            ; |Cache|addr_bustri:inst3|lpm_bustri:lpm_bustri_component|dout[1]                                                            ; out              ;
+; |Cache|addr_bustri:inst3|lpm_bustri:lpm_bustri_component|dout[0]                                                            ; |Cache|addr_bustri:inst3|lpm_bustri:lpm_bustri_component|dout[0]                                                            ; out              ;
+; |Cache|addr_bustri:inst2|lpm_bustri:lpm_bustri_component|dout[1]                                                            ; |Cache|addr_bustri:inst2|lpm_bustri:lpm_bustri_component|dout[1]                                                            ; out              ;
 ; |Cache|offset_decoder:inst33|lpm_decode:lpm_decode_component|decode_p7f:auto_generated|w_anode15w[2]                        ; |Cache|offset_decoder:inst33|lpm_decode:lpm_decode_component|decode_p7f:auto_generated|w_anode15w[2]                        ; out0             ;
 ; |Cache|offset_decoder:inst33|lpm_decode:lpm_decode_component|decode_p7f:auto_generated|w_anode1w[2]                         ; |Cache|offset_decoder:inst33|lpm_decode:lpm_decode_component|decode_p7f:auto_generated|w_anode1w[2]                         ; out0             ;
 ; |Cache|offset_decoder:inst33|lpm_decode:lpm_decode_component|decode_p7f:auto_generated|w_anode24w[2]                        ; |Cache|offset_decoder:inst33|lpm_decode:lpm_decode_component|decode_p7f:auto_generated|w_anode24w[2]                        ; out0             ;
@@ -671,14 +677,12 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |Cache|output_data[7]                                                                                                ; |Cache|output_data[7]                                                                                                ; pin_out          ;
 ; |Cache|output_data[6]                                                                                                ; |Cache|output_data[6]                                                                                                ; pin_out          ;
 ; |Cache|output_data[5]                                                                                                ; |Cache|output_data[5]                                                                                                ; pin_out          ;
-; |Cache|output_data[3]                                                                                                ; |Cache|output_data[3]                                                                                                ; pin_out          ;
 ; |Cache|output_data~0                                                                                                 ; |Cache|output_data~0                                                                                                 ; out0             ;
 ; |Cache|output_data~2                                                                                                 ; |Cache|output_data~2                                                                                                 ; out0             ;
 ; |Cache|output_data~3                                                                                                 ; |Cache|output_data~3                                                                                                 ; out0             ;
 ; |Cache|output_data~4                                                                                                 ; |Cache|output_data~4                                                                                                 ; out0             ;
 ; |Cache|output_data~5                                                                                                 ; |Cache|output_data~5                                                                                                 ; out0             ;
 ; |Cache|output_data~6                                                                                                 ; |Cache|output_data~6                                                                                                 ; out0             ;
-; |Cache|output_data~8                                                                                                 ; |Cache|output_data~8                                                                                                 ; out0             ;
 ; |Cache|IDB[11]                                                                                                       ; |Cache|IDB[11]                                                                                                       ; out              ;
 ; |Cache|IDB[9]                                                                                                        ; |Cache|IDB[9]                                                                                                        ; out              ;
 ; |Cache|IDB[8]                                                                                                        ; |Cache|IDB[8]                                                                                                        ; out              ;
@@ -1624,14 +1628,13 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout~0                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout                         ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout                         ; out0             ;
-; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout~0                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w10_n0_mux_dataout~0                      ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w10_n0_mux_dataout~0                      ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w10_n0_mux_dataout~1                      ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w10_n0_mux_dataout~1                      ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w10_n0_mux_dataout                        ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w10_n0_mux_dataout                        ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~0                      ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~0                      ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~1                      ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~1                      ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout                        ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout                        ; out0             ;
-; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~0                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~0                       ; out0             ;
+; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~0                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout                         ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout                         ; out0             ;
@@ -1757,6 +1760,7 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~1                      ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~1                      ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout                        ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout                        ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~0                       ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~0                       ; out0             ;
+; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~1                       ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~0                       ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~1                       ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout                         ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout                         ; out0             ;
@@ -1898,7 +1902,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[7]                                                   ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[7]                                                   ; out              ;
 ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[6]                                                   ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[6]                                                   ; out              ;
 ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[5]                                                   ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[5]                                                   ; out              ;
-; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[3]                                                   ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[3]                                                   ; out              ;
 ; |Cache|time_bustri:inst122|lpm_bustri:lpm_bustri_component|dout[5]                                                   ; |Cache|time_bustri:inst122|lpm_bustri:lpm_bustri_component|dout[5]                                                   ; out              ;
 ; |Cache|time_bustri:inst122|lpm_bustri:lpm_bustri_component|dout[4]                                                   ; |Cache|time_bustri:inst122|lpm_bustri:lpm_bustri_component|dout[4]                                                   ; out              ;
 ; |Cache|time_bustri:inst122|lpm_bustri:lpm_bustri_component|dout[3]                                                   ; |Cache|time_bustri:inst122|lpm_bustri:lpm_bustri_component|dout[3]                                                   ; out              ;
@@ -1993,6 +1996,7 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |Cache|teg_dff:inst10|lpm_ff:lpm_ff_component|dffs[5]                                                                ; |Cache|teg_dff:inst10|lpm_ff:lpm_ff_component|dffs[5]                                                                ; regout           ;
 ; |Cache|teg_dff:inst10|lpm_ff:lpm_ff_component|dffs[1]                                                                ; |Cache|teg_dff:inst10|lpm_ff:lpm_ff_component|dffs[1]                                                                ; regout           ;
 ; |Cache|teg_dff:inst10|lpm_ff:lpm_ff_component|dffs[0]                                                                ; |Cache|teg_dff:inst10|lpm_ff:lpm_ff_component|dffs[0]                                                                ; regout           ;
+; |Cache|addr_bustri:inst2|lpm_bustri:lpm_bustri_component|dout[0]                                                     ; |Cache|addr_bustri:inst2|lpm_bustri:lpm_bustri_component|dout[0]                                                     ; out              ;
 ; |Cache|find_greatest:inst114|greatest[5]                                                                             ; |Cache|find_greatest:inst114|greatest[5]                                                                             ; out0             ;
 ; |Cache|find_greatest:inst114|gdfx_temp5[5]                                                                           ; |Cache|find_greatest:inst114|gdfx_temp5[5]                                                                           ; out0             ;
 ; |Cache|find_greatest:inst114|gdfx_temp0[5]                                                                           ; |Cache|find_greatest:inst114|gdfx_temp0[5]                                                                           ; out0             ;
@@ -2184,6 +2188,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 +----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                                            ; Output Port Name                                                                                                     ; Output Port Type ;
 +----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------------+
+; |Cache|read                                                                                                          ; |Cache|read                                                                                                          ; out              ;
 ; |Cache|inst68                                                                                                        ; |Cache|inst68                                                                                                        ; out0             ;
 ; |Cache|set4                                                                                                          ; |Cache|set4                                                                                                          ; pin_out          ;
 ; |Cache|inst86                                                                                                        ; |Cache|inst86                                                                                                        ; out0             ;
@@ -3108,7 +3113,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout~0                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout                         ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l1_w9_n1_mux_dataout                         ; out0             ;
-; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout~0                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout                         ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w0_n0_mux_dataout                         ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w10_n0_mux_dataout~0                      ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w10_n0_mux_dataout~0                      ; out0             ;
@@ -3118,9 +3122,9 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~1                      ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~1                      ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout                        ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout                        ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w1_n0_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w1_n0_mux_dataout~1                       ; out0             ;
+; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout                         ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout                         ; out0             ;
-; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~0                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~1                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout                         ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w4_n0_mux_dataout                         ; out0             ;
 ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~0                       ; |Cache|data_mux:inst60|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~0                       ; out0             ;
@@ -3259,6 +3263,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~1                      ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout~1                      ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout                        ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w11_n0_mux_dataout                        ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~0                       ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w2_n0_mux_dataout~0                       ; out0             ;
+; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~1                       ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w3_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~0                       ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~1                       ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout                         ; |Cache|data_mux:inst51|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w5_n0_mux_dataout                         ; out0             ;
@@ -3409,6 +3414,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |Cache|data_mux:inst43|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w9_n0_mux_dataout~0                       ; |Cache|data_mux:inst43|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w9_n0_mux_dataout~0                       ; out0             ;
 ; |Cache|data_mux:inst43|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w9_n0_mux_dataout~1                       ; |Cache|data_mux:inst43|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w9_n0_mux_dataout~1                       ; out0             ;
 ; |Cache|data_mux:inst43|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w9_n0_mux_dataout                         ; |Cache|data_mux:inst43|lpm_mux:lpm_mux_component|mux_n5e:auto_generated|l2_w9_n0_mux_dataout                         ; out0             ;
+; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[1]                                                   ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[1]                                                   ; out              ;
+; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[0]                                                   ; |Cache|data_bustri:inst106|lpm_bustri:lpm_bustri_component|dout[0]                                                   ; out              ;
 ; |Cache|time_bustri:inst117|lpm_bustri:lpm_bustri_component|dout[5]                                                   ; |Cache|time_bustri:inst117|lpm_bustri:lpm_bustri_component|dout[5]                                                   ; out              ;
 ; |Cache|time_bustri:inst117|lpm_bustri:lpm_bustri_component|dout[4]                                                   ; |Cache|time_bustri:inst117|lpm_bustri:lpm_bustri_component|dout[4]                                                   ; out              ;
 ; |Cache|time_bustri:inst117|lpm_bustri:lpm_bustri_component|dout[3]                                                   ; |Cache|time_bustri:inst117|lpm_bustri:lpm_bustri_component|dout[3]                                                   ; out              ;
@@ -3716,7 +3723,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Nov 11 23:54:12 2016
+    Info: Processing started: Mon Nov 21 22:44:37 2016
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Cache -c Cache
 Info: Using vector source file "C:/altera/91sp2/quartus/Lab6/Cache.vwf"
 Info: Overwriting simulation input file with simulation results
@@ -3724,12 +3731,12 @@ Info: Overwriting simulation input file with simulation results
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      24.61 %
-Info: Number of transitions in simulation is 6999
+Info: Simulation coverage is      24.80 %
+Info: Number of transitions in simulation is 7027
 Info: Vector file Cache.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 177 megabytes
-    Info: Processing ended: Fri Nov 11 23:54:13 2016
+    Info: Processing ended: Mon Nov 21 22:44:38 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
