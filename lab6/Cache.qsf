@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Stratix II"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY Cache
+set_global_assignment -name TOP_LEVEL_ENTITY Block1
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:45:21  NOVEMBER 10, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
@@ -56,14 +56,19 @@ set_global_assignment -name QIP_FILE data_mux.qip
 set_global_assignment -name QIP_FILE data_bustri.qip
 set_global_assignment -name QIP_FILE time_bustri.qip
 set_global_assignment -name QIP_FILE compare.qip
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name VECTOR_WAVEFORM_FILE find_greatest.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Cache.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Cache.vwf
 set_global_assignment -name QIP_FILE wait_counter.qip
 set_global_assignment -name QIP_FILE addr_bustri.qip
+set_global_assignment -name BDF_FILE Block1.bdf
+set_global_assignment -name BDF_FILE Memory.bdf
+set_global_assignment -name QIP_FILE memory_bustri.qip
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Block1.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Block1.vwf
+set_global_assignment -name HEX_FILE RAM.hex
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
