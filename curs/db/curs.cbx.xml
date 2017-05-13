@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="curs">
+		<CBX_INST_ENTRY INSTANCE_NAME="|curs|cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_3ai.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|curs|cpu:inst1|ComRetr:inst3|lpm_decode1:inst6|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_m7f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|curs|cpu:inst1|lpm_counterDCA:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_tvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|curs|cpu:inst1|lpm_decode0:inst6|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_u7f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|curs|memory:inst|LPM_RAM_IO:inst1|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_ii91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|curs|memory:inst|LPM_ROM:inst|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_8001.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|curs|cpu:inst1|ComRetr:inst3|counter:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_4bj.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
