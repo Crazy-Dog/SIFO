@@ -1,5 +1,5 @@
 Analysis & Synthesis report for curs
-Sat May 13 19:55:41 2017
+Sat May 13 20:41:22 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -25,7 +25,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  17. Parameter Settings for User Entity Instance: cpu:inst1|lpm_counterDCA:inst|lpm_counter:lpm_counter_component
  18. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|counter:inst|lpm_counter:lpm_counter_component
  19. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|first_part:inst3|lpm_ff:lpm_ff_component
- 20. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|lpm_decode1:inst6|lpm_decode:lpm_decode_component
+ 20. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|lpm_decode1:inst2|lpm_decode:lpm_decode_component
  21. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component
  22. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|first_part:inst4|lpm_ff:lpm_ff_component
  23. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri0:inst4|lpm_bustri:lpm_bustri_component
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sat May 13 19:55:41 2017        ;
+; Analysis & Synthesis Status   ; Successful - Sat May 13 20:41:22 2017        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; curs                                         ;
 ; Top-level Entity Name         ; curs                                         ;
@@ -184,8 +184,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_decode0.vhd                  ; yes             ; User Wizard-Generated File            ; C:/altera/91sp2/quartus/curs/lpm_decode0.vhd                    ;
 ; counter.vhd                      ; yes             ; User Wizard-Generated File            ; C:/altera/91sp2/quartus/curs/counter.vhd                        ;
 ; first_part.vhd                   ; yes             ; User Wizard-Generated File            ; C:/altera/91sp2/quartus/curs/first_part.vhd                     ;
-; ../Lab4/lpm_counter0.vhd         ; yes             ; User Wizard-Generated File            ; C:/altera/91sp2/quartus/Lab4/lpm_counter0.vhd                   ;
-; ../Lab4/lpm_decode1.vhd          ; yes             ; User Wizard-Generated File            ; C:/altera/91sp2/quartus/Lab4/lpm_decode1.vhd                    ;
+; lpm_decode1.vhd                  ; yes             ; User Wizard-Generated File            ; C:/altera/91sp2/quartus/curs/lpm_decode1.vhd                    ;
 ; lpm_decode.tdf                   ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_decode.tdf  ;
 ; db/decode_u7f.tdf                ; yes             ; Auto-Generated Megafunction           ; C:/altera/91sp2/quartus/curs/db/decode_u7f.tdf                  ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf ;
@@ -194,7 +193,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/cntr_4bj.tdf                  ; yes             ; Auto-Generated Megafunction           ; C:/altera/91sp2/quartus/curs/db/cntr_4bj.tdf                    ;
 ; lpm_ff.tdf                       ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ff.tdf      ;
 ; db/decode_m7f.tdf                ; yes             ; Auto-Generated Megafunction           ; C:/altera/91sp2/quartus/curs/db/decode_m7f.tdf                  ;
-; db/cntr_3ai.tdf                  ; yes             ; Auto-Generated Megafunction           ; C:/altera/91sp2/quartus/curs/db/cntr_3ai.tdf                    ;
+; lpm_counter0.vhd                 ; yes             ; Auto-Found Wizard-Generated File      ; C:/altera/91sp2/quartus/curs/lpm_counter0.vhd                   ;
 ; lpm_bustri.tdf                   ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_bustri.tdf  ;
 ; lpm_rom.tdf                      ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_rom.tdf     ;
 ; altrom.tdf                       ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/altrom.tdf      ;
@@ -262,26 +261,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |cntr_4bj:auto_generated|        ; 14 (14)           ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|counter:inst|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated                  ; work         ;
 ;          |first_part:inst3|                     ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|first_part:inst3                                                                        ; work         ;
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|first_part:inst3|lpm_ff:lpm_ff_component                                                ; work         ;
-;          |first_part:inst4|                     ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|first_part:inst4                                                                        ;              ;
+;          |first_part:inst4|                     ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|first_part:inst4                                                                        ; work         ;
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|first_part:inst4|lpm_ff:lpm_ff_component                                                ; work         ;
 ;          |lpm_counter0:inst5|                   ; 1 (0)             ; 1 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|lpm_counter0:inst5                                                                      ; work         ;
-;             |lpm_counter:lpm_counter_component| ; 1 (0)             ; 1 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component                                    ;              ;
-;                |cntr_3ai:auto_generated|        ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_3ai:auto_generated            ; work         ;
+;             |lpm_counter:lpm_counter_component| ; 1 (0)             ; 1 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component                                    ; work         ;
+;                |cntr_4bj:auto_generated|        ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated            ; work         ;
 ;       |lpm_counterDCA:inst|                     ; 5 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|lpm_counterDCA:inst                                                                                   ; work         ;
 ;          |lpm_counter:lpm_counter_component|    ; 5 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|lpm_counterDCA:inst|lpm_counter:lpm_counter_component                                                 ; work         ;
 ;             |cntr_tvi:auto_generated|           ; 5 (5)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|cpu:inst1|lpm_counterDCA:inst|lpm_counter:lpm_counter_component|cntr_tvi:auto_generated                         ; work         ;
-;    |memory:inst|                                ; 34 (1)            ; 1 (0)        ; 245760            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst                                                                                                     ;              ;
-;       |lpm_bustri1:inst5|                       ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_bustri1:inst5                                                                                   ; work         ;
-;          |lpm_bustri:lpm_bustri_component|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_bustri1:inst5|lpm_bustri:lpm_bustri_component                                                   ; work         ;
-;       |lpm_ram_io:inst1|                        ; 17 (15)           ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1                                                                                    ; work         ;
-;          |altram:sram|                          ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1|altram:sram                                                                        ; work         ;
-;             |altsyncram:ram_block|              ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block                                                   ; work         ;
-;                |altsyncram_ii91:auto_generated| ; 2 (0)             ; 1 (1)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated                    ; work         ;
-;                   |decode_3pa:decode3|          ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3 ; work         ;
+;    |memory:inst|                                ; 34 (1)            ; 1 (0)        ; 245760            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst                                                                                                     ; work         ;
+;       |lpm_bustri1:inst5|                       ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_bustri1:inst5                                                                                   ;              ;
+;          |lpm_bustri:lpm_bustri_component|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_bustri1:inst5|lpm_bustri:lpm_bustri_component                                                   ;              ;
+;       |lpm_ram_io:inst1|                        ; 17 (15)           ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1                                                                                    ;              ;
+;          |altram:sram|                          ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1|altram:sram                                                                        ;              ;
+;             |altsyncram:ram_block|              ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block                                                   ;              ;
+;                |altsyncram_ii91:auto_generated| ; 2 (0)             ; 1 (1)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated                    ;              ;
+;                   |decode_3pa:decode3|          ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3 ;              ;
 ;       |lpm_rom:inst|                            ; 1 (1)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_rom:inst                                                                                        ; work         ;
-;          |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_rom:inst|altrom:srom                                                                            ;              ;
+;          |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_rom:inst|altrom:srom                                                                            ; work         ;
 ;             |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block                                                       ; work         ;
-;                |altsyncram_8001:auto_generated| ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated                        ;              ;
+;                |altsyncram_8001:auto_generated| ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |curs|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated                        ; work         ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -296,14 +295,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                    ;
-+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                             ; Reason for Removal                                                                                                        ;
-+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
-; memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|address_reg_a[0] ; Merged with memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|address_reg_a[0] ;
-; Total Number of Removed Registers = 1                                                                     ;                                                                                                                           ;
-+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                      ; Reason for Removal                                                                                                        ;
++--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+; cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[1..13] ; Lost fanout                                                                                                               ;
+; memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|address_reg_a[0]          ; Merged with memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|address_reg_a[0] ;
+; Total Number of Removed Registers = 14                                                                             ;                                                                                                                           ;
++--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -465,7 +465,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|lpm_decode1:inst6|lpm_decode:lpm_decode_component ;
+; Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|lpm_decode1:inst2|lpm_decode:lpm_decode_component ;
 +------------------------+------------+----------------------------------------------------------------------------------+
 ; Parameter Name         ; Value      ; Type                                                                             ;
 +------------------------+------------+----------------------------------------------------------------------------------+
@@ -492,7 +492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                       ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                       ;
 ; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                     ;
-; LPM_WIDTH              ; 1           ; Signed Integer                                                                     ;
+; LPM_WIDTH              ; 14          ; Signed Integer                                                                     ;
 ; LPM_DIRECTION          ; UP          ; Untyped                                                                            ;
 ; LPM_MODULUS            ; 0           ; Untyped                                                                            ;
 ; LPM_AVALUE             ; UNUSED      ; Untyped                                                                            ;
@@ -505,7 +505,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CARRY_CNT_EN           ; SMART       ; Untyped                                                                            ;
 ; LABWIDE_SCLR           ; ON          ; Untyped                                                                            ;
 ; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                            ;
-; CBXI_PARAMETER         ; cntr_3ai    ; Untyped                                                                            ;
+; CBXI_PARAMETER         ; cntr_4bj    ; Untyped                                                                            ;
 +------------------------+-------------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -597,7 +597,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat May 13 19:55:35 2017
+    Info: Processing started: Sat May 13 20:41:19 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off curs -c curs
 Info: Found 1 design units, including 1 entities, in source file curs.bdf
     Info: Found entity 1: curs
@@ -625,10 +625,7 @@ Info: Found 2 design units, including 1 entities, in source file counter.vhd
 Info: Found 2 design units, including 1 entities, in source file first_part.vhd
     Info: Found design unit 1: first_part-SYN
     Info: Found entity 1: first_part
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/lab4/lpm_counter0.vhd
-    Info: Found design unit 1: lpm_counter0-SYN
-    Info: Found entity 1: lpm_counter0
-Info: Found 2 design units, including 1 entities, in source file /altera/91sp2/quartus/lab4/lpm_decode1.vhd
+Info: Found 2 design units, including 1 entities, in source file lpm_decode1.vhd
     Info: Found design unit 1: lpm_decode1-SYN
     Info: Found entity 1: lpm_decode1
 Info: Elaborating entity "curs" for the top level hierarchy
@@ -677,27 +674,20 @@ Info: Instantiated megafunction "cpu:inst1|ComRetr:inst3|first_part:inst3|lpm_ff
     Info: Parameter "lpm_fftype" = "DFF"
     Info: Parameter "lpm_type" = "LPM_FF"
     Info: Parameter "lpm_width" = "15"
-Info: Elaborating entity "lpm_decode1" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_decode1:inst6"
-Info: Elaborating entity "lpm_decode" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_decode1:inst6|lpm_decode:lpm_decode_component"
-Info: Elaborated megafunction instantiation "cpu:inst1|ComRetr:inst3|lpm_decode1:inst6|lpm_decode:lpm_decode_component"
-Info: Instantiated megafunction "cpu:inst1|ComRetr:inst3|lpm_decode1:inst6|lpm_decode:lpm_decode_component" with the following parameter:
+Info: Elaborating entity "lpm_decode1" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_decode1:inst2"
+Info: Elaborating entity "lpm_decode" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_decode1:inst2|lpm_decode:lpm_decode_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|ComRetr:inst3|lpm_decode1:inst2|lpm_decode:lpm_decode_component"
+Info: Instantiated megafunction "cpu:inst1|ComRetr:inst3|lpm_decode1:inst2|lpm_decode:lpm_decode_component" with the following parameter:
     Info: Parameter "lpm_decodes" = "2"
     Info: Parameter "lpm_type" = "LPM_DECODE"
     Info: Parameter "lpm_width" = "1"
 Info: Found 1 design units, including 1 entities, in source file db/decode_m7f.tdf
     Info: Found entity 1: decode_m7f
-Info: Elaborating entity "decode_m7f" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_decode1:inst6|lpm_decode:lpm_decode_component|decode_m7f:auto_generated"
+Info: Elaborating entity "decode_m7f" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_decode1:inst2|lpm_decode:lpm_decode_component|decode_m7f:auto_generated"
+Warning: Using design file lpm_counter0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: lpm_counter0-SYN
+    Info: Found entity 1: lpm_counter0
 Info: Elaborating entity "lpm_counter0" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5"
-Info: Elaborating entity "lpm_counter" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component"
-Info: Elaborated megafunction instantiation "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component"
-Info: Instantiated megafunction "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component" with the following parameter:
-    Info: Parameter "lpm_direction" = "UP"
-    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
-    Info: Parameter "lpm_type" = "LPM_COUNTER"
-    Info: Parameter "lpm_width" = "1"
-Info: Found 1 design units, including 1 entities, in source file db/cntr_3ai.tdf
-    Info: Found entity 1: cntr_3ai
-Info: Elaborating entity "cntr_3ai" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_3ai:auto_generated"
 Info: Elaborating entity "memory" for hierarchy "memory:inst"
 Info: Elaborating entity "lpm_bustri0" for hierarchy "memory:inst|lpm_bustri0:inst4"
 Info: Elaborating entity "lpm_bustri" for hierarchy "memory:inst|lpm_bustri0:inst4|lpm_bustri:lpm_bustri_component"
@@ -783,15 +773,29 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[2]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a2" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[1]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a1" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[0]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a0" into an OR gate
+Info: 13 registers lost all their fanouts during netlist optimizations. The first 13 are displayed below.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|ComRetr:inst3|lpm_counter0:inst5|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[1]" lost all its fanouts during netlist optimizations.
 Info: Implemented 180 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 31 output pins
     Info: Implemented 87 logic cells
     Info: Implemented 60 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 278 megabytes
-    Info: Processing ended: Sat May 13 19:55:41 2017
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 276 megabytes
+    Info: Processing ended: Sat May 13 20:41:22 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

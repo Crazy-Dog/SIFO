@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 256 144)
+	(rect 16 16 256 176)
 	(text "ComRetr" (rect 5 0 53 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 112 25 124)(font "Arial" ))
+	(text "inst" (rect 8 144 25 156)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -72,7 +72,35 @@ applicable agreement for further details.
 		(text "command[29..0]" (rect 130 43 219 57)(font "Arial" (font_size 8)))
 		(line (pt 240 48)(pt 224 48)(line_width 3))
 	)
+	(port
+		(pt 240 64)
+		(output)
+		(text "instr[5..0]" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "instr[5..0]" (rect 166 59 219 73)(font "Arial" (font_size 8)))
+		(line (pt 240 64)(pt 224 64)(line_width 3))
+	)
+	(port
+		(pt 240 80)
+		(output)
+		(text "reg1[3..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "reg1[3..0]" (rect 165 75 219 89)(font "Arial" (font_size 8)))
+		(line (pt 240 80)(pt 224 80)(line_width 3))
+	)
+	(port
+		(pt 240 96)
+		(output)
+		(text "reg2[3..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "reg2[3..0]" (rect 165 91 219 105)(font "Arial" (font_size 8)))
+		(line (pt 240 96)(pt 224 96)(line_width 3))
+	)
+	(port
+		(pt 240 112)
+		(output)
+		(text "addr1[13..0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "addr1[13..0]" (rect 151 107 219 121)(font "Arial" (font_size 8)))
+		(line (pt 240 112)(pt 224 112)(line_width 3))
+	)
 	(drawing
-		(rectangle (rect 16 16 224 112)(line_width 1))
+		(rectangle (rect 16 16 224 144)(line_width 1))
 	)
 )
