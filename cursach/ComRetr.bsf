@@ -68,8 +68,8 @@ applicable agreement for further details.
 	(port
 		(pt 216 48)
 		(output)
-		(text "instr[5..0]" (rect 0 0 53 14)(font "Arial" (font_size 8)))
-		(text "instr[5..0]" (rect 142 43 195 57)(font "Arial" (font_size 8)))
+		(text "instr[6..0]" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "instr[6..0]" (rect 142 43 195 57)(font "Arial" (font_size 8)))
 		(line (pt 216 48)(pt 200 48)(line_width 3))
 	)
 	(port
