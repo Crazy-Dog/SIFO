@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="cursach">
+		<CBX_INST_ENTRY INSTANCE_NAME="|registers|lpm_decode0:inst51|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_e9f.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
