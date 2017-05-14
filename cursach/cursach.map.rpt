@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cursach
-Sun May 14 15:00:19 2017
+Sun May 14 17:38:29 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -23,50 +23,62 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  15. Source assignments for memory:inst|LPM_RAM_IO:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated
  16. Parameter Settings for User Entity Instance: cpu:inst1|lpm_decodeDCA:inst|lpm_decode:lpm_decode_component
  17. Parameter Settings for User Entity Instance: cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component
- 18. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component
- 19. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component
- 20. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component
- 21. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component
- 22. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff_component
- 23. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component
- 24. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst3|lpm_bustri:lpm_bustri_component
- 25. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst9|lpm_bustri:lpm_bustri_component
- 26. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component
- 27. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component
- 28. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component
- 29. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
- 30. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component
- 31. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
- 32. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component
- 33. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component
- 34. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component
- 35. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component
- 36. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component
- 37. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
- 38. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst4|lpm_ff:lpm_ff_component
- 39. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
- 40. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst6|lpm_ff:lpm_ff_component
- 41. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
- 42. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component
- 43. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component
- 44. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component
- 45. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
- 46. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component
- 47. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst13|lpm_bustri:lpm_bustri_component
- 48. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst12|lpm_ff:lpm_ff_component
- 49. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst15|lpm_bustri:lpm_bustri_component
- 50. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst16|lpm_ff:lpm_ff_component
- 51. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst17|lpm_bustri:lpm_bustri_component
- 52. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst18|lpm_ff:lpm_ff_component
- 53. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst19|lpm_bustri:lpm_bustri_component
- 54. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst14|lpm_ff:lpm_ff_component
- 55. Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component
- 56. Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component
- 57. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
- 58. Parameter Settings for User Entity Instance: memory:inst|LPM_ROM:inst
- 59. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component
- 60. Parameter Settings for User Entity Instance: memory:inst|LPM_RAM_IO:inst1
- 61. Analysis & Synthesis Messages
+ 18. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_compare1:inst19|lpm_compare:lpm_compare_component
+ 19. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_compare0:inst16|lpm_compare:lpm_compare_component
+ 20. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component
+ 21. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_decode1:inst|lpm_decode:lpm_decode_component
+ 22. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri2:inst18|lpm_bustri:lpm_bustri_component
+ 23. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri2:inst21|lpm_bustri:lpm_bustri_component
+ 24. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
+ 25. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component
+ 26. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component
+ 27. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component
+ 28. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri3:inst12|lpm_bustri:lpm_bustri_component
+ 29. Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri3:inst13|lpm_bustri:lpm_bustri_component
+ 30. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component
+ 31. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component
+ 32. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component
+ 33. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component
+ 34. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff_component
+ 35. Parameter Settings for User Entity Instance: cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component
+ 36. Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component
+ 37. Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component
+ 38. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component
+ 39. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component
+ 40. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component
+ 41. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
+ 42. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst4|lpm_ff:lpm_ff_component
+ 43. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
+ 44. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst6|lpm_ff:lpm_ff_component
+ 45. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
+ 46. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component
+ 47. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component
+ 48. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component
+ 49. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
+ 50. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component
+ 51. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst13|lpm_bustri:lpm_bustri_component
+ 52. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst12|lpm_ff:lpm_ff_component
+ 53. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst15|lpm_bustri:lpm_bustri_component
+ 54. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst16|lpm_ff:lpm_ff_component
+ 55. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst17|lpm_bustri:lpm_bustri_component
+ 56. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst18|lpm_ff:lpm_ff_component
+ 57. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst19|lpm_bustri:lpm_bustri_component
+ 58. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst14|lpm_ff:lpm_ff_component
+ 59. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst3|lpm_bustri:lpm_bustri_component
+ 60. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst9|lpm_bustri:lpm_bustri_component
+ 61. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component
+ 62. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component
+ 63. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component
+ 64. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
+ 65. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component
+ 66. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
+ 67. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component
+ 68. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component
+ 69. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
+ 70. Parameter Settings for User Entity Instance: memory:inst|LPM_ROM:inst
+ 71. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component
+ 72. Parameter Settings for User Entity Instance: memory:inst|LPM_RAM_IO:inst1
+ 73. Analysis & Synthesis Messages
 
 
 
@@ -92,16 +104,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sun May 14 15:00:19 2017        ;
+; Analysis & Synthesis Status   ; Successful - Sun May 14 17:38:29 2017        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; cursach                                      ;
 ; Top-level Entity Name         ; cursach                                      ;
 ; Family                        ; Stratix II                                   ;
 ; Logic utilization             ; N/A                                          ;
-;     Combinational ALUTs       ; 244                                          ;
-;     Dedicated logic registers ; 241                                          ;
-; Total registers               ; 241                                          ;
-; Total pins                    ; 211                                          ;
+;     Combinational ALUTs       ; 291                                          ;
+;     Dedicated logic registers ; 259                                          ;
+; Total registers               ; 259                                          ;
+; Total pins                    ; 256                                          ;
 ; Total virtual pins            ; 0                                            ;
 ; Total block memory bits       ; 245,760                                      ;
 ; DSP block 9-bit elements      ; 0                                            ;
@@ -227,11 +239,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_decodeDCA.vhd                ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_decodeDCA.vhd                               ;
 ; lpm_bustri2.vhd                  ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_bustri2.vhd                                 ;
 ; lpm_bustri3.vhd                  ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_bustri3.vhd                                 ;
+; saveRes.bdf                      ; yes             ; User Block Diagram/Schematic File     ; D:/SIFO/cursach/saveRes.bdf                                     ;
+; lpm_decode1.vhd                  ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_decode1.vhd                                 ;
+; lpm_decode2.vhd                  ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_decode2.vhd                                 ;
+; lpm_compare0.vhd                 ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_compare0.vhd                                ;
+; lpm_compare1.vhd                 ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_compare1.vhd                                ;
 ; lpm_decode.tdf                   ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_decode.tdf  ;
 ; db/decode_u7f.tdf                ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/decode_u7f.tdf                               ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf ;
-; db/cntr_tvi.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cntr_tvi.tdf                                 ;
+; db/cntr_uvi.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cntr_uvi.tdf                                 ;
 ; db/cmpr_9dc.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cmpr_9dc.tdf                                 ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_compare.tdf ;
+; db/cmpr_l8j.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cmpr_l8j.tdf                                 ;
+; db/decode_5bf.tdf                ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/decode_5bf.tdf                               ;
 ; lpm_bustri.tdf                   ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_bustri.tdf  ;
 ; db/cntr_4bj.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cntr_4bj.tdf                                 ;
 ; lpm_ff.tdf                       ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ff.tdf      ;
@@ -254,39 +274,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+--------+
 ; Resource                                      ; Usage  ;
 +-----------------------------------------------+--------+
-; Estimated ALUTs Used                          ; 244    ;
-; Dedicated logic registers                     ; 241    ;
+; Estimated ALUTs Used                          ; 291    ;
+; Dedicated logic registers                     ; 259    ;
 ;                                               ;        ;
 ; Estimated ALUTs Unavailable                   ; 0      ;
 ;                                               ;        ;
-; Total combinational functions                 ; 244    ;
+; Total combinational functions                 ; 291    ;
 ; Combinational ALUT usage by number of inputs  ;        ;
 ;     -- 7 input functions                      ; 0      ;
-;     -- 6 input functions                      ; 103    ;
-;     -- 5 input functions                      ; 44     ;
-;     -- 4 input functions                      ; 30     ;
-;     -- <=3 input functions                    ; 67     ;
+;     -- 6 input functions                      ; 108    ;
+;     -- 5 input functions                      ; 31     ;
+;     -- 4 input functions                      ; 72     ;
+;     -- <=3 input functions                    ; 80     ;
 ;                                               ;        ;
 ; Combinational ALUTs by mode                   ;        ;
-;     -- normal mode                            ; 226    ;
+;     -- normal mode                            ; 273    ;
 ;     -- extended LUT mode                      ; 0      ;
 ;     -- arithmetic mode                        ; 18     ;
 ;     -- shared arithmetic mode                 ; 0      ;
 ;                                               ;        ;
-; Estimated ALUT/register pairs used            ; 385    ;
+; Estimated ALUT/register pairs used            ; 433    ;
 ;                                               ;        ;
-; Total registers                               ; 241    ;
-;     -- Dedicated logic registers              ; 241    ;
+; Total registers                               ; 259    ;
+;     -- Dedicated logic registers              ; 259    ;
 ;     -- I/O registers                          ; 0      ;
 ;                                               ;        ;
-; Estimated ALMs:  partially or completely used ; 193    ;
+; Estimated ALMs:  partially or completely used ; 217    ;
 ;                                               ;        ;
-; I/O pins                                      ; 211    ;
+; I/O pins                                      ; 256    ;
 ; Total block memory bits                       ; 245760 ;
 ; Maximum fan-out node                          ; clk    ;
-; Maximum fan-out                               ; 272    ;
-; Total fan-out                                 ; 2935   ;
-; Average fan-out                               ; 3.88   ;
+; Maximum fan-out                               ; 290    ;
+; Total fan-out                                 ; 3260   ;
+; Average fan-out                               ; 3.76   ;
 +-----------------------------------------------+--------+
 
 
@@ -295,9 +315,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |cursach                                        ; 244 (1)           ; 241 (0)      ; 245760            ; 0            ; 0       ; 0         ; 0         ; 211  ; 0            ; |cursach                                                                                                                 ; work         ;
-;    |cpu:inst1|                                  ; 181 (6)           ; 240 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1                                                                                                       ;              ;
-;       |ComRetr:inst3|                           ; 72 (0)            ; 44 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3                                                                                         ; work         ;
+; |cursach                                        ; 291 (1)           ; 259 (0)      ; 245760            ; 0            ; 0       ; 0         ; 0         ; 256  ; 0            ; |cursach                                                                                                                 ; work         ;
+;    |cpu:inst1|                                  ; 211 (9)           ; 258 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1                                                                                                       ;              ;
+;       |ComRetr:inst3|                           ; 62 (0)            ; 44 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3                                                                                         ; work         ;
 ;          |addr:inst|                            ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst                                                                               ; work         ;
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component                                                       ; work         ;
 ;          |counter:inst4|                        ; 14 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4                                                                           ; work         ;
@@ -306,27 +326,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |instruct:inst8|                       ; 0 (0)             ; 7 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8                                                                          ; work         ;
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component                                                  ; work         ;
 ;          |jkffre:inst12|                        ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|jkffre:inst12                                                                           ; work         ;
-;          |lpm_bustri2:inst1|                    ; 57 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1                                                                       ; work         ;
-;             |lpm_bustri:lpm_bustri_component|   ; 57 (57)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component                                       ; work         ;
+;          |lpm_bustri2:inst1|                    ; 47 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1                                                                       ; work         ;
+;             |lpm_bustri:lpm_bustri_component|   ; 47 (47)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component                                       ; work         ;
 ;          |reg:inst5|                            ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5                                                                               ; work         ;
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff_component                                                       ; work         ;
 ;          |reg:inst7|                            ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7                                                                               ; work         ;
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component                                                       ; work         ;
-;       |loadOP2:inst6|                           ; 4 (3)             ; 43 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6                                                                                         ; work         ;
+;       |loadOP1:inst1|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1                                                                                         ; work         ;
+;          |lpm_reg:inst1|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1|lpm_reg:inst1                                                                           ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component                                                   ; work         ;
+;       |loadOP2:inst6|                           ; 19 (2)            ; 46 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6                                                                                         ; work         ;
 ;          |jkffre:inst12|                        ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|jkffre:inst12                                                                           ; work         ;
-;          |lpm_reg:inst1|                        ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst1                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst5|                        ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst|                         ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst                                                                            ; work         ;
-;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component                                                    ; work         ;
-;       |lpm_counterDCA:inst8|                    ; 5 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8                                                                                  ; work         ;
-;          |lpm_counter:lpm_counter_component|    ; 5 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component                                                ; work         ;
-;             |cntr_tvi:auto_generated|           ; 5 (5)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_tvi:auto_generated                        ; work         ;
-;       |registers:inst4|                         ; 94 (84)           ; 150 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4                                                                                       ; work         ;
-;          |lpm_decode0:inst51|                   ; 10 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_decode0:inst51                                                                    ; work         ;
-;             |lpm_decode:lpm_decode_component|   ; 10 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component                                    ; work         ;
-;                |decode_e9f:auto_generated|      ; 10 (10)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component|decode_e9f:auto_generated          ; work         ;
+;          |lpm_bustri0:inst14|                   ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14                                                                      ; work         ;
+;             |lpm_bustri:lpm_bustri_component|   ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component                                      ; work         ;
+;          |lpm_reg:inst1|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst1                                                                           ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component                                                   ; work         ;
+;          |lpm_reg:inst5|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5                                                                           ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component                                                   ; work         ;
+;          |lpm_reg:inst|                         ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst                                                                            ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component                                                    ; work         ;
+;       |lpm_counterDCA:inst8|                    ; 6 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8                                                                                  ; work         ;
+;          |lpm_counter:lpm_counter_component|    ; 6 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component                                                ; work         ;
+;             |cntr_uvi:auto_generated|           ; 6 (5)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated                        ; work         ;
+;                |cmpr_9dc:cmpr2|                 ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated|cmpr_9dc:cmpr2         ; work         ;
+;       |registers:inst4|                         ; 90 (90)           ; 150 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4                                                                                       ; work         ;
 ;          |lpm_reg:inst10|                       ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst10                                                                        ; work         ;
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component                                                ; work         ;
 ;          |lpm_reg:inst12|                       ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst12                                                                        ; work         ;
@@ -347,16 +370,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component                                                 ; work         ;
 ;          |lpm_reg:inst|                         ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst                                                                          ; work         ;
 ;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component                                                  ; work         ;
-;    |memory:inst|                                ; 62 (0)            ; 1 (0)        ; 245760            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst                                                                                                     ; work         ;
+;       |saveRes:inst11|                          ; 25 (8)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11                                                                                        ; work         ;
+;          |lpm_bustri0:inst5|                    ; 17 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_bustri0:inst5                                                                      ; work         ;
+;             |lpm_bustri:lpm_bustri_component|   ; 17 (17)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component                                      ; work         ;
+;    |memory:inst|                                ; 79 (1)            ; 1 (0)        ; 245760            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst                                                                                                     ; work         ;
 ;       |lpm_bustri0:inst11|                      ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri0:inst11                                                                                  ; work         ;
 ;          |lpm_bustri:lpm_bustri_component|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component                                                  ; work         ;
-;       |lpm_bustri1:inst12|                      ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12                                                                                  ;              ;
-;          |lpm_bustri:lpm_bustri_component|      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component                                                  ; work         ;
-;       |lpm_ram_io:inst1|                        ; 31 (30)           ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1                                                                                    ; work         ;
-;          |altram:sram|                          ; 1 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram                                                                        ; work         ;
-;             |altsyncram:ram_block|              ; 1 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block                                                   ; work         ;
-;                |altsyncram_ii91:auto_generated| ; 1 (0)             ; 1 (1)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated                    ; work         ;
-;                   |decode_3pa:decode3|          ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3 ; work         ;
+;       |lpm_bustri1:inst12|                      ; 31 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12                                                                                  ;              ;
+;          |lpm_bustri:lpm_bustri_component|      ; 31 (31)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component                                                  ;              ;
+;       |lpm_ram_io:inst1|                        ; 32 (30)           ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1                                                                                    ;              ;
+;          |altram:sram|                          ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram                                                                        ;              ;
+;             |altsyncram:ram_block|              ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block                                                   ;              ;
+;                |altsyncram_ii91:auto_generated| ; 2 (0)             ; 1 (1)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated                    ;              ;
+;                   |decode_3pa:decode3|          ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3 ;              ;
 ;       |lpm_rom:inst|                            ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst                                                                                        ; work         ;
 ;          |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom                                                                            ; work         ;
 ;             |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block                                                       ; work         ;
@@ -390,23 +416,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 241   ;
+; Total registers                              ; 259   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 206   ;
+; Number of registers using Clock Enable       ; 224   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 10:1               ; 14 bits   ; 84 ALUTs      ; 84 ALUTs             ; 0 ALUTs                ; Yes        ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[6] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 10:1               ; 15 bits   ; 90 ALUTs      ; 90 ALUTs             ; 0 ALUTs                ; No         ; |cursach|cpu:inst1|registers:inst4|out[13] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -479,7 +505,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                         ;
 ; LPM_WIDTH              ; 3           ; Signed Integer                                                         ;
 ; LPM_DIRECTION          ; UP          ; Untyped                                                                ;
-; LPM_MODULUS            ; 6           ; Signed Integer                                                         ;
+; LPM_MODULUS            ; 7           ; Signed Integer                                                         ;
 ; LPM_AVALUE             ; UNUSED      ; Untyped                                                                ;
 ; LPM_SVALUE             ; UNUSED      ; Untyped                                                                ;
 ; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                ;
@@ -490,8 +516,174 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CARRY_CNT_EN           ; SMART       ; Untyped                                                                ;
 ; LABWIDE_SCLR           ; ON          ; Untyped                                                                ;
 ; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                ;
-; CBXI_PARAMETER         ; cntr_tvi    ; Untyped                                                                ;
+; CBXI_PARAMETER         ; cntr_uvi    ; Untyped                                                                ;
 +------------------------+-------------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_compare1:inst19|lpm_compare:lpm_compare_component ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                  ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+; lpm_width              ; 7          ; Signed Integer                                                                        ;
+; LPM_REPRESENTATION     ; UNSIGNED   ; Untyped                                                                               ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                               ;
+; CHAIN_SIZE             ; 8          ; Untyped                                                                               ;
+; ONE_INPUT_IS_CONSTANT  ; YES        ; Untyped                                                                               ;
+; CARRY_CHAIN            ; MANUAL     ; Untyped                                                                               ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                               ;
+; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                                                    ;
+; CASCADE_CHAIN_LENGTH   ; 2          ; CASCADE_CHAIN_LENGTH                                                                  ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                                               ;
+; CBXI_PARAMETER         ; cmpr_l8j   ; Untyped                                                                               ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                        ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_compare0:inst16|lpm_compare:lpm_compare_component ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                  ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+; lpm_width              ; 7          ; Signed Integer                                                                        ;
+; LPM_REPRESENTATION     ; UNSIGNED   ; Untyped                                                                               ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                               ;
+; CHAIN_SIZE             ; 8          ; Untyped                                                                               ;
+; ONE_INPUT_IS_CONSTANT  ; YES        ; Untyped                                                                               ;
+; CARRY_CHAIN            ; MANUAL     ; Untyped                                                                               ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                               ;
+; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                                                    ;
+; CASCADE_CHAIN_LENGTH   ; 2          ; CASCADE_CHAIN_LENGTH                                                                  ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                                               ;
+; CBXI_PARAMETER         ; cmpr_l8j   ; Untyped                                                                               ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                        ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component ;
++------------------------+------------+-----------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                              ;
++------------------------+------------+-----------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 7          ; Signed Integer                                                                    ;
+; LPM_DECODES            ; 128        ; Signed Integer                                                                    ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                           ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                                           ;
+; CBXI_PARAMETER         ; decode_5bf ; Untyped                                                                           ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                    ;
++------------------------+------------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_decode1:inst|lpm_decode:lpm_decode_component ;
++------------------------+------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                             ;
++------------------------+------------+----------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 7          ; Signed Integer                                                                   ;
+; LPM_DECODES            ; 128        ; Signed Integer                                                                   ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                          ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                          ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; decode_5bf ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                   ;
++------------------------+------------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri2:inst18|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 14    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri2:inst21|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 14    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 15    ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 15    ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 15    ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 15    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri3:inst12|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|saveRes:inst11|lpm_bustri3:inst13|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -608,48 +800,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst3|lpm_bustri:lpm_bustri_component ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                          ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; LPM_WIDTH      ; 14    ; Signed Integer                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst9|lpm_bustri:lpm_bustri_component ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                          ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; LPM_WIDTH      ; 14    ; Signed Integer                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                           ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-; LPM_WIDTH      ; 14    ; Signed Integer                                                                                 ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                           ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-; LPM_WIDTH      ; 15    ; Signed Integer                                                                                 ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component ;
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component ;
 +------------------------+------------+----------------------------------------------------------------------+
 ; Parameter Name         ; Value      ; Type                                                                 ;
 +------------------------+------------+----------------------------------------------------------------------+
@@ -667,71 +819,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                          ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; LPM_WIDTH      ; 15    ; Signed Integer                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component ;
-+------------------------+------------+---------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                ;
-+------------------------+------------+---------------------------------------------------------------------+
-; LPM_WIDTH              ; 15         ; Signed Integer                                                      ;
-; LPM_AVALUE             ; UNUSED     ; Untyped                                                             ;
-; LPM_SVALUE             ; UNUSED     ; Untyped                                                             ;
-; LPM_FFTYPE             ; DFF        ; Untyped                                                             ;
-; DEVICE_FAMILY          ; Stratix II ; Untyped                                                             ;
-; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                             ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                        ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                      ;
-+------------------------+------------+---------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                          ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; LPM_WIDTH      ; 15    ; Signed Integer                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component ;
-+------------------------+------------+----------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                 ;
-+------------------------+------------+----------------------------------------------------------------------+
-; LPM_WIDTH              ; 15         ; Signed Integer                                                       ;
-; LPM_AVALUE             ; UNUSED     ; Untyped                                                              ;
-; LPM_SVALUE             ; UNUSED     ; Untyped                                                              ;
-; LPM_FFTYPE             ; DFF        ; Untyped                                                              ;
-; DEVICE_FAMILY          ; Stratix II ; Untyped                                                              ;
-; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                              ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                           ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                         ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                         ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                       ;
-+------------------------+------------+----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                          ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; LPM_WIDTH      ; 14    ; Signed Integer                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 4     ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1044,8 +1138,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst3|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 14    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst9|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 14    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 14    ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 15    ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component ;
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component ;
 +------------------------+------------+----------------------------------------------------------------------+
 ; Parameter Name         ; Value      ; Type                                                                 ;
 +------------------------+------------+----------------------------------------------------------------------+
@@ -1063,13 +1197,71 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                         ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; LPM_WIDTH      ; 4     ; Signed Integer                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 15    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component ;
++------------------------+------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                ;
++------------------------+------------+---------------------------------------------------------------------+
+; LPM_WIDTH              ; 15         ; Signed Integer                                                      ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                                             ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                                             ;
+; LPM_FFTYPE             ; DFF        ; Untyped                                                             ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                             ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                             ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                      ;
++------------------------+------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 15    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component ;
++------------------------+------------+----------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                 ;
++------------------------+------------+----------------------------------------------------------------------+
+; LPM_WIDTH              ; 15         ; Signed Integer                                                       ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                                              ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                                              ;
+; LPM_FFTYPE             ; DFF        ; Untyped                                                              ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                              ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                              ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                       ;
++------------------------+------------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 14    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1141,7 +1333,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun May 14 15:00:14 2017
+    Info: Processing started: Sun May 14 17:38:23 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cursach -c cursach
 Info: Found 1 design units, including 1 entities, in source file loadop2.bdf
     Info: Found entity 1: loadOP2
@@ -1193,6 +1385,20 @@ Info: Found 2 design units, including 1 entities, in source file lpm_bustri2.vhd
 Info: Found 2 design units, including 1 entities, in source file lpm_bustri3.vhd
     Info: Found design unit 1: lpm_bustri3-SYN
     Info: Found entity 1: lpm_bustri3
+Info: Found 1 design units, including 1 entities, in source file saveres.bdf
+    Info: Found entity 1: saveRes
+Info: Found 2 design units, including 1 entities, in source file lpm_decode1.vhd
+    Info: Found design unit 1: lpm_decode1-SYN
+    Info: Found entity 1: lpm_decode1
+Info: Found 2 design units, including 1 entities, in source file lpm_decode2.vhd
+    Info: Found design unit 1: lpm_decode2-SYN
+    Info: Found entity 1: lpm_decode2
+Info: Found 2 design units, including 1 entities, in source file lpm_compare0.vhd
+    Info: Found design unit 1: lpm_compare0-SYN
+    Info: Found entity 1: lpm_compare0
+Info: Found 2 design units, including 1 entities, in source file lpm_compare1.vhd
+    Info: Found design unit 1: lpm_compare1-SYN
+    Info: Found entity 1: lpm_compare1
 Info: Elaborating entity "cursach" for the top level hierarchy
 Info: Elaborating entity "cpu" for hierarchy "cpu:inst1"
 Info: Elaborating entity "lpm_decodeDCA" for hierarchy "cpu:inst1|lpm_decodeDCA:inst"
@@ -1210,23 +1416,72 @@ Info: Elaborating entity "lpm_counter" for hierarchy "cpu:inst1|lpm_counterDCA:i
 Info: Elaborated megafunction instantiation "cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component"
 Info: Instantiated megafunction "cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component" with the following parameter:
     Info: Parameter "lpm_direction" = "UP"
-    Info: Parameter "lpm_modulus" = "6"
+    Info: Parameter "lpm_modulus" = "7"
     Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
     Info: Parameter "lpm_type" = "LPM_COUNTER"
     Info: Parameter "lpm_width" = "3"
-Info: Found 1 design units, including 1 entities, in source file db/cntr_tvi.tdf
-    Info: Found entity 1: cntr_tvi
-Info: Elaborating entity "cntr_tvi" for hierarchy "cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_tvi:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_uvi.tdf
+    Info: Found entity 1: cntr_uvi
+Info: Elaborating entity "cntr_uvi" for hierarchy "cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated"
 Info: Found 1 design units, including 1 entities, in source file db/cmpr_9dc.tdf
     Info: Found entity 1: cmpr_9dc
-Info: Elaborating entity "cmpr_9dc" for hierarchy "cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_tvi:auto_generated|cmpr_9dc:cmpr2"
-Info: Elaborating entity "ComRetr" for hierarchy "cpu:inst1|ComRetr:inst3"
-Info: Elaborating entity "lpm_bustri2" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1"
-Info: Elaborating entity "lpm_bustri" for hierarchy "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component"
-Info: Elaborated megafunction instantiation "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component"
-Info: Instantiated megafunction "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component" with the following parameter:
+Info: Elaborating entity "cmpr_9dc" for hierarchy "cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated|cmpr_9dc:cmpr2"
+Info: Elaborating entity "saveRes" for hierarchy "cpu:inst1|saveRes:inst11"
+Info: Elaborating entity "lpm_compare1" for hierarchy "cpu:inst1|saveRes:inst11|lpm_compare1:inst19"
+Info: Elaborating entity "lpm_compare" for hierarchy "cpu:inst1|saveRes:inst11|lpm_compare1:inst19|lpm_compare:lpm_compare_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|saveRes:inst11|lpm_compare1:inst19|lpm_compare:lpm_compare_component"
+Info: Instantiated megafunction "cpu:inst1|saveRes:inst11|lpm_compare1:inst19|lpm_compare:lpm_compare_component" with the following parameter:
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_COMPARE"
+    Info: Parameter "lpm_width" = "7"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_l8j.tdf
+    Info: Found entity 1: cmpr_l8j
+Info: Elaborating entity "cmpr_l8j" for hierarchy "cpu:inst1|saveRes:inst11|lpm_compare1:inst19|lpm_compare:lpm_compare_component|cmpr_l8j:auto_generated"
+Info: Elaborating entity "lpm_compare0" for hierarchy "cpu:inst1|saveRes:inst11|lpm_compare0:inst16"
+Info: Elaborating entity "lpm_compare" for hierarchy "cpu:inst1|saveRes:inst11|lpm_compare0:inst16|lpm_compare:lpm_compare_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|saveRes:inst11|lpm_compare0:inst16|lpm_compare:lpm_compare_component"
+Info: Instantiated megafunction "cpu:inst1|saveRes:inst11|lpm_compare0:inst16|lpm_compare:lpm_compare_component" with the following parameter:
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_COMPARE"
+    Info: Parameter "lpm_width" = "7"
+Info: Elaborating entity "lpm_decode2" for hierarchy "cpu:inst1|saveRes:inst11|lpm_decode2:inst6"
+Info: Elaborating entity "lpm_decode" for hierarchy "cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component"
+Info: Instantiated megafunction "cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component" with the following parameter:
+    Info: Parameter "lpm_decodes" = "128"
+    Info: Parameter "lpm_type" = "LPM_DECODE"
+    Info: Parameter "lpm_width" = "7"
+Info: Found 1 design units, including 1 entities, in source file db/decode_5bf.tdf
+    Info: Found entity 1: decode_5bf
+Info: Elaborating entity "decode_5bf" for hierarchy "cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component|decode_5bf:auto_generated"
+Info: Elaborating entity "lpm_decode1" for hierarchy "cpu:inst1|saveRes:inst11|lpm_decode1:inst"
+Info: Elaborating entity "lpm_decode" for hierarchy "cpu:inst1|saveRes:inst11|lpm_decode1:inst|lpm_decode:lpm_decode_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|saveRes:inst11|lpm_decode1:inst|lpm_decode:lpm_decode_component"
+Info: Instantiated megafunction "cpu:inst1|saveRes:inst11|lpm_decode1:inst|lpm_decode:lpm_decode_component" with the following parameter:
+    Info: Parameter "lpm_decodes" = "128"
+    Info: Parameter "lpm_type" = "LPM_DECODE"
+    Info: Parameter "lpm_width" = "7"
+Info: Elaborating entity "lpm_bustri2" for hierarchy "cpu:inst1|saveRes:inst11|lpm_bustri2:inst18"
+Info: Elaborating entity "lpm_bustri" for hierarchy "cpu:inst1|saveRes:inst11|lpm_bustri2:inst18|lpm_bustri:lpm_bustri_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|saveRes:inst11|lpm_bustri2:inst18|lpm_bustri:lpm_bustri_component"
+Info: Instantiated megafunction "cpu:inst1|saveRes:inst11|lpm_bustri2:inst18|lpm_bustri:lpm_bustri_component" with the following parameter:
     Info: Parameter "lpm_type" = "LPM_BUSTRI"
     Info: Parameter "lpm_width" = "14"
+Info: Elaborating entity "lpm_bustri0" for hierarchy "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5"
+Info: Elaborating entity "lpm_bustri" for hierarchy "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component"
+Info: Instantiated megafunction "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component" with the following parameter:
+    Info: Parameter "lpm_type" = "LPM_BUSTRI"
+    Info: Parameter "lpm_width" = "15"
+Info: Elaborating entity "lpm_bustri3" for hierarchy "cpu:inst1|saveRes:inst11|lpm_bustri3:inst12"
+Info: Elaborating entity "lpm_bustri" for hierarchy "cpu:inst1|saveRes:inst11|lpm_bustri3:inst12|lpm_bustri:lpm_bustri_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|saveRes:inst11|lpm_bustri3:inst12|lpm_bustri:lpm_bustri_component"
+Info: Instantiated megafunction "cpu:inst1|saveRes:inst11|lpm_bustri3:inst12|lpm_bustri:lpm_bustri_component" with the following parameter:
+    Info: Parameter "lpm_type" = "LPM_BUSTRI"
+    Info: Parameter "lpm_width" = "4"
+Info: Elaborating entity "ComRetr" for hierarchy "cpu:inst1|ComRetr:inst3"
 Info: Elaborating entity "counter" for hierarchy "cpu:inst1|ComRetr:inst3|counter:inst4"
 Info: Elaborating entity "lpm_counter" for hierarchy "cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component"
 Info: Elaborated megafunction instantiation "cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component"
@@ -1261,17 +1516,11 @@ Info: Instantiated megafunction "cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff
     Info: Parameter "lpm_fftype" = "DFF"
     Info: Parameter "lpm_type" = "LPM_FF"
     Info: Parameter "lpm_width" = "4"
-Info: Elaborating entity "loadOP2" for hierarchy "cpu:inst1|loadOP2:inst6"
-Info: Elaborating entity "lpm_bustri0" for hierarchy "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14"
-Info: Elaborating entity "lpm_bustri" for hierarchy "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component"
-Info: Elaborated megafunction instantiation "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component"
-Info: Instantiated megafunction "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component" with the following parameter:
-    Info: Parameter "lpm_type" = "LPM_BUSTRI"
-    Info: Parameter "lpm_width" = "15"
-Info: Elaborating entity "lpm_reg" for hierarchy "cpu:inst1|loadOP2:inst6|lpm_reg:inst5"
-Info: Elaborating entity "lpm_ff" for hierarchy "cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component"
-Info: Elaborated megafunction instantiation "cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component"
-Info: Instantiated megafunction "cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component" with the following parameter:
+Info: Elaborating entity "loadOP1" for hierarchy "cpu:inst1|loadOP1:inst1"
+Info: Elaborating entity "lpm_reg" for hierarchy "cpu:inst1|loadOP1:inst1|lpm_reg:inst1"
+Info: Elaborating entity "lpm_ff" for hierarchy "cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component"
+Info: Instantiated megafunction "cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component" with the following parameter:
     Info: Parameter "lpm_fftype" = "DFF"
     Info: Parameter "lpm_type" = "LPM_FF"
     Info: Parameter "lpm_width" = "15"
@@ -1286,13 +1535,7 @@ Info: Instantiated megafunction "cpu:inst1|registers:inst4|lpm_decode0:inst51|lp
 Info: Found 1 design units, including 1 entities, in source file db/decode_e9f.tdf
     Info: Found entity 1: decode_e9f
 Info: Elaborating entity "decode_e9f" for hierarchy "cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component|decode_e9f:auto_generated"
-Info: Elaborating entity "loadOP1" for hierarchy "cpu:inst1|loadOP1:inst1"
-Info: Elaborating entity "lpm_bustri3" for hierarchy "cpu:inst1|loadOP1:inst1|lpm_bustri3:inst"
-Info: Elaborating entity "lpm_bustri" for hierarchy "cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component"
-Info: Elaborated megafunction instantiation "cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component"
-Info: Instantiated megafunction "cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component" with the following parameter:
-    Info: Parameter "lpm_type" = "LPM_BUSTRI"
-    Info: Parameter "lpm_width" = "4"
+Info: Elaborating entity "loadOP2" for hierarchy "cpu:inst1|loadOP2:inst6"
 Info: Elaborating entity "memory" for hierarchy "memory:inst"
 Warning: Can't find a definition for parameter LPM_FILE -- assuming RAM.hex was intended to be a quoted string
 Info: Elaborating entity "LPM_ROM" for hierarchy "memory:inst|LPM_ROM:inst"
@@ -1347,6 +1590,7 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted tri-state node "cpu:inst1|readR[2]" into a selector
     Warning: Converted tri-state node "cpu:inst1|readR[1]" into a selector
     Warning: Converted tri-state node "cpu:inst1|readR[0]" into a selector
+    Warning: Converted tri-state node "cpu:inst1|registers:inst4|out[14]" into a selector
     Warning: Converted tri-state node "cpu:inst1|registers:inst4|out[13]" into a selector
     Warning: Converted tri-state node "cpu:inst1|registers:inst4|out[12]" into a selector
     Warning: Converted tri-state node "cpu:inst1|registers:inst4|out[11]" into a selector
@@ -1377,20 +1621,6 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[2]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a2" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[1]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a1" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[0]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[13]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[12]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[11]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[11]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[10]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[10]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[9]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[9]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[8]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[8]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[7]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[7]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[6]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[6]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[5]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[5]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[4]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[4]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[3]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[3]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[2]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[1]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component|dout[0]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[14]" to the node "cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component|dffs[6]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[13]" to the node "cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component|dffs[13]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[12]" to the node "cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component|dffs[12]" into an OR gate
@@ -1406,6 +1636,21 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[2]" to the node "cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component|dffs[2]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[1]" to the node "cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component|dffs[1]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[0]" to the node "cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component|dffs[0]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[14]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[14]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[13]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[13]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[12]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[12]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[11]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[11]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[10]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[10]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[9]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[9]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[8]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[8]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[7]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[7]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[6]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[6]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[5]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[5]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[4]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[4]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[3]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[3]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[2]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[2]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[1]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[1]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[0]" to the node "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|dout[0]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[13]" to the node "memory:inst|inst2" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[12]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|address_reg_a[0]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[11]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
@@ -1420,15 +1665,30 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[2]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[1]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[0]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-Info: Implemented 722 device resources after synthesis - the final resource count might be different
-    Info: Implemented 2 input pins
-    Info: Implemented 209 output pins
-    Info: Implemented 451 logic cells
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[14]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[14]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[13]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[12]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[11]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[11]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[10]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[10]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[9]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[9]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[8]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[8]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[7]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[7]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[6]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[6]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[5]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[5]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[4]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[4]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[3]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[3]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[2]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[1]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[0]" into an OR gate
+Info: Implemented 846 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 255 output pins
+    Info: Implemented 530 logic cells
     Info: Implemented 60 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 289 megabytes
-    Info: Processing ended: Sun May 14 15:00:19 2017
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 97 warnings
+    Info: Peak virtual memory: 284 megabytes
+    Info: Processing ended: Sun May 14 17:38:29 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 

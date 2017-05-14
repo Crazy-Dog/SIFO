@@ -39,7 +39,7 @@ applicable agreement for further details.
 	)
 	(drawing
 		(text "up counter" (rect 84 17 128 29)(font "Arial" ))
-		(text "modulus 6" (rect 85 27 128 39)(font "Arial" ))
+		(text "modulus 7" (rect 85 27 128 39)(font "Arial" ))
 		(line (pt 16 16)(pt 128 16)(line_width 1))
 		(line (pt 128 16)(pt 128 64)(line_width 1))
 		(line (pt 128 64)(pt 16 64)(line_width 1))
