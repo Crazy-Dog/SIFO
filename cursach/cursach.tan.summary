@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.449 ns
+Actual Time    : 5.425 ns
 From           : write
-To             : memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a25~porta_we_reg
+To             : cpu:inst1|registers:inst4|lpm_reg:inst12|lpm_ff:lpm_ff_component|dffs[3]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.259 ns
-From           : memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a11~porta_address_reg11
-To             : mem_out[11]
+Actual Time    : 12.393 ns
+From           : cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component|dffs[2]
+To             : mem_out[7]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.252 ns
+Actual Time    : 10.518 ns
 From           : write
-To             : mem_out[7]
+To             : mem_out[4]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 0.147 ns
+Actual Time    : -1.657 ns
 From           : write
-To             : cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component|dffs[0]
+To             : cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component|dffs[0]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -45,22 +45,12 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 149.75 MHz ( period = 6.678 ns )
-From           : cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_tvi:auto_generated|safe_q[2]
-To             : memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a1~porta_datain_reg0
+Actual Time    : 77.93 MHz ( period = 12.832 ns )
+From           : cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component|dffs[2]
+To             : memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a12~porta_datain_reg0
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
-
-Type           : Clock Hold: 'clk'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated|safe_q[13]
-To             : cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component|dffs[0]
-From Clock     : clk
-To Clock       : clk
-Failed Paths   : 233
 
 Type           : Total number of failed paths
 Slack          : 
@@ -70,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 233
+Failed Paths   : 0
 
 --------------------------------------------------------------------------------------
 
