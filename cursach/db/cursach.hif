@@ -3347,7 +3347,7 @@ AUTO
 cpu:inst1|ComRetr:inst3|jkffre:inst12
 cpu:inst1|loadOP2:inst6|jkffre:inst12
 cpu:inst1|execute:inst7|jkffre:inst14
-cpu:inst1|execute:inst7|jkffre:inst18
+cpu:inst1|execute:inst7|ALU:inst1|jkffre:inst18
 }
 # macro_sequence
 
@@ -7459,26 +7459,6 @@ cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component|
 
 # end
 # entity
-ALU
-# storage
-db|cursach.(81).cnf
-db|cursach.(81).cnf
-# case_insensitive
-# source_file
-alu.bdf
-32a177a9d36e712708feab221bbe2ca
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-cpu:inst1|execute:inst7|ALU:inst1
-}
-# macro_sequence
-
-# end
-# entity
 lpm_decode
 # storage
 db|cursach.(93).cnf
@@ -7696,26 +7676,6 @@ memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_g
 
 # end
 # entity
-execute
-# storage
-db|cursach.(80).cnf
-db|cursach.(80).cnf
-# case_insensitive
-# source_file
-execute.bdf
-c04b34adaa1a36dd37fdd3beb9d9d438
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-cpu:inst1|execute:inst7
-}
-# macro_sequence
-
-# end
-# entity
 lpm_decode4
 # storage
 db|cursach.(84).cnf
@@ -7887,7 +7847,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-cpu:inst1|execute:inst7|lpm_compare4:inst17
+cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -8063,7 +8023,7 @@ datab0
 1
 }
 # hierarchies {
-cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component
+cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component
 }
 # macro_sequence
 
@@ -8129,7 +8089,7 @@ aeb
 3
 }
 # hierarchies {
-cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component|cmpr_8pi:auto_generated
+cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component|cmpr_8pi:auto_generated
 }
 # macro_sequence
 
@@ -8170,6 +8130,46 @@ AUTO
 }
 # hierarchies {
 cpu:inst1
+}
+# macro_sequence
+
+# end
+# entity
+execute
+# storage
+db|cursach.(80).cnf
+db|cursach.(80).cnf
+# case_insensitive
+# source_file
+execute.bdf
+d8fa2bd7c75660e4b5bdb314aac97cf3
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+cpu:inst1|execute:inst7
+}
+# macro_sequence
+
+# end
+# entity
+ALU
+# storage
+db|cursach.(81).cnf
+db|cursach.(81).cnf
+# case_insensitive
+# source_file
+alu.bdf
+273177bae1c6a98224b272eccc7b81d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+cpu:inst1|execute:inst7|ALU:inst1
 }
 # macro_sequence
 

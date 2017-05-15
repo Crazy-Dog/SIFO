@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cursach
-Mon May 15 11:38:13 2017
+Mon May 15 11:49:27 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -78,12 +78,12 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  70. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component
  71. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component
  72. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|lpm_add_sub:lpm_add_sub_component
- 73. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
- 74. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst4|lpm_bustri:lpm_bustri_component
- 75. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
- 76. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
- 77. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component
- 78. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component
+ 73. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component
+ 74. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
+ 75. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst4|lpm_bustri:lpm_bustri_component
+ 76. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
+ 77. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
+ 78. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component
  79. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component
  80. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_bustri0:inst10|lpm_bustri:lpm_bustri_component
  81. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component
@@ -133,13 +133,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Mon May 15 11:38:13 2017        ;
+; Analysis & Synthesis Status   ; Successful - Mon May 15 11:49:27 2017        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; cursach                                      ;
 ; Top-level Entity Name         ; cursach                                      ;
 ; Family                        ; Stratix II                                   ;
 ; Logic utilization             ; N/A                                          ;
-;     Combinational ALUTs       ; 473                                          ;
+;     Combinational ALUTs       ; 445                                          ;
 ;     Dedicated logic registers ; 384                                          ;
 ; Total registers               ; 384                                          ;
 ; Total pins                    ; 276                                          ;
@@ -301,9 +301,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/decode_e9f.tdf                ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/decode_e9f.tdf                               ;
 ; lpm_add_sub.tdf                  ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf ;
 ; db/add_sub_o6i.tdf               ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/add_sub_o6i.tdf                              ;
+; db/cmpr_8pi.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cmpr_8pi.tdf                                 ;
 ; lpm_clshift.tdf                  ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_clshift.tdf ;
 ; db/lpm_clshift_iib.tdf           ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/lpm_clshift_iib.tdf                          ;
-; db/cmpr_8pi.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cmpr_8pi.tdf                                 ;
 ; db/cmpr_lni.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cmpr_lni.tdf                                 ;
 ; db/cntr_4dg.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cntr_4dg.tdf                                 ;
 ; db/cmpr_h8j.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/cmpr_h8j.tdf                                 ;
@@ -324,39 +324,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+--------+
 ; Resource                                      ; Usage  ;
 +-----------------------------------------------+--------+
-; Estimated ALUTs Used                          ; 473    ;
+; Estimated ALUTs Used                          ; 445    ;
 ; Dedicated logic registers                     ; 384    ;
 ;                                               ;        ;
-; Estimated ALUTs Unavailable                   ; 6      ;
+; Estimated ALUTs Unavailable                   ; 0      ;
 ;                                               ;        ;
-; Total combinational functions                 ; 473    ;
+; Total combinational functions                 ; 445    ;
 ; Combinational ALUT usage by number of inputs  ;        ;
 ;     -- 7 input functions                      ; 0      ;
-;     -- 6 input functions                      ; 195    ;
-;     -- 5 input functions                      ; 77     ;
-;     -- 4 input functions                      ; 89     ;
-;     -- <=3 input functions                    ; 112    ;
+;     -- 6 input functions                      ; 157    ;
+;     -- 5 input functions                      ; 75     ;
+;     -- 4 input functions                      ; 100    ;
+;     -- <=3 input functions                    ; 113    ;
 ;                                               ;        ;
 ; Combinational ALUTs by mode                   ;        ;
-;     -- normal mode                            ; 436    ;
+;     -- normal mode                            ; 408    ;
 ;     -- extended LUT mode                      ; 0      ;
 ;     -- arithmetic mode                        ; 21     ;
 ;     -- shared arithmetic mode                 ; 16     ;
 ;                                               ;        ;
-; Estimated ALUT/register pairs used            ; 700    ;
+; Estimated ALUT/register pairs used            ; 645    ;
 ;                                               ;        ;
 ; Total registers                               ; 384    ;
 ;     -- Dedicated logic registers              ; 384    ;
 ;     -- I/O registers                          ; 0      ;
 ;                                               ;        ;
-; Estimated ALMs:  partially or completely used ; 350    ;
+; Estimated ALMs:  partially or completely used ; 323    ;
 ;                                               ;        ;
 ; I/O pins                                      ; 276    ;
 ; Total block memory bits                       ; 245760 ;
 ; Maximum fan-out node                          ; clk    ;
 ; Maximum fan-out                               ; 290    ;
-; Total fan-out                                 ; 4528   ;
-; Average fan-out                               ; 3.80   ;
+; Total fan-out                                 ; 4333   ;
+; Average fan-out                               ; 3.72   ;
 +-----------------------------------------------+--------+
 
 
@@ -365,9 +365,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |cursach                                           ; 473 (1)           ; 384 (0)      ; 245760            ; 0            ; 0       ; 0         ; 0         ; 276  ; 0            ; |cursach                                                                                                                 ; work         ;
-;    |cpu:inst1|                                     ; 409 (9)           ; 383 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1                                                                                                       ;              ;
-;       |ComRetr:inst3|                              ; 62 (0)            ; 44 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3                                                                                         ; work         ;
+; |cursach                                           ; 445 (1)           ; 384 (0)      ; 245760            ; 0            ; 0       ; 0         ; 0         ; 276  ; 0            ; |cursach                                                                                                                 ; work         ;
+;    |cpu:inst1|                                     ; 380 (9)           ; 383 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1                                                                                                       ;              ;
+;       |ComRetr:inst3|                              ; 63 (0)            ; 44 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3                                                                                         ; work         ;
 ;          |addr:inst|                               ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst                                                                               ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component                                                       ; work         ;
 ;          |counter:inst4|                           ; 14 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4                                                                           ; work         ;
@@ -376,14 +376,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |instruct:inst8|                          ; 0 (0)             ; 7 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8                                                                          ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component                                                  ; work         ;
 ;          |jkffre:inst12|                           ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|jkffre:inst12                                                                           ; work         ;
-;          |lpm_bustri2:inst1|                       ; 47 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1                                                                       ; work         ;
-;             |lpm_bustri:lpm_bustri_component|      ; 47 (47)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component                                       ; work         ;
+;          |lpm_bustri2:inst1|                       ; 48 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1                                                                       ; work         ;
+;             |lpm_bustri:lpm_bustri_component|      ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component                                       ; work         ;
 ;          |reg:inst5|                               ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5                                                                               ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff_component                                                       ; work         ;
 ;          |reg:inst7|                               ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7                                                                               ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component                                                       ; work         ;
-;       |execute:inst7|                              ; 108 (69)          ; 32 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7                                                                                         ; work         ;
-;          |ALU:inst1|                               ; 31 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1                                                                               ; work         ;
+;       |execute:inst7|                              ; 106 (69)          ; 32 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7                                                                                         ; work         ;
+;          |ALU:inst1|                               ; 34 (0)            ; 1 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1                                                                               ; work         ;
+;             |jkffre:inst18|                        ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|jkffre:inst18                                                                 ; work         ;
+;             |lpm_compare4:inst17|                  ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17                                                           ; work         ;
+;                |lpm_compare:lpm_compare_component| ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component                         ; work         ;
+;                   |cmpr_8pi:auto_generated|        ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component|cmpr_8pi:auto_generated ; work         ;
 ;             |lpm_sub:inst|                         ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst                                                                  ; work         ;
 ;                |lpm_add_sub:lpm_add_sub_component| ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|lpm_add_sub:lpm_add_sub_component                                ; work         ;
 ;                   |add_sub_o6i:auto_generated|     ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|lpm_add_sub:lpm_add_sub_component|add_sub_o6i:auto_generated     ; work         ;
@@ -391,13 +395,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |lpm_clshift:lpm_clshift_component| ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component                                 ; work         ;
 ;                   |lpm_clshift_iib:auto_generated| ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component|lpm_clshift_iib:auto_generated  ; work         ;
 ;          |jkffre:inst14|                           ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|jkffre:inst14                                                                           ; work         ;
-;          |jkffre:inst18|                           ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|jkffre:inst18                                                                           ; work         ;
-;          |lpm_compare4:inst17|                     ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_compare4:inst17                                                                     ; work         ;
-;             |lpm_compare:lpm_compare_component|    ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component                                   ; work         ;
-;                |cmpr_8pi:auto_generated|           ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component|cmpr_8pi:auto_generated           ; work         ;
-;          |lpm_decode4:inst|                        ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst                                                                        ; work         ;
-;             |lpm_decode:lpm_decode_component|      ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component                                        ; work         ;
-;                |decode_5bf:auto_generated|         ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component|decode_5bf:auto_generated              ; work         ;
+;          |lpm_decode4:inst|                        ; 2 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst                                                                        ; work         ;
+;             |lpm_decode:lpm_decode_component|      ; 2 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component                                        ; work         ;
+;                |decode_5bf:auto_generated|         ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component|decode_5bf:auto_generated              ; work         ;
 ;          |lpm_reg:inst11|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst11                                                                          ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component                                                  ; work         ;
 ;          |lpm_reg:inst8|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst8                                                                           ; work         ;
@@ -422,7 +422,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |lpm_decodeDCA:inst|                         ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_decodeDCA:inst                                                                                    ; work         ;
 ;          |lpm_decode:lpm_decode_component|         ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_decodeDCA:inst|lpm_decode:lpm_decode_component                                                    ; work         ;
 ;             |decode_u7f:auto_generated|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_decodeDCA:inst|lpm_decode:lpm_decode_component|decode_u7f:auto_generated                          ; work         ;
-;       |registers:inst4|                            ; 122 (122)         ; 150 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4                                                                                       ; work         ;
+;       |registers:inst4|                            ; 94 (94)           ; 150 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4                                                                                       ; work         ;
 ;          |lpm_reg:inst10|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst10                                                                        ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component                                                ; work         ;
 ;          |lpm_reg:inst12|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst12                                                                        ; work         ;
@@ -471,16 +471,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component                                                   ; work         ;
 ;          |lpm_reg:inst|                            ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst                                                                             ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component                                                     ; work         ;
-;    |memory:inst|                                   ; 63 (0)            ; 1 (0)        ; 245760            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst                                                                                                     ; work         ;
+;    |memory:inst|                                   ; 64 (0)            ; 1 (0)        ; 245760            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst                                                                                                     ; work         ;
 ;       |lpm_bustri0:inst11|                         ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri0:inst11                                                                                  ; work         ;
 ;          |lpm_bustri:lpm_bustri_component|         ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component                                                  ; work         ;
 ;       |lpm_bustri1:inst12|                         ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12                                                                                  ;              ;
 ;          |lpm_bustri:lpm_bustri_component|         ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component                                                  ;              ;
-;       |lpm_ram_io:inst1|                           ; 32 (30)           ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1                                                                                    ;              ;
-;          |altram:sram|                             ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram                                                                        ;              ;
-;             |altsyncram:ram_block|                 ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block                                                   ;              ;
-;                |altsyncram_ii91:auto_generated|    ; 2 (0)             ; 1 (1)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated                    ;              ;
-;                   |decode_3pa:decode3|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3 ;              ;
+;       |lpm_ram_io:inst1|                           ; 33 (30)           ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1                                                                                    ;              ;
+;          |altram:sram|                             ; 3 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram                                                                        ;              ;
+;             |altsyncram:ram_block|                 ; 3 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block                                                   ;              ;
+;                |altsyncram_ii91:auto_generated|    ; 3 (0)             ; 1 (1)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated                    ;              ;
+;                   |decode_3pa:decode3|             ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3 ;              ;
 ;       |lpm_rom:inst|                               ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst                                                                                        ; work         ;
 ;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom                                                                            ; work         ;
 ;             |altsyncram:rom_block|                 ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block                                                       ; work         ;
@@ -539,9 +539,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
-; 6:1                ; 15 bits   ; 60 ALUTs      ; 60 ALUTs             ; 0 ALUTs                ; Yes        ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[0]  ;
-; 6:1                ; 15 bits   ; 60 ALUTs      ; 60 ALUTs             ; 0 ALUTs                ; Yes        ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[3] ;
-; 10:1               ; 15 bits   ; 90 ALUTs      ; 90 ALUTs             ; 0 ALUTs                ; No         ; |cursach|cpu:inst1|registers:inst4|out[14]                                      ;
+; 6:1                ; 15 bits   ; 60 ALUTs      ; 60 ALUTs             ; 0 ALUTs                ; Yes        ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[14] ;
+; 6:1                ; 15 bits   ; 60 ALUTs      ; 60 ALUTs             ; 0 ALUTs                ; No         ; |cursach|cpu:inst1|execute:inst7|data[14]                                       ;
+; 10:1               ; 15 bits   ; 90 ALUTs      ; 90 ALUTs             ; 0 ALUTs                ; No         ; |cursach|cpu:inst1|registers:inst4|out[2]                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
 
 
@@ -1433,6 +1433,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component ;
++------------------------+------------+------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                           ;
++------------------------+------------+------------------------------------------------------------------------------------------------+
+; lpm_width              ; 15         ; Signed Integer                                                                                 ;
+; LPM_REPRESENTATION     ; UNSIGNED   ; Untyped                                                                                        ;
+; LPM_PIPELINE           ; 0          ; Untyped                                                                                        ;
+; CHAIN_SIZE             ; 8          ; Untyped                                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES        ; Untyped                                                                                        ;
+; CARRY_CHAIN            ; MANUAL     ; Untyped                                                                                        ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                                                             ;
+; CASCADE_CHAIN_LENGTH   ; 2          ; CASCADE_CHAIN_LENGTH                                                                           ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                                                        ;
+; CBXI_PARAMETER         ; cmpr_8pi   ; Untyped                                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                 ;
++------------------------+------------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component ;
 +----------------+-------+---------------------------------------------------------------------------------------------------------+
@@ -1484,30 +1508,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_WIDTHDIST  ; 4               ; Signed Integer                                                                            ;
 ; CBXI_PARAMETER ; lpm_clshift_iib ; Untyped                                                                                   ;
 +----------------+-----------------+-------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component ;
-+------------------------+------------+--------------------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                                 ;
-+------------------------+------------+--------------------------------------------------------------------------------------+
-; lpm_width              ; 15         ; Signed Integer                                                                       ;
-; LPM_REPRESENTATION     ; UNSIGNED   ; Untyped                                                                              ;
-; LPM_PIPELINE           ; 0          ; Untyped                                                                              ;
-; CHAIN_SIZE             ; 8          ; Untyped                                                                              ;
-; ONE_INPUT_IS_CONSTANT  ; YES        ; Untyped                                                                              ;
-; CARRY_CHAIN            ; MANUAL     ; Untyped                                                                              ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                              ;
-; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                                                   ;
-; CASCADE_CHAIN_LENGTH   ; 2          ; CASCADE_CHAIN_LENGTH                                                                 ;
-; DEVICE_FAMILY          ; Stratix II ; Untyped                                                                              ;
-; CBXI_PARAMETER         ; cmpr_8pi   ; Untyped                                                                              ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                           ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                         ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                         ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                       ;
-+------------------------+------------+--------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1895,7 +1895,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon May 15 11:38:05 2017
+    Info: Processing started: Mon May 15 11:49:18 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cursach -c cursach
 Info: Found 1 design units, including 1 entities, in source file loadop2.bdf
     Info: Found entity 1: loadOP2
@@ -2162,6 +2162,17 @@ Info: Instantiated megafunction "cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_o6i.tdf
     Info: Found entity 1: add_sub_o6i
 Info: Elaborating entity "add_sub_o6i" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|lpm_add_sub:lpm_add_sub_component|add_sub_o6i:auto_generated"
+Info: Elaborating entity "lpm_compare4" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17"
+Info: Elaborating entity "lpm_compare" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component"
+Info: Instantiated megafunction "cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component" with the following parameter:
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_COMPARE"
+    Info: Parameter "lpm_width" = "15"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_8pi.tdf
+    Info: Found entity 1: cmpr_8pi
+Info: Elaborating entity "cmpr_8pi" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|lpm_compare4:inst17|lpm_compare:lpm_compare_component|cmpr_8pi:auto_generated"
 Info: Elaborating entity "lpm_xor" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9"
 Info: Elaborating entity "lpm_nxor" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|lpm_nxor:inst10"
 Info: Elaborating entity "shift" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|shift:inst1"
@@ -2175,17 +2186,6 @@ Info: Instantiated megafunction "cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|l
 Info: Found 1 design units, including 1 entities, in source file db/lpm_clshift_iib.tdf
     Info: Found entity 1: lpm_clshift_iib
 Info: Elaborating entity "lpm_clshift_iib" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component|lpm_clshift_iib:auto_generated"
-Info: Elaborating entity "lpm_compare4" for hierarchy "cpu:inst1|execute:inst7|lpm_compare4:inst17"
-Info: Elaborating entity "lpm_compare" for hierarchy "cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component"
-Info: Elaborated megafunction instantiation "cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component"
-Info: Instantiated megafunction "cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component" with the following parameter:
-    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
-    Info: Parameter "lpm_representation" = "UNSIGNED"
-    Info: Parameter "lpm_type" = "LPM_COMPARE"
-    Info: Parameter "lpm_width" = "15"
-Info: Found 1 design units, including 1 entities, in source file db/cmpr_8pi.tdf
-    Info: Found entity 1: cmpr_8pi
-Info: Elaborating entity "cmpr_8pi" for hierarchy "cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component|cmpr_8pi:auto_generated"
 Info: Elaborating entity "stack" for hierarchy "cpu:inst1|stack:inst17"
 Info: Elaborating entity "lpm_compare2" for hierarchy "cpu:inst1|stack:inst17|lpm_compare2:inst11"
 Info: Elaborating entity "lpm_compare" for hierarchy "cpu:inst1|stack:inst17|lpm_compare2:inst11|lpm_compare:lpm_compare_component"
@@ -2402,15 +2402,15 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst15" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst17" into an OR gate
 Info: Registers with preset signals will power-up high
-Info: Implemented 1138 device resources after synthesis - the final resource count might be different
+Info: Implemented 1125 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
     Info: Implemented 275 output pins
-    Info: Implemented 802 logic cells
+    Info: Implemented 789 logic cells
     Info: Implemented 60 RAM segments
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 130 warnings
     Info: Peak virtual memory: 288 megabytes
-    Info: Processing ended: Mon May 15 11:38:13 2017
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Processing ended: Mon May 15 11:49:27 2017
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:11
 
 

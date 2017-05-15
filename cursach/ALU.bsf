@@ -66,6 +66,13 @@ applicable agreement for further details.
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
+		(pt 0 128)
+		(input)
+		(text "enable" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "enable" (rect 21 123 58 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
 		(pt 184 32)
 		(output)
 		(text "result[14..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
@@ -75,9 +82,16 @@ applicable agreement for further details.
 	(port
 		(pt 184 48)
 		(output)
-		(text "CF_en" (rect 0 0 36 14)(font "Arial" (font_size 8)))
-		(text "CF_en" (rect 127 43 163 57)(font "Arial" (font_size 8)))
+		(text "ZF" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "ZF" (rect 148 43 163 57)(font "Arial" (font_size 8)))
 		(line (pt 184 48)(pt 168 48)(line_width 1))
+	)
+	(port
+		(pt 184 64)
+		(output)
+		(text "CF_en" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "CF_en" (rect 127 59 163 73)(font "Arial" (font_size 8)))
+		(line (pt 184 64)(pt 168 64)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 168 144)(line_width 1))
