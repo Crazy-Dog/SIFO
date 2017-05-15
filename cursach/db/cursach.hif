@@ -167,6 +167,9 @@ address0
 -1
 3
 }
+# hierarchies {
+memory:inst|lpm_rom:inst
+}
 # macro_sequence
 
 # end
@@ -330,6 +333,9 @@ address1
 address0
 -1
 3
+}
+# hierarchies {
+memory:inst|lpm_rom:inst|altrom:srom
 }
 # macro_sequence
 
@@ -635,6 +641,9 @@ address_a0
 -1
 3
 }
+# hierarchies {
+memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block
+}
 # macro_sequence
 
 # end
@@ -661,6 +670,10 @@ data0
 enable
 -1
 2
+}
+# hierarchies {
+memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|decode_3pa:deep_decode
+memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:deep_decode
 }
 # macro_sequence
 
@@ -814,6 +827,10 @@ data1
 data0
 -1
 3
+}
+# hierarchies {
+memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|mux_1lb:mux2
+memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|mux_1lb:mux2
 }
 # macro_sequence
 
@@ -979,6 +996,9 @@ address1
 address0
 -1
 3
+}
+# hierarchies {
+memory:inst|lpm_ram_io:inst1
 }
 # macro_sequence
 
@@ -1195,6 +1215,9 @@ address1
 address0
 -1
 3
+}
+# hierarchies {
+memory:inst|lpm_ram_io:inst1|altram:sram
 }
 # macro_sequence
 
@@ -1548,6 +1571,9 @@ address_a0
 -1
 3
 }
+# hierarchies {
+memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block
+}
 # macro_sequence
 
 # end
@@ -1574,6 +1600,9 @@ enable
 data0
 -1
 3
+}
+# hierarchies {
+memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3
 }
 # macro_sequence
 
@@ -1603,10 +1632,35 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_bustri0:inst3
-lpm_bustri0:inst4
-lpm_bustri0:inst5
-lpm_bustri0:inst6
+cpu:inst1|saveRes:inst11|lpm_bustri0:inst5
+cpu:inst1|saveRes:inst11|lpm_bustri0:inst8
+cpu:inst1|saveRes:inst11|lpm_bustri0:inst9
+cpu:inst1|saveRes:inst11|lpm_bustri0:inst14
+cpu:inst1|registers:inst4|lpm_bustri0:inst1
+cpu:inst1|registers:inst4|lpm_bustri0:inst3
+cpu:inst1|registers:inst4|lpm_bustri0:inst5
+cpu:inst1|registers:inst4|lpm_bustri0:inst7
+cpu:inst1|registers:inst4|lpm_bustri0:inst9
+cpu:inst1|registers:inst4|lpm_bustri0:inst11
+cpu:inst1|registers:inst4|lpm_bustri0:inst13
+cpu:inst1|registers:inst4|lpm_bustri0:inst15
+cpu:inst1|registers:inst4|lpm_bustri0:inst17
+cpu:inst1|registers:inst4|lpm_bustri0:inst19
+cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14
+cpu:inst1|loadOP2:inst6|lpm_bustri0:inst6
+cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7
+cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst3
+cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst4
+cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst5
+cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst6
+cpu:inst1|execute:inst7|lpm_bustri0:inst10
+cpu:inst1|stack:inst17|lpm_bustri0:inst15
+cpu:inst1|stack:inst17|lpm_bustri0:inst16
+cpu:inst1|stack:inst17|lpm_bustri0:inst19
+cpu:inst1|stack:inst17|lpm_bustri0:inst21
+cpu:inst1|stack:inst17|lpm_bustri0:inst23
+cpu:inst1|stack:inst17|lpm_bustri0:inst25
+memory:inst|lpm_bustri0:inst11
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1726,10 +1780,35 @@ data0
 3
 }
 # hierarchies {
-lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
-lpm_bustri0:inst4|lpm_bustri:lpm_bustri_component
-lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
-lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
+cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
+cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component
+cpu:inst1|saveRes:inst11|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component
+cpu:inst1|saveRes:inst11|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst13|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst15|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst17|lpm_bustri:lpm_bustri_component
+cpu:inst1|registers:inst4|lpm_bustri0:inst19|lpm_bustri:lpm_bustri_component
+cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component
+cpu:inst1|loadOP2:inst6|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
+cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
+cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
+cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst4|lpm_bustri:lpm_bustri_component
+cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
+cpu:inst1|execute:inst7|ALU:inst1|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
+cpu:inst1|execute:inst7|lpm_bustri0:inst10|lpm_bustri:lpm_bustri_component
+cpu:inst1|stack:inst17|lpm_bustri0:inst15|lpm_bustri:lpm_bustri_component
+cpu:inst1|stack:inst17|lpm_bustri0:inst16|lpm_bustri:lpm_bustri_component
+cpu:inst1|stack:inst17|lpm_bustri0:inst19|lpm_bustri:lpm_bustri_component
+cpu:inst1|stack:inst17|lpm_bustri0:inst21|lpm_bustri:lpm_bustri_component
+cpu:inst1|stack:inst17|lpm_bustri0:inst23|lpm_bustri:lpm_bustri_component
+cpu:inst1|stack:inst17|lpm_bustri0:inst25|lpm_bustri:lpm_bustri_component
+memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
 }
 # macro_sequence
 
@@ -1757,6 +1836,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+memory:inst|lpm_bustri1:inst12
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1923,6 +2005,9 @@ data0
 -1
 3
 }
+# hierarchies {
+memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component
+}
 # macro_sequence
 
 # end
@@ -1939,6 +2024,9 @@ registers.bdf
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+cpu:inst1|registers:inst4
 }
 # macro_sequence
 
@@ -1966,6 +2054,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|registers:inst4|lpm_decode0:inst51
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -2069,6 +2160,9 @@ data0
 -1
 3
 }
+# hierarchies {
+cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component
+}
 # macro_sequence
 
 # end
@@ -2144,6 +2238,9 @@ data0
 -1
 3
 }
+# hierarchies {
+cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component|decode_e9f:auto_generated
+}
 # macro_sequence
 
 # end
@@ -2170,6 +2267,30 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|loadOP1:inst1|lpm_reg:inst1
+cpu:inst1|registers:inst4|lpm_reg:inst2
+cpu:inst1|registers:inst4|lpm_reg:inst4
+cpu:inst1|registers:inst4|lpm_reg:inst6
+cpu:inst1|registers:inst4|lpm_reg:inst8
+cpu:inst1|registers:inst4|lpm_reg:inst
+cpu:inst1|registers:inst4|lpm_reg:inst10
+cpu:inst1|registers:inst4|lpm_reg:inst12
+cpu:inst1|registers:inst4|lpm_reg:inst16
+cpu:inst1|registers:inst4|lpm_reg:inst18
+cpu:inst1|registers:inst4|lpm_reg:inst14
+cpu:inst1|loadOP2:inst6|lpm_reg:inst5
+cpu:inst1|loadOP2:inst6|lpm_reg:inst
+cpu:inst1|loadOP2:inst6|lpm_reg:inst1
+cpu:inst1|execute:inst7|lpm_reg:inst11
+cpu:inst1|execute:inst7|lpm_reg:inst8
+cpu:inst1|stack:inst17|lpm_reg:inst
+cpu:inst1|stack:inst17|lpm_reg:inst17
+cpu:inst1|stack:inst17|lpm_reg:inst18
+cpu:inst1|stack:inst17|lpm_reg:inst20
+cpu:inst1|stack:inst17|lpm_reg:inst22
+cpu:inst1|stack:inst17|lpm_reg:inst24
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -2327,6 +2448,30 @@ clock
 -1
 3
 }
+# hierarchies {
+cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst4|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst6|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst12|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst16|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst18|lpm_ff:lpm_ff_component
+cpu:inst1|registers:inst4|lpm_reg:inst14|lpm_ff:lpm_ff_component
+cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component
+cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component
+cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component
+cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component
+cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component
+cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component
+cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component
+cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component
+cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component
+cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component
+cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component
+}
 # macro_sequence
 
 # end
@@ -2353,6 +2498,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|lpm_decodeDCA:inst
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -2447,6 +2595,9 @@ data0
 -1
 3
 }
+# hierarchies {
+cpu:inst1|lpm_decodeDCA:inst|lpm_decode:lpm_decode_component
+}
 # macro_sequence
 
 # end
@@ -2494,6 +2645,10 @@ data1
 data0
 -1
 3
+}
+# hierarchies {
+cpu:inst1|lpm_decodeDCA:inst|lpm_decode:lpm_decode_component|decode_u7f:auto_generated
+cpu:inst1|stack:inst17|lpm_decode3:inst14|lpm_decode:lpm_decode_component|decode_u7f:auto_generated
 }
 # macro_sequence
 
@@ -2659,6 +2814,9 @@ aeb
 -1
 3
 }
+# hierarchies {
+cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated|cmpr_9dc:cmpr2
+}
 # macro_sequence
 
 # end
@@ -2685,6 +2843,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|ComRetr:inst3|counter:inst4
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -2871,6 +3032,9 @@ clk_en
 -1
 3
 }
+# hierarchies {
+cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component
+}
 # macro_sequence
 
 # end
@@ -2979,6 +3143,9 @@ clk_en
 -1
 3
 }
+# hierarchies {
+cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component|cntr_4bj:auto_generated
+}
 # macro_sequence
 
 # end
@@ -3005,6 +3172,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|ComRetr:inst3|addr:inst
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3153,6 +3323,9 @@ clock
 -1
 3
 }
+# hierarchies {
+cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component
+}
 # macro_sequence
 
 # end
@@ -3169,6 +3342,12 @@ e9629a113c2a322c45445b929d551c7
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+cpu:inst1|ComRetr:inst3|jkffre:inst12
+cpu:inst1|loadOP2:inst6|jkffre:inst12
+cpu:inst1|execute:inst7|jkffre:inst14
+cpu:inst1|execute:inst7|jkffre:inst18
 }
 # macro_sequence
 
@@ -3196,6 +3375,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|ComRetr:inst3|instruct:inst8
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3302,6 +3484,9 @@ clock
 -1
 3
 }
+# hierarchies {
+cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component
+}
 # macro_sequence
 
 # end
@@ -3328,6 +3513,10 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|ComRetr:inst3|reg:inst5
+cpu:inst1|ComRetr:inst3|reg:inst7
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3416,6 +3605,10 @@ clock
 -1
 3
 }
+# hierarchies {
+cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff_component
+cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component
+}
 # macro_sequence
 
 # end
@@ -3432,6 +3625,9 @@ comretr.bdf
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+cpu:inst1|ComRetr:inst3
 }
 # macro_sequence
 
@@ -3459,6 +3655,15 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_bustri2:inst18
+cpu:inst1|saveRes:inst11|lpm_bustri2:inst21
+cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1
+cpu:inst1|loadOP2:inst6|lpm_bustri2:inst3
+cpu:inst1|loadOP2:inst6|lpm_bustri2:inst9
+cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11
+cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3570,6 +3775,15 @@ data1
 data0
 -1
 3
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_bustri2:inst18|lpm_bustri:lpm_bustri_component
+cpu:inst1|saveRes:inst11|lpm_bustri2:inst21|lpm_bustri:lpm_bustri_component
+cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component
+cpu:inst1|loadOP2:inst6|lpm_bustri2:inst3|lpm_bustri:lpm_bustri_component
+cpu:inst1|loadOP2:inst6|lpm_bustri2:inst9|lpm_bustri:lpm_bustri_component
+cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component
+cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component
 }
 # macro_sequence
 
@@ -3725,6 +3939,9 @@ address_a0
 ram.hex
 53837018b8e7589856f61fc7a5fa911c
 }
+# hierarchies {
+memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated
+}
 # macro_sequence
 
 # end
@@ -3741,6 +3958,9 @@ loadop1.bdf
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+cpu:inst1|loadOP1:inst1
 }
 # macro_sequence
 
@@ -3768,6 +3988,11 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_bustri3:inst12
+cpu:inst1|saveRes:inst11|lpm_bustri3:inst13
+cpu:inst1|loadOP1:inst1|lpm_bustri3:inst
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3820,6 +4045,11 @@ data0
 -1
 3
 }
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_bustri3:inst12|lpm_bustri:lpm_bustri_component
+cpu:inst1|saveRes:inst11|lpm_bustri3:inst13|lpm_bustri:lpm_bustri_component
+cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component
+}
 # macro_sequence
 
 # end
@@ -3837,6 +4067,9 @@ memory.bdf
 BLOCK_DESIGN_NAMING
 AUTO
 }
+# hierarchies {
+memory:inst
+}
 # macro_sequence
 
 # end
@@ -3853,6 +4086,9 @@ loadop2.bdf
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+cpu:inst1|loadOP2:inst6
 }
 # macro_sequence
 
@@ -3880,6 +4116,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_compare0:inst16
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -4005,6 +4244,9 @@ datab1
 datab0
 -1
 2
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_compare0:inst16|lpm_compare:lpm_compare_component
 }
 # macro_sequence
 
@@ -4066,6 +4308,10 @@ aeb
 -1
 3
 }
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_compare1:inst19|lpm_compare:lpm_compare_component|cmpr_l8j:auto_generated
+cpu:inst1|saveRes:inst11|lpm_compare0:inst16|lpm_compare:lpm_compare_component|cmpr_l8j:auto_generated
+}
 # macro_sequence
 
 # end
@@ -4092,6 +4338,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_compare1:inst19
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -4218,6 +4467,9 @@ datab0
 -1
 2
 }
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_compare1:inst19|lpm_compare:lpm_compare_component
+}
 # macro_sequence
 
 # end
@@ -4244,6 +4496,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_decode1:inst
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -4331,6 +4586,9 @@ data1
 data0
 -1
 3
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_decode1:inst|lpm_decode:lpm_decode_component
 }
 # macro_sequence
 
@@ -4752,6 +5010,11 @@ data0
 -1
 3
 }
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component|decode_5bf:auto_generated
+cpu:inst1|saveRes:inst11|lpm_decode1:inst|lpm_decode:lpm_decode_component|decode_5bf:auto_generated
+cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component|decode_5bf:auto_generated
+}
 # macro_sequence
 
 # end
@@ -4778,6 +5041,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_decode2:inst6
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -4884,6 +5150,9 @@ data0
 -1
 3
 }
+# hierarchies {
+cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component
+}
 # macro_sequence
 
 # end
@@ -4910,6 +5179,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|lpm_counterDCA:inst8
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -5015,6 +5287,9 @@ clock
 -1
 3
 }
+# hierarchies {
+cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component
+}
 # macro_sequence
 
 # end
@@ -5042,6 +5317,9 @@ clock
 -1
 3
 }
+# hierarchies {
+cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated
+}
 # macro_sequence
 
 # end
@@ -5068,6 +5346,9 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
+}
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_compare2:inst11
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -5170,6 +5451,9 @@ datab0
 -1
 1
 }
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_compare2:inst11|lpm_compare:lpm_compare_component
+}
 # macro_sequence
 
 # end
@@ -5196,6 +5480,9 @@ dataa0
 aeb
 -1
 3
+}
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_compare2:inst11|lpm_compare:lpm_compare_component|cmpr_lni:auto_generated
 }
 # macro_sequence
 
@@ -5719,6 +6006,9 @@ datab1
 -1
 2
 }
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_compare3:inst26|lpm_compare:lpm_compare_component
+}
 # macro_sequence
 
 # end
@@ -5754,6 +6044,9 @@ dataa0
 aeb
 -1
 3
+}
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_compare3:inst26|lpm_compare:lpm_compare_component|cmpr_h8j:auto_generated
 }
 # macro_sequence
 
@@ -5880,6 +6173,9 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_counterStak:inst8
+}
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
@@ -5987,6 +6283,9 @@ clock
 -1
 3
 }
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_counterStak:inst8|lpm_counter:lpm_counter_component
+}
 # macro_sequence
 
 # end
@@ -6016,6 +6315,9 @@ q0
 clock
 -1
 3
+}
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_counterStak:inst8|lpm_counter:lpm_counter_component|cntr_4dg:auto_generated
 }
 # macro_sequence
 
@@ -6100,6 +6402,9 @@ data1
 data0
 -1
 3
+}
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_decode3:inst14|lpm_decode:lpm_decode_component
 }
 # macro_sequence
 
@@ -6226,6 +6531,9 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_compare3:inst26
+}
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
@@ -6256,52 +6564,8 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-cursach
-# storage
-db|cursach.(0).cnf
-db|cursach.(0).cnf
-# case_insensitive
-# source_file
-cursach.bdf
-f1579ffb732294c9fa4213d3f9223d
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# macro_sequence
-
-# end
-# entity
-lpm_decode4
-# storage
-db|cursach.(81).cnf
-db|cursach.(81).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lpm_decode4.vhd
-2338b2ded7ff3d6303577eba2c14526
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
+# hierarchies {
+cpu:inst1|stack:inst17|lpm_decode3:inst14
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -6407,39 +6671,8 @@ stack.bdf
 BLOCK_DESIGN_NAMING
 AUTO
 }
-# macro_sequence
-
-# end
-# entity
-execute
-# storage
-db|cursach.(80).cnf
-db|cursach.(80).cnf
-# case_insensitive
-# source_file
-execute.bdf
-7e602bb33f97cdca8cf37f646459c0c9
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# macro_sequence
-
-# end
-# entity
-cpu
-# storage
-db|cursach.(4).cnf
-db|cursach.(4).cnf
-# case_insensitive
-# source_file
-cpu.bdf
-f6736e518bc2b59753c1baf134f5c8
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
+# hierarchies {
+cpu:inst1|stack:inst17
 }
 # macro_sequence
 
@@ -6457,6 +6690,9 @@ cf301b38c09b38821b3e51a81890cdf8
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+cpu:inst1|saveRes:inst11
 }
 # macro_sequence
 
@@ -6486,7 +6722,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_sub:inst
+cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -6723,7 +6959,7 @@ cout
 3
 }
 # hierarchies {
-lpm_sub:inst|lpm_add_sub:lpm_add_sub_component
+cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|lpm_add_sub:lpm_add_sub_component
 }
 # macro_sequence
 
@@ -6879,7 +7115,7 @@ cout
 3
 }
 # hierarchies {
-lpm_sub:inst|lpm_add_sub:lpm_add_sub_component|add_sub_o6i:auto_generated
+cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|lpm_add_sub:lpm_add_sub_component|add_sub_o6i:auto_generated
 }
 # macro_sequence
 
@@ -6899,7 +7135,7 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-lpm_xor:inst9
+cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9
 }
 # macro_sequence
 
@@ -6919,27 +7155,7 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-lpm_nxor:inst10
-}
-# macro_sequence
-
-# end
-# entity
-ALU
-# storage
-db|cursach.(84).cnf
-db|cursach.(84).cnf
-# case_insensitive
-# source_file
-alu.bdf
-1cbeb4a6e7ac9de0ef2d2d8b8ee5a
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
+cpu:inst1|execute:inst7|ALU:inst1|lpm_nxor:inst10
 }
 # macro_sequence
 
@@ -6969,7 +7185,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-shift:inst1
+cpu:inst1|execute:inst7|ALU:inst1|shift:inst1
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -7117,7 +7333,7 @@ direction
 1
 }
 # hierarchies {
-shift:inst1|lpm_clshift:lpm_clshift_component
+cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component
 }
 # macro_sequence
 
@@ -7237,7 +7453,723 @@ data0
 3
 }
 # hierarchies {
-shift:inst1|lpm_clshift:lpm_clshift_component|lpm_clshift_iib:auto_generated
+cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component|lpm_clshift_iib:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+ALU
+# storage
+db|cursach.(81).cnf
+db|cursach.(81).cnf
+# case_insensitive
+# source_file
+alu.bdf
+32a177a9d36e712708feab221bbe2ca
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+cpu:inst1|execute:inst7|ALU:inst1
+}
+# macro_sequence
+
+# end
+# entity
+lpm_decode
+# storage
+db|cursach.(93).cnf
+db|cursach.(93).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|megafunctions|lpm_decode.tdf
+801b50bb3ab97a9f41a27f6333e6c69e
+7
+# user_parameter {
+LPM_WIDTH
+7
+PARAMETER_SIGNED_DEC
+USR
+LPM_DECODES
+128
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+decode_5bf
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+eq89
+-1
+3
+eq84
+-1
+3
+eq57
+-1
+3
+eq52
+-1
+3
+eq5
+-1
+3
+eq25
+-1
+3
+eq20
+-1
+3
+eq17
+-1
+3
+eq16
+-1
+3
+eq121
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+altsyncram_8001
+# storage
+db|cursach.(94).cnf
+db|cursach.(94).cnf
+# case_insensitive
+# source_file
+db|altsyncram_8001.tdf
+99af54bd7954f86055c86824f5d1a8
+7
+# used_port {
+q_a9
+-1
+3
+q_a8
+-1
+3
+q_a7
+-1
+3
+q_a6
+-1
+3
+q_a5
+-1
+3
+q_a4
+-1
+3
+q_a3
+-1
+3
+q_a2
+-1
+3
+q_a14
+-1
+3
+q_a13
+-1
+3
+q_a12
+-1
+3
+q_a11
+-1
+3
+q_a10
+-1
+3
+q_a1
+-1
+3
+q_a0
+-1
+3
+clock0
+-1
+3
+address_a9
+-1
+3
+address_a8
+-1
+3
+address_a7
+-1
+3
+address_a6
+-1
+3
+address_a5
+-1
+3
+address_a4
+-1
+3
+address_a3
+-1
+3
+address_a2
+-1
+3
+address_a12
+-1
+3
+address_a11
+-1
+3
+address_a10
+-1
+3
+address_a1
+-1
+3
+address_a0
+-1
+3
+}
+# memory_file {
+rom.hex
+8a88b6b1c9258e1635549dc9a680edbb
+}
+# hierarchies {
+memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+execute
+# storage
+db|cursach.(80).cnf
+db|cursach.(80).cnf
+# case_insensitive
+# source_file
+execute.bdf
+c04b34adaa1a36dd37fdd3beb9d9d438
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+cpu:inst1|execute:inst7
+}
+# macro_sequence
+
+# end
+# entity
+lpm_decode4
+# storage
+db|cursach.(84).cnf
+db|cursach.(84).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_decode4.vhd
+68a9972bd1fe7e4ef35297cf7ab69e1
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+cpu:inst1|execute:inst7|lpm_decode4:inst
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_decode
+# storage
+db|cursach.(95).cnf
+db|cursach.(95).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|megafunctions|lpm_decode.tdf
+801b50bb3ab97a9f41a27f6333e6c69e
+7
+# user_parameter {
+LPM_WIDTH
+7
+PARAMETER_SIGNED_DEC
+USR
+LPM_DECODES
+128
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+decode_5bf
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+eq96
+-1
+3
+eq89
+-1
+3
+eq84
+-1
+3
+eq57
+-1
+3
+eq52
+-1
+3
+eq5
+-1
+3
+eq25
+-1
+3
+eq20
+-1
+3
+eq17
+-1
+3
+eq16
+-1
+3
+eq121
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component
+}
+# macro_sequence
+
+# end
+# entity
+lpm_compare4
+# storage
+db|cursach.(96).cnf
+db|cursach.(96).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_compare4.vhd
+e4cfbde4fce84c5a30c752715f9a46a9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+cpu:inst1|execute:inst7|lpm_compare4:inst17
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_compare
+# storage
+db|cursach.(97).cnf
+db|cursach.(97).cnf
+# case_insensitive
+# source_file
+c:|altera|91sp2|quartus|libraries|megafunctions|lpm_compare.tdf
+6fe57e55c2d8e254bfe73d8fff3f219
+7
+# user_parameter {
+lpm_width
+15
+PARAMETER_SIGNED_DEC
+USR
+LPM_REPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+CHAIN_SIZE
+8
+PARAMETER_UNKNOWN
+DEF
+ONE_INPUT_IS_CONSTANT
+YES
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CASCADE_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+CASCADE_CHAIN_LENGTH
+2
+CASCADE_CHAIN_LENGTH
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+cmpr_8pi
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+dataa9
+-1
+3
+dataa8
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa14
+-1
+3
+dataa13
+-1
+3
+dataa12
+-1
+3
+dataa11
+-1
+3
+dataa10
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+AeB
+-1
+3
+datab9
+-1
+1
+datab8
+-1
+1
+datab7
+-1
+1
+datab6
+-1
+1
+datab5
+-1
+1
+datab4
+-1
+1
+datab3
+-1
+1
+datab2
+-1
+1
+datab14
+-1
+1
+datab13
+-1
+1
+datab12
+-1
+1
+datab11
+-1
+1
+datab10
+-1
+1
+datab1
+-1
+1
+datab0
+-1
+1
+}
+# hierarchies {
+cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_8pi
+# storage
+db|cursach.(98).cnf
+db|cursach.(98).cnf
+# case_insensitive
+# source_file
+db|cmpr_8pi.tdf
+cdbe9cc0d493d913817ab6debb351646
+7
+# used_port {
+dataa9
+-1
+3
+dataa8
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa14
+-1
+3
+dataa13
+-1
+3
+dataa12
+-1
+3
+dataa11
+-1
+3
+dataa10
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+aeb
+-1
+3
+}
+# hierarchies {
+cpu:inst1|execute:inst7|lpm_compare4:inst17|lpm_compare:lpm_compare_component|cmpr_8pi:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+cursach
+# storage
+db|cursach.(0).cnf
+db|cursach.(0).cnf
+# case_insensitive
+# source_file
+cursach.bdf
+daabf92be39481d99d15faa71ba8c7ce
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+cpu
+# storage
+db|cursach.(4).cnf
+db|cursach.(4).cnf
+# case_insensitive
+# source_file
+cpu.bdf
+69e3281b9b8ce5c89af9b8d51fbde2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+cpu:inst1
 }
 # macro_sequence
 

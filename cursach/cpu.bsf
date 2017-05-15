@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 200 464)
+	(rect 16 16 200 496)
 	(text "cpu" (rect 5 0 26 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 432 25 444)(font "Arial" ))
+	(text "inst" (rect 8 464 25 476)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -194,18 +194,32 @@ applicable agreement for further details.
 	(port
 		(pt 184 384)
 		(output)
-		(text "full_stack" (rect 0 0 54 14)(font "Arial" (font_size 8)))
-		(text "full_stack" (rect 109 379 163 393)(font "Arial" (font_size 8)))
+		(text "CF" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "CF" (rect 148 379 163 393)(font "Arial" (font_size 8)))
 		(line (pt 184 384)(pt 168 384)(line_width 1))
 	)
 	(port
 		(pt 184 400)
 		(output)
+		(text "full_stack" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "full_stack" (rect 109 395 163 409)(font "Arial" (font_size 8)))
+		(line (pt 184 400)(pt 168 400)(line_width 1))
+	)
+	(port
+		(pt 184 416)
+		(output)
+		(text "ZF" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "ZF" (rect 148 411 163 425)(font "Arial" (font_size 8)))
+		(line (pt 184 416)(pt 168 416)(line_width 1))
+	)
+	(port
+		(pt 184 432)
+		(output)
 		(text "res[14..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
-		(text "res[14..0]" (rect 109 395 163 409)(font "Arial" (font_size 8)))
-		(line (pt 184 400)(pt 168 400)(line_width 3))
+		(text "res[14..0]" (rect 109 427 163 441)(font "Arial" (font_size 8)))
+		(line (pt 184 432)(pt 168 432)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 168 432)(line_width 1))
+		(rectangle (rect 16 16 168 464)(line_width 1))
 	)
 )
