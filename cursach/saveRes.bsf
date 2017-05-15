@@ -47,8 +47,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "reg2[3..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
-		(text "reg2[3..0]" (rect 21 75 75 89)(font "Arial" (font_size 8)))
+		(text "reg1[3..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "reg1[3..0]" (rect 21 75 75 89)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
