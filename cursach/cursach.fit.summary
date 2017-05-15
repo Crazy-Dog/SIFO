@@ -1,4 +1,4 @@
-Fitter Status : Successful - Mon May 15 11:49:36 2017
+Fitter Status : Successful - Mon May 15 12:43:37 2017
 Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
 Revision Name : cursach
 Top-level Entity Name : cursach
@@ -6,10 +6,10 @@ Family : Stratix II
 Device : EP2S15F484C3
 Timing Models : Final
 Logic utilization : 6 %
-    Combinational ALUTs : 471 / 12,480 ( 4 % )
-    Dedicated logic registers : 391 / 12,480 ( 3 % )
-Total registers : 391
-Total pins : 276 / 343 ( 80 % )
+    Combinational ALUTs : 503 / 12,480 ( 4 % )
+    Dedicated logic registers : 386 / 12,480 ( 3 % )
+Total registers : 386
+Total pins : 277 / 343 ( 81 % )
 Total virtual pins : 0
 Total block memory bits : 245,760 / 419,328 ( 59 % )
 DSP block 9-bit elements : 0 / 96 ( 0 % )

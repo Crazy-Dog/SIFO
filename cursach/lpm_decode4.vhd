@@ -48,6 +48,7 @@ ENTITY lpm_decode4 IS
 		eq17		: OUT STD_LOGIC ;
 		eq20		: OUT STD_LOGIC ;
 		eq25		: OUT STD_LOGIC ;
+		eq32		: OUT STD_LOGIC ;
 		eq5		: OUT STD_LOGIC ;
 		eq52		: OUT STD_LOGIC ;
 		eq57		: OUT STD_LOGIC ;
@@ -72,6 +73,7 @@ ARCHITECTURE SYN OF lpm_decode4 IS
 	SIGNAL sub_wire9	: STD_LOGIC ;
 	SIGNAL sub_wire10	: STD_LOGIC ;
 	SIGNAL sub_wire11	: STD_LOGIC ;
+	SIGNAL sub_wire12	: STD_LOGIC ;
 
 
 
@@ -88,9 +90,10 @@ ARCHITECTURE SYN OF lpm_decode4 IS
 	END COMPONENT;
 
 BEGIN
-	sub_wire11    <= sub_wire0(25);
-	sub_wire10    <= sub_wire0(57);
-	sub_wire9    <= sub_wire0(89);
+	sub_wire12    <= sub_wire0(25);
+	sub_wire11    <= sub_wire0(57);
+	sub_wire10    <= sub_wire0(89);
+	sub_wire9    <= sub_wire0(32);
 	sub_wire8    <= sub_wire0(20);
 	sub_wire7    <= sub_wire0(52);
 	sub_wire6    <= sub_wire0(96);
@@ -107,9 +110,10 @@ BEGIN
 	eq96    <= sub_wire6;
 	eq52    <= sub_wire7;
 	eq20    <= sub_wire8;
-	eq89    <= sub_wire9;
-	eq57    <= sub_wire10;
-	eq25    <= sub_wire11;
+	eq32    <= sub_wire9;
+	eq89    <= sub_wire10;
+	eq57    <= sub_wire11;
+	eq25    <= sub_wire12;
 
 	lpm_decode_component : lpm_decode
 	GENERIC MAP (
@@ -191,7 +195,7 @@ END SYN;
 -- Retrieval info: PRIVATE: eq3 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq30 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq31 NUMERIC "0"
--- Retrieval info: PRIVATE: eq32 NUMERIC "0"
+-- Retrieval info: PRIVATE: eq32 NUMERIC "1"
 -- Retrieval info: PRIVATE: eq33 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq34 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq35 NUMERIC "0"
@@ -276,6 +280,7 @@ END SYN;
 -- Retrieval info: USED_PORT: eq17 0 0 0 0 OUTPUT NODEFVAL eq17
 -- Retrieval info: USED_PORT: eq20 0 0 0 0 OUTPUT NODEFVAL eq20
 -- Retrieval info: USED_PORT: eq25 0 0 0 0 OUTPUT NODEFVAL eq25
+-- Retrieval info: USED_PORT: eq32 0 0 0 0 OUTPUT NODEFVAL eq32
 -- Retrieval info: USED_PORT: eq5 0 0 0 0 OUTPUT NODEFVAL eq5
 -- Retrieval info: USED_PORT: eq52 0 0 0 0 OUTPUT NODEFVAL eq52
 -- Retrieval info: USED_PORT: eq57 0 0 0 0 OUTPUT NODEFVAL eq57
@@ -288,6 +293,7 @@ END SYN;
 -- Retrieval info: CONNECT: eq17 0 0 0 0 @eq 0 0 1 17
 -- Retrieval info: CONNECT: eq20 0 0 0 0 @eq 0 0 1 20
 -- Retrieval info: CONNECT: eq25 0 0 0 0 @eq 0 0 1 25
+-- Retrieval info: CONNECT: eq32 0 0 0 0 @eq 0 0 1 32
 -- Retrieval info: CONNECT: eq52 0 0 0 0 @eq 0 0 1 52
 -- Retrieval info: CONNECT: eq57 0 0 0 0 @eq 0 0 1 57
 -- Retrieval info: CONNECT: eq84 0 0 0 0 @eq 0 0 1 84

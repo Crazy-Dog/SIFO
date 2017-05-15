@@ -102,7 +102,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 680 64 856 80)
+	(rect 680 40 856 56)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "addr[13..0]" (rect 90 0 143 12)(font "Arial" ))
 	(pt 0 8)
@@ -178,55 +178,6 @@ applicable agreement for further details.
 		(line (pt 78 4)(pt 82 8)(line_width 1))
 		(line (pt 82 8)(pt 78 12)(line_width 1))
 		(line (pt 78 12)(pt 82 8)(line_width 1))
-	)
-)
-(symbol
-	(rect 416 0 560 128)
-	(text "counter" (rect 51 1 101 17)(font "Arial" (font_size 10)))
-	(text "inst4" (rect 8 112 31 124)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "sload" (rect 0 0 30 14)(font "Arial" (font_size 8)))
-		(text "sload" (rect 20 26 50 40)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 1))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "data[13..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
-		(text "data[13..0]" (rect 20 42 80 56)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "clock" (rect 0 0 29 14)(font "Arial" (font_size 8)))
-		(text "clock" (rect 26 74 55 88)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80)(line_width 1))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "clk_en" (rect 0 0 36 14)(font "Arial" (font_size 8)))
-		(text "clk_en" (rect 20 90 56 104)(font "Arial" (font_size 8)))
-		(line (pt 0 96)(pt 16 96)(line_width 1))
-	)
-	(port
-		(pt 144 72)
-		(output)
-		(text "q[13..0]" (rect 0 0 42 14)(font "Arial" (font_size 8)))
-		(text "q[13..0]" (rect 89 66 131 80)(font "Arial" (font_size 8)))
-		(line (pt 144 72)(pt 128 72)(line_width 3))
-	)
-	(drawing
-		(text "up counter" (rect 84 17 135 29)(font "Arial" ))
-		(line (pt 16 16)(pt 128 16)(line_width 1))
-		(line (pt 128 16)(pt 128 112)(line_width 1))
-		(line (pt 128 112)(pt 16 112)(line_width 1))
-		(line (pt 16 112)(pt 16 16)(line_width 1))
-		(line (pt 16 74)(pt 22 80)(line_width 1))
-		(line (pt 22 80)(pt 16 86)(line_width 1))
 	)
 )
 (symbol
@@ -430,7 +381,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 576 48 656 88)
+	(rect 576 24 656 64)
 	(text "lpm_bustri2" (rect 7 1 86 17)(font "Arial" (font_size 10)))
 	(text "inst1" (rect 8 24 31 36)(font "Arial" ))
 	(port
@@ -464,38 +415,54 @@ applicable agreement for further details.
 		(line (pt 8 28)(pt 16 20)(line_width 1))
 	)
 )
-(connector
-	(text "jump" (rect 346 16 369 28)(font "Arial" ))
-	(pt 416 32)
-	(pt 336 32)
-)
-(connector
-	(text "new_addr[13..0]" (rect 346 32 423 44)(font "Arial" ))
-	(pt 416 48)
-	(pt 336 48)
-	(bus)
-)
-(connector
-	(pt 560 72)
-	(pt 576 72)
-	(bus)
-)
-(connector
-	(pt 656 72)
-	(pt 680 72)
-	(bus)
-)
-(connector
-	(pt 616 88)
-	(pt 616 136)
-)
-(connector
-	(pt 616 136)
-	(pt 400 136)
-)
-(connector
-	(pt 400 136)
-	(pt 400 96)
+(symbol
+	(rect 416 0 560 112)
+	(text "counter" (rect 51 1 101 17)(font "Arial" (font_size 10)))
+	(text "inst4" (rect 8 96 31 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "data[13..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "data[13..0]" (rect 20 26 80 40)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clock" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "clock" (rect 26 58 55 72)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clk_en" (rect 0 0 36 14)(font "Arial" (font_size 8)))
+		(text "clk_en" (rect 20 74 56 88)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 96 112)
+		(input)
+		(text "aload" (rect 0 0 14 30)(font "Arial" (font_size 8))(vertical))
+		(text "aload" (rect 89 65 103 95)(font "Arial" (font_size 8))(vertical))
+		(line (pt 96 112)(pt 96 96)(line_width 1))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "q[13..0]" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "q[13..0]" (rect 89 42 131 56)(font "Arial" (font_size 8)))
+		(line (pt 144 48)(pt 128 48)(line_width 3))
+	)
+	(drawing
+		(text "up counter" (rect 84 17 135 29)(font "Arial" ))
+		(line (pt 16 16)(pt 128 16)(line_width 1))
+		(line (pt 128 16)(pt 128 96)(line_width 1))
+		(line (pt 128 96)(pt 16 96)(line_width 1))
+		(line (pt 16 96)(pt 16 16)(line_width 1))
+		(line (pt 16 58)(pt 22 64)(line_width 1))
+		(line (pt 22 64)(pt 16 70)(line_width 1))
+	)
 )
 (connector
 	(pt 608 200)
@@ -540,26 +507,12 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "enable" (rect 346 80 377 92)(font "Arial" ))
-	(pt 336 96)
-	(pt 400 96)
-)
-(connector
-	(pt 400 96)
-	(pt 416 96)
-)
-(connector
 	(pt 400 280)
 	(pt 400 360)
 )
 (connector
 	(pt 400 280)
 	(pt 464 280)
-)
-(connector
-	(text "clk" (rect 346 64 360 76)(font "Arial" ))
-	(pt 416 80)
-	(pt 336 80)
 )
 (connector
 	(text "enable" (rect 114 176 145 188)(font "Arial" ))
@@ -619,7 +572,58 @@ applicable agreement for further details.
 	(pt 408 184)
 	(bus)
 )
-(junction (pt 400 96))
+(connector
+	(text "clk" (rect 346 48 360 60)(font "Arial" ))
+	(pt 416 64)
+	(pt 336 64)
+)
+(connector
+	(text "enable" (rect 346 64 377 76)(font "Arial" ))
+	(pt 336 80)
+	(pt 400 80)
+)
+(connector
+	(pt 400 80)
+	(pt 416 80)
+)
+(connector
+	(pt 400 80)
+	(pt 400 136)
+)
+(connector
+	(text "new_addr[13..0]" (rect 346 16 423 28)(font "Arial" ))
+	(pt 416 32)
+	(pt 336 32)
+	(bus)
+)
+(connector
+	(text "jump" (rect 474 112 497 124)(font "Arial" ))
+	(pt 512 128)
+	(pt 464 128)
+)
+(connector
+	(pt 512 112)
+	(pt 512 128)
+)
+(connector
+	(pt 560 48)
+	(pt 576 48)
+	(bus)
+)
+(connector
+	(pt 400 136)
+	(pt 616 136)
+)
+(connector
+	(pt 616 64)
+	(pt 616 136)
+)
+(connector
+	(pt 656 48)
+	(pt 680 48)
+	(bus)
+)
 (junction (pt 400 280))
 (junction (pt 152 192))
 (junction (pt 400 200))
+(junction (pt 400 80))
