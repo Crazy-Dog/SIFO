@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cursach
-Tue May 16 12:07:22 2017
+Tue May 16 12:13:05 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -55,67 +55,66 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  47. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_bustri0:inst24|lpm_bustri:lpm_bustri_component
  48. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component
  49. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_bustri0:inst23|lpm_bustri:lpm_bustri_component
- 50. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_add_sub0:inst25|lpm_add_sub:lpm_add_sub_component
- 51. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component
- 52. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_bustri0:inst10|lpm_bustri:lpm_bustri_component
- 53. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component
- 54. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_bustri0:inst29|lpm_bustri:lpm_bustri_component
- 55. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_constant0:inst27|lpm_constant:lpm_constant_component
- 56. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_compare2:inst11|lpm_compare:lpm_compare_component
- 57. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_counterStak:inst8|lpm_counter:lpm_counter_component
- 58. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_compare3:inst26|lpm_compare:lpm_compare_component
- 59. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst15|lpm_bustri:lpm_bustri_component
- 60. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_decode3:inst14|lpm_decode:lpm_decode_component
- 61. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component
- 62. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst16|lpm_bustri:lpm_bustri_component
- 63. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component
- 64. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst19|lpm_bustri:lpm_bustri_component
- 65. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component
- 66. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst21|lpm_bustri:lpm_bustri_component
- 67. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component
- 68. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst23|lpm_bustri:lpm_bustri_component
- 69. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component
- 70. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst25|lpm_bustri:lpm_bustri_component
- 71. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component
- 72. Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component
- 73. Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component
- 74. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component
- 75. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component
- 76. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component
- 77. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
- 78. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst4|lpm_ff:lpm_ff_component
- 79. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
- 80. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst6|lpm_ff:lpm_ff_component
- 81. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
- 82. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component
- 83. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component
- 84. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component
- 85. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
- 86. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component
- 87. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst13|lpm_bustri:lpm_bustri_component
- 88. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst12|lpm_ff:lpm_ff_component
- 89. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst15|lpm_bustri:lpm_bustri_component
- 90. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst16|lpm_ff:lpm_ff_component
- 91. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst17|lpm_bustri:lpm_bustri_component
- 92. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst18|lpm_ff:lpm_ff_component
- 93. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst19|lpm_bustri:lpm_bustri_component
- 94. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst14|lpm_ff:lpm_ff_component
- 95. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst3|lpm_bustri:lpm_bustri_component
- 96. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst9|lpm_bustri:lpm_bustri_component
- 97. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component
- 98. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component
- 99. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component
-100. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
-101. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component
-102. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
-103. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component
-104. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component
-105. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component
-106. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
-107. Parameter Settings for User Entity Instance: memory:inst|LPM_ROM:inst
-108. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component
-109. Parameter Settings for User Entity Instance: memory:inst|LPM_RAM_IO:inst1
-110. Analysis & Synthesis Messages
+ 50. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component
+ 51. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_bustri0:inst10|lpm_bustri:lpm_bustri_component
+ 52. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component
+ 53. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_bustri0:inst29|lpm_bustri:lpm_bustri_component
+ 54. Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_constant0:inst27|lpm_constant:lpm_constant_component
+ 55. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_compare2:inst11|lpm_compare:lpm_compare_component
+ 56. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_counterStak:inst8|lpm_counter:lpm_counter_component
+ 57. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_compare3:inst26|lpm_compare:lpm_compare_component
+ 58. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst15|lpm_bustri:lpm_bustri_component
+ 59. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_decode3:inst14|lpm_decode:lpm_decode_component
+ 60. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component
+ 61. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst16|lpm_bustri:lpm_bustri_component
+ 62. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component
+ 63. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst19|lpm_bustri:lpm_bustri_component
+ 64. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component
+ 65. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst21|lpm_bustri:lpm_bustri_component
+ 66. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component
+ 67. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst23|lpm_bustri:lpm_bustri_component
+ 68. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component
+ 69. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_bustri0:inst25|lpm_bustri:lpm_bustri_component
+ 70. Parameter Settings for User Entity Instance: cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component
+ 71. Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component
+ 72. Parameter Settings for User Entity Instance: cpu:inst1|loadOP1:inst1|lpm_bustri3:inst|lpm_bustri:lpm_bustri_component
+ 73. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst1|lpm_bustri:lpm_bustri_component
+ 74. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component
+ 75. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component
+ 76. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst3|lpm_bustri:lpm_bustri_component
+ 77. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst4|lpm_ff:lpm_ff_component
+ 78. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component
+ 79. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst6|lpm_ff:lpm_ff_component
+ 80. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
+ 81. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component
+ 82. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component
+ 83. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component
+ 84. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
+ 85. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component
+ 86. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst13|lpm_bustri:lpm_bustri_component
+ 87. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst12|lpm_ff:lpm_ff_component
+ 88. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst15|lpm_bustri:lpm_bustri_component
+ 89. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst16|lpm_ff:lpm_ff_component
+ 90. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst17|lpm_bustri:lpm_bustri_component
+ 91. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst18|lpm_ff:lpm_ff_component
+ 92. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_bustri0:inst19|lpm_bustri:lpm_bustri_component
+ 93. Parameter Settings for User Entity Instance: cpu:inst1|registers:inst4|lpm_reg:inst14|lpm_ff:lpm_ff_component
+ 94. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst3|lpm_bustri:lpm_bustri_component
+ 95. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst9|lpm_bustri:lpm_bustri_component
+ 96. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst11|lpm_bustri:lpm_bustri_component
+ 97. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component
+ 98. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component
+ 99. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst6|lpm_bustri:lpm_bustri_component
+100. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component
+101. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
+102. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component
+103. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component
+104. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component
+105. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
+106. Parameter Settings for User Entity Instance: memory:inst|LPM_ROM:inst
+107. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component
+108. Parameter Settings for User Entity Instance: memory:inst|LPM_RAM_IO:inst1
+109. Analysis & Synthesis Messages
 
 
 
@@ -141,7 +140,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Tue May 16 12:07:22 2017        ;
+; Analysis & Synthesis Status   ; Successful - Tue May 16 12:13:05 2017        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; cursach                                      ;
 ; Top-level Entity Name         ; cursach                                      ;
@@ -294,7 +293,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_nxor.bdf                     ; yes             ; User Block Diagram/Schematic File     ; D:/AVP/SIFO/cursach/lpm_nxor.bdf                                 ;
 ; shift.vhd                        ; yes             ; User Wizard-Generated File            ; D:/AVP/SIFO/cursach/shift.vhd                                    ;
 ; lpm_compare4.vhd                 ; yes             ; User Wizard-Generated File            ; D:/AVP/SIFO/cursach/lpm_compare4.vhd                             ;
-; lpm_add_sub0.vhd                 ; yes             ; User Wizard-Generated File            ; D:/AVP/SIFO/cursach/lpm_add_sub0.vhd                             ;
 ; lpm_constant0.vhd                ; yes             ; User Wizard-Generated File            ; D:/AVP/SIFO/cursach/lpm_constant0.vhd                            ;
 ; new_addr.vhd                     ; yes             ; User Wizard-Generated File            ; D:/AVP/SIFO/cursach/new_addr.vhd                                 ;
 ; lpm_decode.tdf                   ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_decode.tdf   ;
@@ -314,7 +312,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/cmpr_8pi.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/AVP/SIFO/cursach/db/cmpr_8pi.tdf                              ;
 ; lpm_clshift.tdf                  ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_clshift.tdf  ;
 ; db/lpm_clshift_iib.tdf           ; yes             ; Auto-Generated Megafunction           ; D:/AVP/SIFO/cursach/db/lpm_clshift_iib.tdf                       ;
-; db/add_sub_grh.tdf               ; yes             ; Auto-Generated Megafunction           ; D:/AVP/SIFO/cursach/db/add_sub_grh.tdf                           ;
 ; lpm_constant.tdf                 ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_constant.tdf ;
 ; db/cmpr_lni.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/AVP/SIFO/cursach/db/cmpr_lni.tdf                              ;
 ; db/cntr_4dg.tdf                  ; yes             ; Auto-Generated Megafunction           ; D:/AVP/SIFO/cursach/db/cntr_4dg.tdf                              ;
@@ -1100,34 +1097,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------------------------------------------+
 ; LPM_WIDTH      ; 15    ; Signed Integer                                                                                 ;
 +----------------+-------+------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:inst1|execute:inst7|lpm_add_sub0:inst25|lpm_add_sub:lpm_add_sub_component ;
-+------------------------+-------------+-------------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                                ;
-+------------------------+-------------+-------------------------------------------------------------------------------------+
-; LPM_WIDTH              ; 14          ; Signed Integer                                                                      ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                             ;
-; LPM_DIRECTION          ; SUB         ; Untyped                                                                             ;
-; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                             ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                                             ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                             ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                             ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                             ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                             ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                             ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                  ;
-; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                                             ;
-; USE_WYS                ; OFF         ; Untyped                                                                             ;
-; STYLE                  ; FAST        ; Untyped                                                                             ;
-; CBXI_PARAMETER         ; add_sub_grh ; Untyped                                                                             ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                        ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                      ;
-+------------------------+-------------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2022,7 +1991,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue May 16 12:07:13 2017
+    Info: Processing started: Tue May 16 12:12:56 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cursach -c cursach
 Info: Found 1 design units, including 1 entities, in source file loadop2.bdf
     Info: Found entity 1: loadOP2
@@ -2301,18 +2270,6 @@ Info: Instantiated megafunction "cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|l
 Info: Found 1 design units, including 1 entities, in source file db/lpm_clshift_iib.tdf
     Info: Found entity 1: lpm_clshift_iib
 Info: Elaborating entity "lpm_clshift_iib" for hierarchy "cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component|lpm_clshift_iib:auto_generated"
-Info: Elaborating entity "lpm_add_sub0" for hierarchy "cpu:inst1|execute:inst7|lpm_add_sub0:inst25"
-Info: Elaborating entity "lpm_add_sub" for hierarchy "cpu:inst1|execute:inst7|lpm_add_sub0:inst25|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborated megafunction instantiation "cpu:inst1|execute:inst7|lpm_add_sub0:inst25|lpm_add_sub:lpm_add_sub_component"
-Info: Instantiated megafunction "cpu:inst1|execute:inst7|lpm_add_sub0:inst25|lpm_add_sub:lpm_add_sub_component" with the following parameter:
-    Info: Parameter "lpm_direction" = "SUB"
-    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES,CIN_USED=NO"
-    Info: Parameter "lpm_representation" = "UNSIGNED"
-    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
-    Info: Parameter "lpm_width" = "14"
-Info: Found 1 design units, including 1 entities, in source file db/add_sub_grh.tdf
-    Info: Found entity 1: add_sub_grh
-Info: Elaborating entity "add_sub_grh" for hierarchy "cpu:inst1|execute:inst7|lpm_add_sub0:inst25|lpm_add_sub:lpm_add_sub_component|add_sub_grh:auto_generated"
 Info: Elaborating entity "lpm_reg" for hierarchy "cpu:inst1|execute:inst7|lpm_reg:inst11"
 Info: Elaborating entity "lpm_ff" for hierarchy "cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component"
 Info: Elaborated megafunction instantiation "cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component"
@@ -2599,9 +2556,9 @@ Info: Implemented 1238 device resources after synthesis - the final resource cou
     Info: Implemented 901 logic cells
     Info: Implemented 60 RAM segments
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 158 warnings
-    Info: Peak virtual memory: 288 megabytes
-    Info: Processing ended: Tue May 16 12:07:22 2017
+    Info: Peak virtual memory: 289 megabytes
+    Info: Processing ended: Tue May 16 12:13:05 2017
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 
