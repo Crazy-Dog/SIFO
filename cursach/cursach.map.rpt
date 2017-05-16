@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cursach
-Mon May 15 12:43:27 2017
+Tue May 16 08:44:19 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -105,12 +105,13 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  97. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component
  98. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
  99. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component
-100. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component
-101. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
-102. Parameter Settings for User Entity Instance: memory:inst|LPM_ROM:inst
-103. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component
-104. Parameter Settings for User Entity Instance: memory:inst|LPM_RAM_IO:inst1
-105. Analysis & Synthesis Messages
+100. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component
+101. Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component
+102. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
+103. Parameter Settings for User Entity Instance: memory:inst|LPM_ROM:inst
+104. Parameter Settings for User Entity Instance: memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component
+105. Parameter Settings for User Entity Instance: memory:inst|LPM_RAM_IO:inst1
+106. Analysis & Synthesis Messages
 
 
 
@@ -136,15 +137,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Mon May 15 12:43:27 2017        ;
+; Analysis & Synthesis Status   ; Successful - Tue May 16 08:44:19 2017        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; cursach                                      ;
 ; Top-level Entity Name         ; cursach                                      ;
 ; Family                        ; Stratix II                                   ;
 ; Logic utilization             ; N/A                                          ;
-;     Combinational ALUTs       ; 493                                          ;
-;     Dedicated logic registers ; 384                                          ;
-; Total registers               ; 384                                          ;
+;     Combinational ALUTs       ; 494                                          ;
+;     Dedicated logic registers ; 398                                          ;
+; Total registers               ; 398                                          ;
 ; Total pins                    ; 277                                          ;
 ; Total virtual pins            ; 0                                            ;
 ; Total block memory bits       ; 245,760                                      ;
@@ -291,6 +292,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; lpm_compare4.vhd                 ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_compare4.vhd                                 ;
 ; lpm_add_sub0.vhd                 ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_add_sub0.vhd                                 ;
 ; lpm_constant0.vhd                ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/lpm_constant0.vhd                                ;
+; new_addr.vhd                     ; yes             ; User Wizard-Generated File            ; D:/SIFO/cursach/new_addr.vhd                                     ;
 ; lpm_decode.tdf                   ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_decode.tdf   ;
 ; db/decode_u7f.tdf                ; yes             ; Auto-Generated Megafunction           ; D:/SIFO/cursach/db/decode_u7f.tdf                                ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                          ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf  ;
@@ -331,39 +333,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+--------+
 ; Resource                                      ; Usage  ;
 +-----------------------------------------------+--------+
-; Estimated ALUTs Used                          ; 493    ;
-; Dedicated logic registers                     ; 384    ;
+; Estimated ALUTs Used                          ; 494    ;
+; Dedicated logic registers                     ; 398    ;
 ;                                               ;        ;
-; Estimated ALUTs Unavailable                   ; 25     ;
+; Estimated ALUTs Unavailable                   ; 38     ;
 ;                                               ;        ;
-; Total combinational functions                 ; 493    ;
+; Total combinational functions                 ; 494    ;
 ; Combinational ALUT usage by number of inputs  ;        ;
 ;     -- 7 input functions                      ; 0      ;
-;     -- 6 input functions                      ; 214    ;
-;     -- 5 input functions                      ; 64     ;
-;     -- 4 input functions                      ; 73     ;
-;     -- <=3 input functions                    ; 142    ;
+;     -- 6 input functions                      ; 228    ;
+;     -- 5 input functions                      ; 74     ;
+;     -- 4 input functions                      ; 60     ;
+;     -- <=3 input functions                    ; 132    ;
 ;                                               ;        ;
 ; Combinational ALUTs by mode                   ;        ;
-;     -- normal mode                            ; 442    ;
+;     -- normal mode                            ; 443    ;
 ;     -- extended LUT mode                      ; 0      ;
 ;     -- arithmetic mode                        ; 35     ;
 ;     -- shared arithmetic mode                 ; 16     ;
 ;                                               ;        ;
-; Estimated ALUT/register pairs used            ; 739    ;
+; Estimated ALUT/register pairs used            ; 754    ;
 ;                                               ;        ;
-; Total registers                               ; 384    ;
-;     -- Dedicated logic registers              ; 384    ;
+; Total registers                               ; 398    ;
+;     -- Dedicated logic registers              ; 398    ;
 ;     -- I/O registers                          ; 0      ;
 ;                                               ;        ;
-; Estimated ALMs:  partially or completely used ; 370    ;
+; Estimated ALMs:  partially or completely used ; 377    ;
 ;                                               ;        ;
 ; I/O pins                                      ; 277    ;
 ; Total block memory bits                       ; 245760 ;
 ; Maximum fan-out node                          ; clk    ;
-; Maximum fan-out                               ; 290    ;
-; Total fan-out                                 ; 4603   ;
-; Average fan-out                               ; 3.79   ;
+; Maximum fan-out                               ; 304    ;
+; Total fan-out                                 ; 4698   ;
+; Average fan-out                               ; 3.82   ;
 +-----------------------------------------------+--------+
 
 
@@ -372,9 +374,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |cursach                                           ; 493 (1)           ; 384 (0)      ; 245760            ; 0            ; 0       ; 0         ; 0         ; 277  ; 0            ; |cursach                                                                                                                 ; work         ;
-;    |cpu:inst1|                                     ; 428 (9)           ; 383 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1                                                                                                       ;              ;
-;       |ComRetr:inst3|                              ; 64 (0)            ; 44 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3                                                                                         ; work         ;
+; |cursach                                           ; 494 (1)           ; 398 (0)      ; 245760            ; 0            ; 0       ; 0         ; 0         ; 277  ; 0            ; |cursach                                                                                                                 ; work         ;
+;    |cpu:inst1|                                     ; 429 (10)          ; 397 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1                                                                                                       ;              ;
+;       |ComRetr:inst3|                              ; 63 (0)            ; 44 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3                                                                                         ; work         ;
 ;          |addr:inst|                               ; 1 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst                                                                               ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 1 (1)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component                                                       ; work         ;
 ;          |counter:inst4|                           ; 14 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4                                                                           ; work         ;
@@ -383,8 +385,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |instruct:inst8|                          ; 0 (0)             ; 7 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8                                                                          ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component                                                  ; work         ;
 ;          |jkffre:inst12|                           ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|jkffre:inst12                                                                           ; work         ;
-;          |lpm_bustri2:inst1|                       ; 48 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1                                                                       ; work         ;
-;             |lpm_bustri:lpm_bustri_component|      ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component                                       ; work         ;
+;          |lpm_bustri2:inst1|                       ; 47 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1                                                                       ; work         ;
+;             |lpm_bustri:lpm_bustri_component|      ; 47 (47)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component                                       ; work         ;
 ;          |reg:inst5|                               ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5                                                                               ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff_component                                                       ; work         ;
 ;          |reg:inst7|                               ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7                                                                               ; work         ;
@@ -416,7 +418,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |loadOP1:inst1|                              ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1                                                                                         ; work         ;
 ;          |lpm_reg:inst1|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1|lpm_reg:inst1                                                                           ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component                                                   ; work         ;
-;       |loadOP2:inst6|                              ; 20 (3)            ; 46 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6                                                                                         ; work         ;
+;       |loadOP2:inst6|                              ; 20 (3)            ; 60 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6                                                                                         ; work         ;
 ;          |jkffre:inst12|                           ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|jkffre:inst12                                                                           ; work         ;
 ;          |lpm_bustri0:inst14|                      ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14                                                                      ; work         ;
 ;             |lpm_bustri:lpm_bustri_component|      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component                                      ; work         ;
@@ -426,6 +428,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component                                                   ; work         ;
 ;          |lpm_reg:inst|                            ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst                                                                            ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component                                                    ; work         ;
+;          |new_addr:inst15|                         ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|new_addr:inst15                                                                         ; work         ;
+;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component                                                 ; work         ;
 ;       |lpm_counterDCA:inst8|                       ; 6 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8                                                                                  ; work         ;
 ;          |lpm_counter:lpm_counter_component|       ; 6 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component                                                ; work         ;
 ;             |cntr_uvi:auto_generated|              ; 6 (5)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated                        ; work         ;
@@ -454,7 +458,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component                                                 ; work         ;
 ;          |lpm_reg:inst|                            ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst                                                                          ; work         ;
 ;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component                                                  ; work         ;
-;       |saveRes:inst11|                             ; 23 (6)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11                                                                                        ; work         ;
+;       |saveRes:inst11|                             ; 24 (7)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11                                                                                        ; work         ;
 ;          |lpm_bustri0:inst5|                       ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_bustri0:inst5                                                                      ; work         ;
 ;             |lpm_bustri:lpm_bustri_component|      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component                                      ; work         ;
 ;          |lpm_decode2:inst6|                       ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_decode2:inst6                                                                      ; work         ;
@@ -525,12 +529,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 384   ;
+; Total registers                              ; 398   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 14    ;
-; Number of registers using Clock Enable       ; 329   ;
+; Number of registers using Clock Enable       ; 344   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1879,6 +1883,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component ;
++------------------------+------------+------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                   ;
++------------------------+------------+------------------------------------------------------------------------+
+; LPM_WIDTH              ; 14         ; Signed Integer                                                         ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                                                ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                                                ;
+; LPM_FFTYPE             ; DFF        ; Untyped                                                                ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                                                ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                                ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                         ;
++------------------------+------------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: cpu:inst1|loadOP2:inst6|lpm_bustri2:inst2|lpm_bustri:lpm_bustri_component ;
 +----------------+-------+-----------------------------------------------------------------------------------------------+
@@ -1957,7 +1980,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon May 15 12:43:18 2017
+    Info: Processing started: Tue May 16 08:44:10 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cursach -c cursach
 Info: Found 1 design units, including 1 entities, in source file loadop2.bdf
     Info: Found entity 1: loadOP2
@@ -2070,6 +2093,9 @@ Info: Found 2 design units, including 1 entities, in source file lpm_add_sub0.vh
 Info: Found 2 design units, including 1 entities, in source file lpm_constant0.vhd
     Info: Found design unit 1: lpm_constant0-SYN
     Info: Found entity 1: lpm_constant0
+Info: Found 2 design units, including 1 entities, in source file new_addr.vhd
+    Info: Found design unit 1: new_addr-SYN
+    Info: Found entity 1: new_addr
 Info: Elaborating entity "cursach" for the top level hierarchy
 Info: Elaborating entity "cpu" for hierarchy "cpu:inst1"
 Info: Elaborating entity "lpm_decodeDCA" for hierarchy "cpu:inst1|lpm_decodeDCA:inst"
@@ -2314,6 +2340,13 @@ Info: Found 1 design units, including 1 entities, in source file db/decode_e9f.t
     Info: Found entity 1: decode_e9f
 Info: Elaborating entity "decode_e9f" for hierarchy "cpu:inst1|registers:inst4|lpm_decode0:inst51|lpm_decode:lpm_decode_component|decode_e9f:auto_generated"
 Info: Elaborating entity "loadOP2" for hierarchy "cpu:inst1|loadOP2:inst6"
+Info: Elaborating entity "new_addr" for hierarchy "cpu:inst1|loadOP2:inst6|new_addr:inst15"
+Info: Elaborating entity "lpm_ff" for hierarchy "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component"
+Info: Elaborated megafunction instantiation "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component"
+Info: Instantiated megafunction "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component" with the following parameter:
+    Info: Parameter "lpm_fftype" = "DFF"
+    Info: Parameter "lpm_type" = "LPM_FF"
+    Info: Parameter "lpm_width" = "14"
 Info: Elaborating entity "memory" for hierarchy "memory:inst"
 Info: Elaborating entity "LPM_ROM" for hierarchy "memory:inst|LPM_ROM:inst"
 Info: Elaborated megafunction instantiation "memory:inst|LPM_ROM:inst"
@@ -2463,20 +2496,20 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[2]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[1]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[0]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[13]" to the node "memory:inst|inst2" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[12]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|address_reg_a[0]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[11]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[10]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[9]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[8]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[7]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[6]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[5]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[4]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[3]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[2]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[1]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[0]" to the node "memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|ram_block1a0" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[13]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[12]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[11]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[11]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[10]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[10]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[9]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[9]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[8]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[8]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[7]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[7]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[6]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[6]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[5]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[5]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[4]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[4]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[3]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[3]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[2]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[1]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[0]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[14]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst4" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst5" into an OR gate
@@ -2493,15 +2526,15 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst15" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst17" into an OR gate
 Info: Registers with preset signals will power-up high
-Info: Implemented 1174 device resources after synthesis - the final resource count might be different
+Info: Implemented 1190 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
     Info: Implemented 276 output pins
-    Info: Implemented 837 logic cells
+    Info: Implemented 853 logic cells
     Info: Implemented 60 RAM segments
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 133 warnings
     Info: Peak virtual memory: 288 megabytes
-    Info: Processing ended: Mon May 15 12:43:27 2017
+    Info: Processing ended: Tue May 16 08:44:19 2017
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 

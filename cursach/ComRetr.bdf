@@ -515,11 +515,6 @@ applicable agreement for further details.
 	(pt 464 280)
 )
 (connector
-	(text "enable" (rect 114 176 145 188)(font "Arial" ))
-	(pt 104 192)
-	(pt 152 192)
-)
-(connector
 	(pt 400 200)
 	(pt 400 280)
 )
@@ -528,25 +523,8 @@ applicable agreement for further details.
 	(pt 464 200)
 )
 (connector
-	(pt 152 184)
-	(pt 152 192)
-)
-(connector
-	(pt 152 192)
-	(pt 152 216)
-)
-(connector
 	(pt 152 216)
 	(pt 224 216)
-)
-(connector
-	(text "clk" (rect 146 184 160 196)(font "Arial" ))
-	(pt 136 200)
-	(pt 224 200)
-)
-(connector
-	(pt 152 184)
-	(pt 224 184)
 )
 (connector
 	(text "<<__$DEF_ALIAS2742>>" (rect 338 184 461 196)(font "Arial" )(invisible))
@@ -623,7 +601,25 @@ applicable agreement for further details.
 	(pt 680 48)
 	(bus)
 )
+(connector
+	(text "clk" (rect 114 184 128 196)(font "Arial" ))
+	(pt 224 200)
+	(pt 104 200)
+)
+(connector
+	(pt 152 184)
+	(pt 152 216)
+)
+(connector
+	(text "enable" (rect 114 168 145 180)(font "Arial" ))
+	(pt 104 184)
+	(pt 152 184)
+)
+(connector
+	(pt 152 184)
+	(pt 224 184)
+)
 (junction (pt 400 280))
-(junction (pt 152 192))
 (junction (pt 400 200))
 (junction (pt 400 80))
+(junction (pt 152 184))
