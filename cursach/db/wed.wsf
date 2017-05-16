@@ -3208,8 +3208,8 @@ VECTOR("D:/SIFO/cursach/cursach.vwf")
 VECTOR("D:/AVP/SIFO/cursach/cursach.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 601106;
+		ZBEGIN = 4398894;
+		ZEND = 5000000;
 		NUMERATOR = 877;
 		DENOMINATOR = 601106;
 		TOP_INDEX = 0;

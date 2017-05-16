@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cursach
-Tue May 16 12:13:05 2017
+Tue May 16 12:19:39 2017
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -15,8 +15,8 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Source assignments for cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component
  14. Source assignments for cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component
@@ -140,15 +140,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Tue May 16 12:13:05 2017        ;
+; Analysis & Synthesis Status   ; Successful - Tue May 16 12:19:39 2017        ;
 ; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                 ; cursach                                      ;
 ; Top-level Entity Name         ; cursach                                      ;
 ; Family                        ; Stratix II                                   ;
 ; Logic utilization             ; N/A                                          ;
-;     Combinational ALUTs       ; 544                                          ;
-;     Dedicated logic registers ; 398                                          ;
-; Total registers               ; 398                                          ;
+;     Combinational ALUTs       ; 295                                          ;
+;     Dedicated logic registers ; 273                                          ;
+; Total registers               ; 273                                          ;
 ; Total pins                    ; 277                                          ;
 ; Total virtual pins            ; 0                                            ;
 ; Total block memory bits       ; 245,760                                      ;
@@ -334,172 +334,121 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+--------+
 ; Resource                                      ; Usage  ;
 +-----------------------------------------------+--------+
-; Estimated ALUTs Used                          ; 544    ;
-; Dedicated logic registers                     ; 398    ;
+; Estimated ALUTs Used                          ; 295    ;
+; Dedicated logic registers                     ; 273    ;
 ;                                               ;        ;
-; Estimated ALUTs Unavailable                   ; 45     ;
+; Estimated ALUTs Unavailable                   ; 0      ;
 ;                                               ;        ;
-; Total combinational functions                 ; 544    ;
+; Total combinational functions                 ; 295    ;
 ; Combinational ALUT usage by number of inputs  ;        ;
-;     -- 7 input functions                      ; 5      ;
-;     -- 6 input functions                      ; 230    ;
-;     -- 5 input functions                      ; 107    ;
-;     -- 4 input functions                      ; 64     ;
-;     -- <=3 input functions                    ; 138    ;
+;     -- 7 input functions                      ; 0      ;
+;     -- 6 input functions                      ; 82     ;
+;     -- 5 input functions                      ; 120    ;
+;     -- 4 input functions                      ; 12     ;
+;     -- <=3 input functions                    ; 81     ;
 ;                                               ;        ;
 ; Combinational ALUTs by mode                   ;        ;
-;     -- normal mode                            ; 502    ;
-;     -- extended LUT mode                      ; 5      ;
-;     -- arithmetic mode                        ; 21     ;
-;     -- shared arithmetic mode                 ; 16     ;
+;     -- normal mode                            ; 277    ;
+;     -- extended LUT mode                      ; 0      ;
+;     -- arithmetic mode                        ; 18     ;
+;     -- shared arithmetic mode                 ; 0      ;
 ;                                               ;        ;
-; Estimated ALUT/register pairs used            ; 811    ;
+; Estimated ALUT/register pairs used            ; 450    ;
 ;                                               ;        ;
-; Total registers                               ; 398    ;
-;     -- Dedicated logic registers              ; 398    ;
+; Total registers                               ; 273    ;
+;     -- Dedicated logic registers              ; 273    ;
 ;     -- I/O registers                          ; 0      ;
 ;                                               ;        ;
-; Estimated ALMs:  partially or completely used ; 406    ;
+; Estimated ALMs:  partially or completely used ; 225    ;
 ;                                               ;        ;
 ; I/O pins                                      ; 277    ;
 ; Total block memory bits                       ; 245760 ;
 ; Maximum fan-out node                          ; clk    ;
 ; Maximum fan-out                               ; 304    ;
-; Total fan-out                                 ; 4957   ;
-; Average fan-out                               ; 3.88   ;
+; Total fan-out                                 ; 3344   ;
+; Average fan-out                               ; 3.70   ;
 +-----------------------------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                        ;
-+----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
-+----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |cursach                                           ; 544 (1)           ; 398 (0)      ; 245760            ; 0            ; 0       ; 0         ; 0         ; 277  ; 0            ; |cursach                                                                                                                 ; work         ;
-;    |cpu:inst1|                                     ; 480 (10)          ; 397 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1                                                                                                       ;              ;
-;       |ComRetr:inst3|                              ; 60 (0)            ; 44 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3                                                                                         ; work         ;
-;          |addr:inst|                               ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst                                                                               ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component                                                       ; work         ;
-;          |counter:inst4|                           ; 14 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4                                                                           ; work         ;
-;             |lpm_counter:lpm_counter_component|    ; 14 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component                                         ; work         ;
-;                |cntr_iaj:auto_generated|           ; 14 (14)           ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component|cntr_iaj:auto_generated                 ; work         ;
-;          |instruct:inst8|                          ; 0 (0)             ; 7 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8                                                                          ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component                                                  ; work         ;
-;          |jkffre:inst12|                           ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|jkffre:inst12                                                                           ; work         ;
-;          |lpm_bustri2:inst1|                       ; 45 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1                                                                       ; work         ;
-;             |lpm_bustri:lpm_bustri_component|      ; 45 (45)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component                                       ; work         ;
-;          |reg:inst5|                               ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5                                                                               ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff_component                                                       ; work         ;
-;          |reg:inst7|                               ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7                                                                               ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component                                                       ; work         ;
-;       |execute:inst7|                              ; 153 (68)          ; 32 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7                                                                                         ; work         ;
-;          |ALU:inst1|                               ; 50 (0)            ; 1 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1                                                                               ; work         ;
-;             |jkffre:inst18|                        ; 6 (6)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|jkffre:inst18                                                                 ; work         ;
-;             |lpm_sub:inst|                         ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst                                                                  ; work         ;
-;                |lpm_add_sub:lpm_add_sub_component| ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|lpm_add_sub:lpm_add_sub_component                                ; work         ;
-;                   |add_sub_o6i:auto_generated|     ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_sub:inst|lpm_add_sub:lpm_add_sub_component|add_sub_o6i:auto_generated     ; work         ;
-;             |lpm_xor:inst9|                        ; 13 (13)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9                                                                 ; work         ;
-;             |shift:inst1|                          ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|shift:inst1                                                                   ; work         ;
-;                |lpm_clshift:lpm_clshift_component| ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component                                 ; work         ;
-;                   |lpm_clshift_iib:auto_generated| ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|ALU:inst1|shift:inst1|lpm_clshift:lpm_clshift_component|lpm_clshift_iib:auto_generated  ; work         ;
-;          |jkffre:inst14|                           ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|jkffre:inst14                                                                           ; work         ;
-;          |lpm_bustri0:inst18|                      ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_bustri0:inst18                                                                      ; work         ;
-;             |lpm_bustri:lpm_bustri_component|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component                                      ; work         ;
-;          |lpm_bustri0:inst20|                      ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_bustri0:inst20                                                                      ; work         ;
-;             |lpm_bustri:lpm_bustri_component|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component                                      ; work         ;
-;          |lpm_decode4:inst|                        ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst                                                                        ; work         ;
-;             |lpm_decode:lpm_decode_component|      ; 4 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component                                        ; work         ;
-;                |decode_5bf:auto_generated|         ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component|decode_5bf:auto_generated              ; work         ;
-;          |lpm_reg:inst11|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst11                                                                          ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component                                                  ; work         ;
-;          |lpm_reg:inst8|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst8                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component                                                   ; work         ;
-;       |loadOP1:inst1|                              ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1                                                                                         ; work         ;
-;          |lpm_reg:inst1|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1|lpm_reg:inst1                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component                                                   ; work         ;
-;       |loadOP2:inst6|                              ; 20 (3)            ; 60 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6                                                                                         ; work         ;
-;          |jkffre:inst12|                           ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|jkffre:inst12                                                                           ; work         ;
-;          |lpm_bustri0:inst14|                      ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14                                                                      ; work         ;
-;             |lpm_bustri:lpm_bustri_component|      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component                                      ; work         ;
-;          |lpm_reg:inst1|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst1                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst5|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst|                            ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst                                                                            ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component                                                    ; work         ;
-;          |new_addr:inst15|                         ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|new_addr:inst15                                                                         ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component                                                 ; work         ;
-;       |lpm_counterDCA:inst8|                       ; 6 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8                                                                                  ; work         ;
-;          |lpm_counter:lpm_counter_component|       ; 6 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component                                                ; work         ;
-;             |cntr_uvi:auto_generated|              ; 6 (5)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated                        ; work         ;
-;                |cmpr_9dc:cmpr2|                    ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated|cmpr_9dc:cmpr2         ; work         ;
-;       |lpm_decodeDCA:inst|                         ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_decodeDCA:inst                                                                                    ; work         ;
-;          |lpm_decode:lpm_decode_component|         ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_decodeDCA:inst|lpm_decode:lpm_decode_component                                                    ; work         ;
-;             |decode_u7f:auto_generated|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_decodeDCA:inst|lpm_decode:lpm_decode_component|decode_u7f:auto_generated                          ; work         ;
-;       |registers:inst4|                            ; 118 (118)         ; 150 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4                                                                                       ; work         ;
-;          |lpm_reg:inst10|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst10                                                                        ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component                                                ; work         ;
-;          |lpm_reg:inst12|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst12                                                                        ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst12|lpm_ff:lpm_ff_component                                                ; work         ;
-;          |lpm_reg:inst14|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst14                                                                        ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst14|lpm_ff:lpm_ff_component                                                ; work         ;
-;          |lpm_reg:inst16|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst16                                                                        ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst16|lpm_ff:lpm_ff_component                                                ; work         ;
-;          |lpm_reg:inst18|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst18                                                                        ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst18|lpm_ff:lpm_ff_component                                                ; work         ;
-;          |lpm_reg:inst2|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst2                                                                         ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component                                                 ; work         ;
-;          |lpm_reg:inst4|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst4                                                                         ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst4|lpm_ff:lpm_ff_component                                                 ; work         ;
-;          |lpm_reg:inst6|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst6                                                                         ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst6|lpm_ff:lpm_ff_component                                                 ; work         ;
-;          |lpm_reg:inst8|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst8                                                                         ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component                                                 ; work         ;
-;          |lpm_reg:inst|                            ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst                                                                          ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component                                                  ; work         ;
-;       |saveRes:inst11|                             ; 55 (7)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11                                                                                        ; work         ;
-;          |lpm_bustri0:inst5|                       ; 46 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_bustri0:inst5                                                                      ; work         ;
-;             |lpm_bustri:lpm_bustri_component|      ; 46 (46)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component                                      ; work         ;
-;          |lpm_decode2:inst6|                       ; 2 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_decode2:inst6                                                                      ; work         ;
-;             |lpm_decode:lpm_decode_component|      ; 2 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component                                      ; work         ;
-;                |decode_5bf:auto_generated|         ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_decode2:inst6|lpm_decode:lpm_decode_component|decode_5bf:auto_generated            ; work         ;
-;       |stack:inst17|                               ; 57 (47)           ; 93 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17                                                                                          ; work         ;
-;          |lpm_compare2:inst11|                     ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_compare2:inst11                                                                      ; work         ;
-;             |lpm_compare:lpm_compare_component|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_compare2:inst11|lpm_compare:lpm_compare_component                                    ; work         ;
-;                |cmpr_lni:auto_generated|           ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_compare2:inst11|lpm_compare:lpm_compare_component|cmpr_lni:auto_generated            ; work         ;
-;          |lpm_counterStak:inst8|                   ; 3 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_counterStak:inst8                                                                    ; work         ;
-;             |lpm_counter:lpm_counter_component|    ; 3 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_counterStak:inst8|lpm_counter:lpm_counter_component                                  ; work         ;
-;                |cntr_4dg:auto_generated|           ; 3 (3)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_counterStak:inst8|lpm_counter:lpm_counter_component|cntr_4dg:auto_generated          ; work         ;
-;          |lpm_decode3:inst14|                      ; 6 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_decode3:inst14                                                                       ; work         ;
-;             |lpm_decode:lpm_decode_component|      ; 6 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_decode3:inst14|lpm_decode:lpm_decode_component                                       ; work         ;
-;                |decode_u7f:auto_generated|         ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_decode3:inst14|lpm_decode:lpm_decode_component|decode_u7f:auto_generated             ; work         ;
-;          |lpm_reg:inst17|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst17                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst18|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst18                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst20|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst20                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst22|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst22                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst24|                          ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst24                                                                           ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component                                                   ; work         ;
-;          |lpm_reg:inst|                            ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst                                                                             ; work         ;
-;             |lpm_ff:lpm_ff_component|              ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component                                                     ; work         ;
-;    |memory:inst|                                   ; 63 (0)            ; 1 (0)        ; 245760            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst                                                                                                     ; work         ;
-;       |lpm_bustri0:inst11|                         ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri0:inst11                                                                                  ; work         ;
-;          |lpm_bustri:lpm_bustri_component|         ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component                                                  ; work         ;
-;       |lpm_bustri1:inst12|                         ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12                                                                                  ;              ;
-;          |lpm_bustri:lpm_bustri_component|         ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component                                                  ;              ;
-;       |lpm_ram_io:inst1|                           ; 32 (30)           ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1                                                                                    ;              ;
-;          |altram:sram|                             ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram                                                                        ;              ;
-;             |altsyncram:ram_block|                 ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block                                                   ;              ;
-;                |altsyncram_ii91:auto_generated|    ; 2 (0)             ; 1 (1)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated                    ;              ;
-;                   |decode_3pa:decode3|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3 ;              ;
-;       |lpm_rom:inst|                               ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst                                                                                        ; work         ;
-;          |altrom:srom|                             ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom                                                                            ; work         ;
-;             |altsyncram:rom_block|                 ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block                                                       ; work         ;
-;                |altsyncram_8001:auto_generated|    ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated                        ; work         ;
-+----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+; |cursach                                        ; 295 (1)           ; 273 (0)      ; 245760            ; 0            ; 0       ; 0         ; 0         ; 277  ; 0            ; |cursach                                                                                                                 ; work         ;
+;    |cpu:inst1|                                  ; 231 (10)          ; 272 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1                                                                                                       ;              ;
+;       |ComRetr:inst3|                           ; 61 (0)            ; 44 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3                                                                                         ; work         ;
+;          |addr:inst|                            ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst                                                                               ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component                                                       ; work         ;
+;          |counter:inst4|                        ; 14 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4                                                                           ; work         ;
+;             |lpm_counter:lpm_counter_component| ; 14 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component                                         ; work         ;
+;                |cntr_iaj:auto_generated|        ; 14 (14)           ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|counter:inst4|lpm_counter:lpm_counter_component|cntr_iaj:auto_generated                 ; work         ;
+;          |instruct:inst8|                       ; 0 (0)             ; 7 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8                                                                          ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 7 (7)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|instruct:inst8|lpm_ff:lpm_ff_component                                                  ; work         ;
+;          |jkffre:inst12|                        ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|jkffre:inst12                                                                           ; work         ;
+;          |lpm_bustri2:inst1|                    ; 46 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1                                                                       ; work         ;
+;             |lpm_bustri:lpm_bustri_component|   ; 46 (46)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component                                       ; work         ;
+;          |reg:inst5|                            ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5                                                                               ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff_component                                                       ; work         ;
+;          |reg:inst7|                            ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7                                                                               ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|ComRetr:inst3|reg:inst7|lpm_ff:lpm_ff_component                                                       ; work         ;
+;       |loadOP1:inst1|                           ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1                                                                                         ; work         ;
+;          |lpm_reg:inst1|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1|lpm_reg:inst1                                                                           ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP1:inst1|lpm_reg:inst1|lpm_ff:lpm_ff_component                                                   ; work         ;
+;       |loadOP2:inst6|                           ; 20 (3)            ; 60 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6                                                                                         ; work         ;
+;          |jkffre:inst12|                        ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|jkffre:inst12                                                                           ; work         ;
+;          |lpm_bustri0:inst14|                   ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14                                                                      ; work         ;
+;             |lpm_bustri:lpm_bustri_component|   ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component                                      ; work         ;
+;          |lpm_reg:inst1|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst1                                                                           ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst1|lpm_ff:lpm_ff_component                                                   ; work         ;
+;          |lpm_reg:inst5|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5                                                                           ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst5|lpm_ff:lpm_ff_component                                                   ; work         ;
+;          |lpm_reg:inst|                         ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst                                                                            ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|lpm_reg:inst|lpm_ff:lpm_ff_component                                                    ; work         ;
+;          |new_addr:inst15|                      ; 0 (0)             ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|new_addr:inst15                                                                         ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component                                                 ; work         ;
+;       |lpm_counterDCA:inst8|                    ; 5 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8                                                                                  ; work         ;
+;          |lpm_counter:lpm_counter_component|    ; 5 (0)             ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component                                                ; work         ;
+;             |cntr_uvi:auto_generated|           ; 5 (5)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|lpm_counterDCA:inst8|lpm_counter:lpm_counter_component|cntr_uvi:auto_generated                        ; work         ;
+;       |registers:inst4|                         ; 90 (90)           ; 150 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4                                                                                       ; work         ;
+;          |lpm_reg:inst10|                       ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst10                                                                        ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst10|lpm_ff:lpm_ff_component                                                ; work         ;
+;          |lpm_reg:inst12|                       ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst12                                                                        ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst12|lpm_ff:lpm_ff_component                                                ; work         ;
+;          |lpm_reg:inst14|                       ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst14                                                                        ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst14|lpm_ff:lpm_ff_component                                                ; work         ;
+;          |lpm_reg:inst16|                       ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst16                                                                        ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst16|lpm_ff:lpm_ff_component                                                ; work         ;
+;          |lpm_reg:inst18|                       ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst18                                                                        ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst18|lpm_ff:lpm_ff_component                                                ; work         ;
+;          |lpm_reg:inst2|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst2                                                                         ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component                                                 ; work         ;
+;          |lpm_reg:inst4|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst4                                                                         ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst4|lpm_ff:lpm_ff_component                                                 ; work         ;
+;          |lpm_reg:inst6|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst6                                                                         ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst6|lpm_ff:lpm_ff_component                                                 ; work         ;
+;          |lpm_reg:inst8|                        ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst8                                                                         ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst8|lpm_ff:lpm_ff_component                                                 ; work         ;
+;          |lpm_reg:inst|                         ; 0 (0)             ; 15 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst                                                                          ; work         ;
+;             |lpm_ff:lpm_ff_component|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|registers:inst4|lpm_reg:inst|lpm_ff:lpm_ff_component                                                  ; work         ;
+;       |saveRes:inst11|                          ; 45 (11)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11                                                                                        ; work         ;
+;          |lpm_bustri0:inst8|                    ; 34 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_bustri0:inst8                                                                      ; work         ;
+;             |lpm_bustri:lpm_bustri_component|   ; 34 (34)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component                                      ; work         ;
+;    |memory:inst|                                ; 63 (0)            ; 1 (0)        ; 245760            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst                                                                                                     ; work         ;
+;       |lpm_bustri0:inst11|                      ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri0:inst11                                                                                  ; work         ;
+;          |lpm_bustri:lpm_bustri_component|      ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component                                                  ; work         ;
+;       |lpm_bustri1:inst12|                      ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12                                                                                  ;              ;
+;          |lpm_bustri:lpm_bustri_component|      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component                                                  ;              ;
+;       |lpm_ram_io:inst1|                        ; 32 (30)           ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1                                                                                    ;              ;
+;          |altram:sram|                          ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram                                                                        ;              ;
+;             |altsyncram:ram_block|              ; 2 (0)             ; 1 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block                                                   ;              ;
+;                |altsyncram_ii91:auto_generated| ; 2 (0)             ; 1 (1)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated                    ;              ;
+;                   |decode_3pa:decode3|          ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|decode_3pa:decode3 ;              ;
+;       |lpm_rom:inst|                            ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst                                                                                        ; work         ;
+;          |altrom:srom|                          ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom                                                                            ; work         ;
+;             |altsyncram:rom_block|              ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block                                                       ; work         ;
+;                |altsyncram_8001:auto_generated| ; 0 (0)             ; 0 (0)        ; 122880            ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cursach|memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated                        ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -513,14 +462,236 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                    ;
-+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                             ; Reason for Removal                                                                                                        ;
-+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
-; memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|address_reg_a[0] ; Merged with memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|address_reg_a[0] ;
-; Total Number of Removed Registers = 1                                                                     ;                                                                                                                           ;
-+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                                       ; Reason for Removal                                                                                                        ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[14]                                              ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[14]                                                ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[14]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[14]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[14]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[14]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[14]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[13]                                              ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[13]                                                ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[13]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[13]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[13]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[13]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[13]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[12]                                              ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[12]                                                ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[12]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[12]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[12]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[12]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[12]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[11]                                              ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[11]                                                ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[11]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[11]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[11]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[11]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[11]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[10]                                              ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[10]                                                ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[10]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[10]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[10]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[10]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[10]                                              ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[9]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[9]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[9]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[9]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[9]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[9]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[9]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[8]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[8]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[8]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[8]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[8]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[8]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[8]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[7]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[7]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[7]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[7]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[7]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[7]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[7]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[6]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[6]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[6]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[6]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[6]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[6]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[6]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[5]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[5]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[5]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[5]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[5]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[5]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[5]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[4]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[4]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[4]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[4]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[4]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[4]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[4]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[3]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[3]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[3]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[3]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[3]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[3]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[3]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[2]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[2]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[2]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[2]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[2]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[2]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[2]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[1]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[1]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[1]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[1]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[1]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[1]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[1]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[0]                                               ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[0]                                                 ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[0]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[0]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[0]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[0]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[0]                                               ; Lost fanout                                                                                                               ;
+; cpu:inst1|execute:inst7|jkffre:inst14|6                                                                             ; Stuck at VCC due to stuck port clock                                                                                      ;
+; cpu:inst1|stack:inst17|lpm_counterStak:inst8|lpm_counter:lpm_counter_component|cntr_4dg:auto_generated|safe_q[0..2] ; Stuck at GND due to stuck port clock                                                                                      ;
+; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[0..14]                                          ; Stuck at GND due to stuck port data_in                                                                                    ;
+; memory:inst|lpm_rom:inst|altrom:srom|altsyncram:rom_block|altsyncram_8001:auto_generated|address_reg_a[0]           ; Merged with memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|address_reg_a[0] ;
+; cpu:inst1|execute:inst7|ALU:inst1|jkffre:inst18|6                                                                   ; Stuck at GND due to stuck port data_in                                                                                    ;
+; Total Number of Removed Registers = 126                                                                             ;                                                                                                                           ;
++---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                ;
++------------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------+
+; Register name                                                          ; Reason for Removal      ; Registers Removed due to This Register                                  ;
++------------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------+
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[14] ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[14],   ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[14], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[14], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[14], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[14], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[14], ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[14] ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[13] ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[13],   ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[13], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[13], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[13], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[13], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[13], ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[13] ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[12] ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[12],   ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[12], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[12], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[12], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[12], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[12], ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[12] ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[11] ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[11],   ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[11], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[11], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[11], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[11], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[11], ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[11] ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[10] ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[10],   ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[10], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[10], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[10], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[10], ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[10], ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[10] ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[9]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[9],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[9],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[9],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[9],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[9],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[9],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[9]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[8]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[8],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[8],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[8],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[8],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[8],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[8],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[8]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[7]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[7],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[7],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[7],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[7],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[7],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[7],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[7]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[6]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[6],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[6],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[6],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[6],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[6],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[6],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[6]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[5]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[5],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[5],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[5],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[5],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[5],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[5],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[5]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[4]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[4],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[4],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[4],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[4],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[4],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[4],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[4]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[3]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[3],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[3],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[3],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[3],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[3],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[3],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[3]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[2]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[2],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[2],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[2],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[2],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[2],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[2],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[2]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[1]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[1],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[1],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[1],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[1],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[1],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[1],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[1]  ;
+; cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[0]  ; Stuck at GND            ; cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[0],    ;
+;                                                                        ; due to stuck port clock ; cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[0],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[0],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[0],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[0],  ;
+;                                                                        ;                         ; cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[0],  ;
+;                                                                        ;                         ; cpu:inst1|execute:inst7|lpm_reg:inst11|lpm_ff:lpm_ff_component|dffs[0]  ;
++------------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -528,35 +699,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 398   ;
+; Total registers                              ; 273   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 3     ;
-; Number of registers using Asynchronous Clear ; 1     ;
-; Number of registers using Asynchronous Load  ; 14    ;
-; Number of registers using Clock Enable       ; 344   ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 239   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; cpu:inst1|execute:inst7|jkffre:inst14|6 ; 3       ;
-; Total number of inverted registers = 1  ;         ;
-+-----------------------------------------+---------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
-; 6:1                ; 15 bits   ; 60 ALUTs      ; 60 ALUTs             ; 0 ALUTs                ; Yes        ; |cursach|cpu:inst1|execute:inst7|lpm_reg:inst8|lpm_ff:lpm_ff_component|dffs[12] ;
-; 7:1                ; 15 bits   ; 60 ALUTs      ; 60 ALUTs             ; 0 ALUTs                ; No         ; |cursach|cpu:inst1|execute:inst7|data[5]                                        ;
-; 10:1               ; 15 bits   ; 90 ALUTs      ; 90 ALUTs             ; 0 ALUTs                ; No         ; |cursach|cpu:inst1|registers:inst4|out[0]                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 10:1               ; 15 bits   ; 90 ALUTs      ; 90 ALUTs             ; 0 ALUTs                ; No         ; |cursach|cpu:inst1|registers:inst4|out[13] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -1991,7 +2150,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue May 16 12:12:56 2017
+    Info: Processing started: Tue May 16 12:19:32 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cursach -c cursach
 Info: Found 1 design units, including 1 entities, in source file loadop2.bdf
     Info: Found entity 1: loadOP2
@@ -2225,7 +2384,7 @@ Info: Instantiated megafunction "cpu:inst1|ComRetr:inst3|reg:inst5|lpm_ff:lpm_ff
     Info: Parameter "lpm_type" = "LPM_FF"
     Info: Parameter "lpm_width" = "4"
 Info: Elaborating entity "execute" for hierarchy "cpu:inst1|execute:inst7"
-Warning: Pin "hlt" is missing source
+Warning: Pin "instr" not connected
 Info: Elaborating entity "lpm_decode4" for hierarchy "cpu:inst1|execute:inst7|lpm_decode4:inst"
 Info: Elaborating entity "lpm_decode" for hierarchy "cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component"
 Info: Elaborated megafunction instantiation "cpu:inst1|execute:inst7|lpm_decode4:inst|lpm_decode:lpm_decode_component"
@@ -2414,21 +2573,6 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted tri-state node "cpu:inst1|registers:inst4|out[2]" into a selector
     Warning: Converted tri-state node "cpu:inst1|registers:inst4|out[1]" into a selector
     Warning: Converted tri-state node "cpu:inst1|registers:inst4|out[0]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[14]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[13]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[12]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[11]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[10]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[9]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[8]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[7]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[6]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[5]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[4]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[3]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[2]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[1]" into a selector
-    Warning: Converted tri-state node "cpu:inst1|stack:inst17|out[0]" into a selector
     Warning: Converted tri-state node "cpu:inst1|execute:inst7|data[14]" into a selector
     Warning: Converted tri-state node "cpu:inst1|execute:inst7|data[13]" into a selector
     Warning: Converted tri-state node "cpu:inst1|execute:inst7|data[12]" into a selector
@@ -2445,36 +2589,6 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted tri-state node "cpu:inst1|execute:inst7|data[1]" into a selector
     Warning: Converted tri-state node "cpu:inst1|execute:inst7|data[0]" into a selector
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[14]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[14]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst4" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst4" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst5" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst5" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[11]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst6" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[11]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst6" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[10]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst7" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[10]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst7" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[9]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst8" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[9]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst8" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[8]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst9" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[8]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst9" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[7]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst11" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[7]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst11" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[6]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst12" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[6]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst12" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[5]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst13" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[5]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst13" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[4]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst14" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[4]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst14" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[3]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst10" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[3]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst10" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst16" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst16" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst15" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst15" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst18|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst17" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|execute:inst7|lpm_bustri0:inst20|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|execute:inst7|ALU:inst1|lpm_xor:inst9|inst17" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[14]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a14" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[13]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a13" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_ram_io:inst1|datatri[12]" to the node "memory:inst|lpm_ram_io:inst1|altram:sram|altsyncram:ram_block|altsyncram_ii91:auto_generated|ram_block1a12" into an OR gate
@@ -2505,21 +2619,21 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[2]" to the node "cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component|dffs[2]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[1]" to the node "cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component|dffs[1]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "memory:inst|lpm_bustri1:inst12|lpm_bustri:lpm_bustri_component|din[0]" to the node "cpu:inst1|ComRetr:inst3|addr:inst|lpm_ff:lpm_ff_component|dffs[0]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[14]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[14]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[13]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[12]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[11]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[11]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[10]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[10]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[9]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[9]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[8]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[8]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[7]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[7]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[6]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[6]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[5]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[5]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[4]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[4]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[3]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[3]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[2]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[1]" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[0]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[14]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[14]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[13]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[12]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[11]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[11]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[10]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[10]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[9]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[9]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[8]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[8]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[7]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[7]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[6]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[6]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[5]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[5]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[4]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[4]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[3]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[3]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[2]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[1]" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|saveRes:inst11|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|registers:inst4|lpm_reg:inst2|lpm_ff:lpm_ff_component|dffs[0]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[13]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[13]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[12]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[12]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|ComRetr:inst3|lpm_bustri2:inst1|lpm_bustri:lpm_bustri_component|dout[11]" to the node "cpu:inst1|loadOP2:inst6|new_addr:inst15|lpm_ff:lpm_ff_component|dffs[11]" into an OR gate
@@ -2549,16 +2663,127 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[2]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[2]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[1]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[1]" into an OR gate
     Warning: Converted the fan-out from the tri-state buffer "cpu:inst1|loadOP2:inst6|lpm_bustri0:inst14|lpm_bustri:lpm_bustri_component|dout[0]" to the node "cpu:inst1|saveRes:inst11|lpm_bustri0:inst5|lpm_bustri:lpm_bustri_component|dout[0]" into an OR gate
-Info: Registers with preset signals will power-up high
-Info: Implemented 1238 device resources after synthesis - the final resource count might be different
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "empty_stack" is stuck at VCC
+    Warning (13410): Pin "full_stack" is stuck at GND
+    Warning (13410): Pin "CF" is stuck at VCC
+    Warning (13410): Pin "ZF" is stuck at GND
+    Warning (13410): Pin "jump" is stuck at GND
+    Warning (13410): Pin "res_ex[14]" is stuck at GND
+    Warning (13410): Pin "res_ex[13]" is stuck at GND
+    Warning (13410): Pin "res_ex[12]" is stuck at GND
+    Warning (13410): Pin "res_ex[11]" is stuck at GND
+    Warning (13410): Pin "res_ex[10]" is stuck at GND
+    Warning (13410): Pin "res_ex[9]" is stuck at GND
+    Warning (13410): Pin "res_ex[8]" is stuck at GND
+    Warning (13410): Pin "res_ex[7]" is stuck at GND
+    Warning (13410): Pin "res_ex[6]" is stuck at GND
+    Warning (13410): Pin "res_ex[5]" is stuck at GND
+    Warning (13410): Pin "res_ex[4]" is stuck at GND
+    Warning (13410): Pin "res_ex[3]" is stuck at GND
+    Warning (13410): Pin "res_ex[2]" is stuck at GND
+    Warning (13410): Pin "res_ex[1]" is stuck at GND
+    Warning (13410): Pin "res_ex[0]" is stuck at GND
+Info: 90 registers lost all their fanouts during netlist optimizations. The first 90 are displayed below.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst|lpm_ff:lpm_ff_component|dffs[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst17|lpm_ff:lpm_ff_component|dffs[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst18|lpm_ff:lpm_ff_component|dffs[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst20|lpm_ff:lpm_ff_component|dffs[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst22|lpm_ff:lpm_ff_component|dffs[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "cpu:inst1|stack:inst17|lpm_reg:inst24|lpm_ff:lpm_ff_component|dffs[0]" lost all its fanouts during netlist optimizations.
+Info: Implemented 886 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
     Info: Implemented 276 output pins
-    Info: Implemented 901 logic cells
+    Info: Implemented 549 logic cells
     Info: Implemented 60 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 158 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 134 warnings
     Info: Peak virtual memory: 289 megabytes
-    Info: Processing ended: Tue May 16 12:13:05 2017
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Processing ended: Tue May 16 12:19:39 2017
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 

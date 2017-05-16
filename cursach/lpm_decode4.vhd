@@ -52,6 +52,7 @@ ENTITY lpm_decode4 IS
 		eq5		: OUT STD_LOGIC ;
 		eq53		: OUT STD_LOGIC ;
 		eq57		: OUT STD_LOGIC ;
+		eq64		: OUT STD_LOGIC ;
 		eq85		: OUT STD_LOGIC ;
 		eq89		: OUT STD_LOGIC ;
 		eq96		: OUT STD_LOGIC 
@@ -74,6 +75,7 @@ ARCHITECTURE SYN OF lpm_decode4 IS
 	SIGNAL sub_wire10	: STD_LOGIC ;
 	SIGNAL sub_wire11	: STD_LOGIC ;
 	SIGNAL sub_wire12	: STD_LOGIC ;
+	SIGNAL sub_wire13	: STD_LOGIC ;
 
 
 
@@ -90,12 +92,13 @@ ARCHITECTURE SYN OF lpm_decode4 IS
 	END COMPONENT;
 
 BEGIN
-	sub_wire12    <= sub_wire0(25);
-	sub_wire11    <= sub_wire0(57);
-	sub_wire10    <= sub_wire0(89);
-	sub_wire9    <= sub_wire0(21);
-	sub_wire8    <= sub_wire0(32);
-	sub_wire7    <= sub_wire0(53);
+	sub_wire13    <= sub_wire0(25);
+	sub_wire12    <= sub_wire0(57);
+	sub_wire11    <= sub_wire0(89);
+	sub_wire10    <= sub_wire0(21);
+	sub_wire9    <= sub_wire0(32);
+	sub_wire8    <= sub_wire0(53);
+	sub_wire7    <= sub_wire0(64);
 	sub_wire6    <= sub_wire0(85);
 	sub_wire5    <= sub_wire0(96);
 	sub_wire4    <= sub_wire0(5);
@@ -108,12 +111,13 @@ BEGIN
 	eq5    <= sub_wire4;
 	eq96    <= sub_wire5;
 	eq85    <= sub_wire6;
-	eq53    <= sub_wire7;
-	eq32    <= sub_wire8;
-	eq21    <= sub_wire9;
-	eq89    <= sub_wire10;
-	eq57    <= sub_wire11;
-	eq25    <= sub_wire12;
+	eq64    <= sub_wire7;
+	eq53    <= sub_wire8;
+	eq32    <= sub_wire9;
+	eq21    <= sub_wire10;
+	eq89    <= sub_wire11;
+	eq57    <= sub_wire12;
+	eq25    <= sub_wire13;
 
 	lpm_decode_component : lpm_decode
 	GENERIC MAP (
@@ -230,7 +234,7 @@ END SYN;
 -- Retrieval info: PRIVATE: eq61 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq62 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq63 NUMERIC "0"
--- Retrieval info: PRIVATE: eq64 NUMERIC "0"
+-- Retrieval info: PRIVATE: eq64 NUMERIC "1"
 -- Retrieval info: PRIVATE: eq65 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq66 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq67 NUMERIC "0"
@@ -284,6 +288,7 @@ END SYN;
 -- Retrieval info: USED_PORT: eq5 0 0 0 0 OUTPUT NODEFVAL eq5
 -- Retrieval info: USED_PORT: eq53 0 0 0 0 OUTPUT NODEFVAL eq53
 -- Retrieval info: USED_PORT: eq57 0 0 0 0 OUTPUT NODEFVAL eq57
+-- Retrieval info: USED_PORT: eq64 0 0 0 0 OUTPUT NODEFVAL eq64
 -- Retrieval info: USED_PORT: eq85 0 0 0 0 OUTPUT NODEFVAL eq85
 -- Retrieval info: USED_PORT: eq89 0 0 0 0 OUTPUT NODEFVAL eq89
 -- Retrieval info: USED_PORT: eq96 0 0 0 0 OUTPUT NODEFVAL eq96
@@ -296,6 +301,7 @@ END SYN;
 -- Retrieval info: CONNECT: eq32 0 0 0 0 @eq 0 0 1 32
 -- Retrieval info: CONNECT: eq53 0 0 0 0 @eq 0 0 1 53
 -- Retrieval info: CONNECT: eq57 0 0 0 0 @eq 0 0 1 57
+-- Retrieval info: CONNECT: eq64 0 0 0 0 @eq 0 0 1 64
 -- Retrieval info: CONNECT: eq85 0 0 0 0 @eq 0 0 1 85
 -- Retrieval info: CONNECT: eq89 0 0 0 0 @eq 0 0 1 89
 -- Retrieval info: CONNECT: eq96 0 0 0 0 @eq 0 0 1 96

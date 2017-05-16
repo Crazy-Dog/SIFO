@@ -3666,15 +3666,8 @@ q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cursach|cpu:inst1|execute:inst7
-hlt <= <GND>
+hlt <= JKFFRE:inst25.Q
 jump <= inst22.DB_MAX_OUTPUT_PORT_TYPE
-instr[0] => lpm_decode4:inst.data[0]
-instr[1] => lpm_decode4:inst.data[1]
-instr[2] => lpm_decode4:inst.data[2]
-instr[3] => lpm_decode4:inst.data[3]
-instr[4] => lpm_decode4:inst.data[4]
-instr[5] => lpm_decode4:inst.data[5]
-instr[6] => lpm_decode4:inst.data[6]
 enable => inst21.IN1
 enable => inst26.IN0
 enable => inst6.IN1
@@ -3776,6 +3769,23 @@ dataSt[11] => lpm_reg:inst8.data[11]
 dataSt[12] => lpm_reg:inst8.data[12]
 dataSt[13] => lpm_reg:inst8.data[13]
 dataSt[14] => lpm_reg:inst8.data[14]
+instr[0] => ~NO_FANOUT~
+instr[1] => ~NO_FANOUT~
+instr[2] => ~NO_FANOUT~
+instr[3] => ~NO_FANOUT~
+instr[4] => ~NO_FANOUT~
+instr[5] => ~NO_FANOUT~
+instr[6] => ~NO_FANOUT~
+
+
+|cursach|cpu:inst1|execute:inst7|JKFFRE:inst25
+QN <= 9.DB_MAX_OUTPUT_PORT_TYPE
+S => 7.IN0
+R => 8.IN0
+K => 6~1.IN0
+J => 6~0.IN1
+CK => 6.CLK
+Q <= 6.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cursach|cpu:inst1|execute:inst7|lpm_decode4:inst
@@ -3795,6 +3805,7 @@ eq32 <= lpm_decode:lpm_decode_component.eq[32]
 eq5 <= lpm_decode:lpm_decode_component.eq[5]
 eq53 <= lpm_decode:lpm_decode_component.eq[53]
 eq57 <= lpm_decode:lpm_decode_component.eq[57]
+eq64 <= lpm_decode:lpm_decode_component.eq[64]
 eq85 <= lpm_decode:lpm_decode_component.eq[85]
 eq89 <= lpm_decode:lpm_decode_component.eq[89]
 eq96 <= lpm_decode:lpm_decode_component.eq[96]

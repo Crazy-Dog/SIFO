@@ -1973,4 +1973,9 @@ applicable agreement for further details.
 	(pt 872 -104)
 	(pt 936 -104)
 )
+(connector
+	(text "hlt1" (rect 882 -200 899 -188)(font "Arial" ))
+	(pt 872 -184)
+	(pt 936 -184)
+)
 (junction (pt 680 -528))
