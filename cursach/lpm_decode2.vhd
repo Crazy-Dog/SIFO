@@ -45,11 +45,11 @@ ENTITY lpm_decode2 IS
 		data		: IN STD_LOGIC_VECTOR (6 DOWNTO 0);
 		eq121		: OUT STD_LOGIC ;
 		eq16		: OUT STD_LOGIC ;
-		eq20		: OUT STD_LOGIC ;
+		eq21		: OUT STD_LOGIC ;
 		eq25		: OUT STD_LOGIC ;
-		eq52		: OUT STD_LOGIC ;
+		eq53		: OUT STD_LOGIC ;
 		eq57		: OUT STD_LOGIC ;
-		eq84		: OUT STD_LOGIC ;
+		eq85		: OUT STD_LOGIC ;
 		eq89		: OUT STD_LOGIC 
 	);
 END lpm_decode2;
@@ -85,16 +85,16 @@ BEGIN
 	sub_wire8    <= sub_wire0(25);
 	sub_wire7    <= sub_wire0(57);
 	sub_wire6    <= sub_wire0(89);
-	sub_wire5    <= sub_wire0(20);
-	sub_wire4    <= sub_wire0(52);
-	sub_wire3    <= sub_wire0(84);
+	sub_wire5    <= sub_wire0(21);
+	sub_wire4    <= sub_wire0(53);
+	sub_wire3    <= sub_wire0(85);
 	sub_wire2    <= sub_wire0(121);
 	sub_wire1    <= sub_wire0(16);
 	eq16    <= sub_wire1;
 	eq121    <= sub_wire2;
-	eq84    <= sub_wire3;
-	eq52    <= sub_wire4;
-	eq20    <= sub_wire5;
+	eq85    <= sub_wire3;
+	eq53    <= sub_wire4;
+	eq21    <= sub_wire5;
 	eq89    <= sub_wire6;
 	eq57    <= sub_wire7;
 	eq25    <= sub_wire8;
@@ -166,8 +166,8 @@ END SYN;
 -- Retrieval info: PRIVATE: eq18 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq19 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq2 NUMERIC "0"
--- Retrieval info: PRIVATE: eq20 NUMERIC "1"
--- Retrieval info: PRIVATE: eq21 NUMERIC "0"
+-- Retrieval info: PRIVATE: eq20 NUMERIC "0"
+-- Retrieval info: PRIVATE: eq21 NUMERIC "1"
 -- Retrieval info: PRIVATE: eq22 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq23 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq24 NUMERIC "0"
@@ -201,8 +201,8 @@ END SYN;
 -- Retrieval info: PRIVATE: eq5 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq50 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq51 NUMERIC "0"
--- Retrieval info: PRIVATE: eq52 NUMERIC "1"
--- Retrieval info: PRIVATE: eq53 NUMERIC "0"
+-- Retrieval info: PRIVATE: eq52 NUMERIC "0"
+-- Retrieval info: PRIVATE: eq53 NUMERIC "1"
 -- Retrieval info: PRIVATE: eq54 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq55 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq56 NUMERIC "0"
@@ -236,8 +236,8 @@ END SYN;
 -- Retrieval info: PRIVATE: eq81 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq82 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq83 NUMERIC "0"
--- Retrieval info: PRIVATE: eq84 NUMERIC "1"
--- Retrieval info: PRIVATE: eq85 NUMERIC "0"
+-- Retrieval info: PRIVATE: eq84 NUMERIC "0"
+-- Retrieval info: PRIVATE: eq85 NUMERIC "1"
 -- Retrieval info: PRIVATE: eq86 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq87 NUMERIC "0"
 -- Retrieval info: PRIVATE: eq88 NUMERIC "0"
@@ -261,19 +261,19 @@ END SYN;
 -- Retrieval info: USED_PORT: data 0 0 7 0 INPUT NODEFVAL data[6..0]
 -- Retrieval info: USED_PORT: eq121 0 0 0 0 OUTPUT NODEFVAL eq121
 -- Retrieval info: USED_PORT: eq16 0 0 0 0 OUTPUT NODEFVAL eq16
--- Retrieval info: USED_PORT: eq20 0 0 0 0 OUTPUT NODEFVAL eq20
+-- Retrieval info: USED_PORT: eq21 0 0 0 0 OUTPUT NODEFVAL eq21
 -- Retrieval info: USED_PORT: eq25 0 0 0 0 OUTPUT NODEFVAL eq25
--- Retrieval info: USED_PORT: eq52 0 0 0 0 OUTPUT NODEFVAL eq52
+-- Retrieval info: USED_PORT: eq53 0 0 0 0 OUTPUT NODEFVAL eq53
 -- Retrieval info: USED_PORT: eq57 0 0 0 0 OUTPUT NODEFVAL eq57
--- Retrieval info: USED_PORT: eq84 0 0 0 0 OUTPUT NODEFVAL eq84
+-- Retrieval info: USED_PORT: eq85 0 0 0 0 OUTPUT NODEFVAL eq85
 -- Retrieval info: USED_PORT: eq89 0 0 0 0 OUTPUT NODEFVAL eq89
 -- Retrieval info: CONNECT: @data 0 0 7 0 data 0 0 7 0
 -- Retrieval info: CONNECT: eq16 0 0 0 0 @eq 0 0 1 16
--- Retrieval info: CONNECT: eq20 0 0 0 0 @eq 0 0 1 20
+-- Retrieval info: CONNECT: eq21 0 0 0 0 @eq 0 0 1 21
 -- Retrieval info: CONNECT: eq25 0 0 0 0 @eq 0 0 1 25
--- Retrieval info: CONNECT: eq52 0 0 0 0 @eq 0 0 1 52
+-- Retrieval info: CONNECT: eq53 0 0 0 0 @eq 0 0 1 53
 -- Retrieval info: CONNECT: eq57 0 0 0 0 @eq 0 0 1 57
--- Retrieval info: CONNECT: eq84 0 0 0 0 @eq 0 0 1 84
+-- Retrieval info: CONNECT: eq85 0 0 0 0 @eq 0 0 1 85
 -- Retrieval info: CONNECT: eq89 0 0 0 0 @eq 0 0 1 89
 -- Retrieval info: CONNECT: eq121 0 0 0 0 @eq 0 0 1 121
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
